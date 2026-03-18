@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Chatbot UI SDK Logo</title>
+  <desc>A modern chat bubble combined with code brackets representing the SDK.</desc>
+  <defs>
+    <linearGradient id="tech_grad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <g id="icon-group">
+    <!-- Chat Bubble Body: Aligned to 8px grid -->
+    <path d="M48 128C48 83.8 83.8 48 128 48H384C428.2 48 464 83.8 464 128V320C464 364.2 428.2 400 384 400H176L80 464V400C62.3 400 48 385.7 48 368V128Z" fill="url(#tech_grad)"/>
+    
+    <!-- Code Symbol: < • > representing Logic/AI -->
+    <g id="code-symbol" stroke="white" stroke-width="40" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M192 168L136 224L192 280"/>
+      <path d="M320 168L376 224L320 280"/>
+    </g>
+    <circle cx="256" cy="224" r="24" fill="white"/>
+  </g>
+</svg>
