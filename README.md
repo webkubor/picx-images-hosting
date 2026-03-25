@@ -4,45 +4,40 @@
 > **🧬 核心引擎**: CortexOS AetherNeural System
 > **🛡️ 安全维护**: Gemini (栖月)
 
-这是 **星舰长（栖洲）** 的 AI 舰队核心补给站。它承载了从《沸腾之雪》电影级武侠资源到 PayLinker 支付生态的全量图片资产，由 PicX 提供托管支持，并通过 jsDelivr CDN 全球分发。
+这是 **星舰长（栖洲）** 的 AI 舰队核心补给站。点击下方分类可直达 GitHub 对应仓库目录。
 
 ---
 
-## 🏗️ 开发者调用模版
+## 📂 核心资源分级仓库 (Direct Links)
 
-| 访问渠道 | 链接格式 |
-| :--- | :--- |
-| **⚡ jsDelivr CDN** | https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/[FILE_PATH] |
-| **🏠 GitHub Raw** | https://raw.githubusercontent.com/webkubor/picx-images-hosting/master/[FILE_PATH] |
+### 🎨 开发者与 UI 资源
+- **[SVG 图标库](https://github.com/webkubor/picx-images-hosting/tree/master/icons/svg)** ➔ `icons/svg/` (包含常用平台 Logo)
+- **[NPM/KLogger 资源](https://github.com/webkubor/picx-images-hosting/tree/master/npm)** ➔ `npm/` (klogger, lib-show 等)
+- **[GitHub 专用图](https://github.com/webkubor/picx-images-hosting/tree/master/github)** ➔ `github/` (Loading, Logo 等)
+
+### 🎬 沸腾之雪 (Boiling Snow) 专用仓
+- **[角色三视图](https://github.com/webkubor/picx-images-hosting/tree/master/沸腾之雪/三视图)** ➔ `沸腾之雪/三视图/` (燕照绫, 顾栖月, 夜惊鸿)
+- **[定妆照合集](https://github.com/webkubor/picx-images-hosting/tree/master/沸腾之雪/定妆照)** ➔ `沸腾之雪/定妆照/` (慕北歌, 欧阳狂徒...)
+
+### 💳 金融与电商生态 (PayLinker / Shops)
+- **[PayLinker UI](https://github.com/webkubor/picx-images-hosting/tree/master/paylinker)** ➔ `paylinker/` (Dashboard, Dev-Preview)
+- **[Trakto Online](https://github.com/webkubor/picx-images-hosting/tree/master/trakto-online)** ➔ `trakto-online/` (24~29 系列图片)
+- **[Xianbei Shop](https://github.com/webkubor/picx-images-hosting/tree/master/xianbei-shop)** ➔ `xianbei-shop/` (电商商品图)
+
+### 🌿 装饰性素材 (Stationery & Backgrounds)
+- **[国风文具信纸](https://github.com/webkubor/picx-images-hosting/tree/master/stationery-bg-)** ➔ `stationery-bg-/` (墨竹, 枫叶, 梅, 燕)
+- **[摄影图库](https://github.com/webkubor/picx-images-hosting/tree/master/scenery)** ➔ `scenery/` (笔记本, 雪山, 背景图)
+- **[博客封面](https://github.com/webkubor/picx-images-hosting/tree/master/blog)** ➔ `blog/` (CortexOS Cover 等)
+
+### 🕰️ 历史存档 (Archives)
+- **[uPic Legacy](https://github.com/webkubor/picx-images-hosting/tree/master/upic-legacy)** ➔ `upic-legacy/` (2025/2026 旧版素材)
+- **[2024 实验库](https://github.com/webkubor/picx-images-hosting/tree/master/20240816)** ➔ `202408xx/` (早期 AI 生成图片记录)
 
 ---
 
-## 📂 核心资源导航
+## ⚡ CDN 极速调用格式
 
-### 🎬 沸腾之雪 (Boiling Snow)
-- **三视图**: 燕照绫.png, 顾栖月.png, 夜惊鸿.png
-- **定妆照**: 慕北歌.jpg, 欧阳狂徒.png, 燕照绫.png...
-
-### 💳 支付与金融 (PayLinker)
-- **UI/Logo**: dashboard.mie6enq7.webp, dev.5q7upr919d.webp, logo.8s3qqzh9du.webp
-
-### 🎨 装饰与素材 (Stationery & Blog)
-- **文具背景**: stationery-bg-/ (包含 墨竹, 枫叶, 梅, 燕 系列)
-- **封面/图标**: blog/CortexOS-MCP-to-CLI-Cover.png, icons/svg/
-
----
-
-## 🔍 最近更新的文件 (Last 10)
-- wallpaper-tools/desktop-app-icon-2-2b153438.2rv5z7sffs.png
-- wallpaper-tools/iphone.1sf2m1pjpv.png
-- wallpaper-tools/5de191e1d26b0a93a681cfc6f9937da19bec609b.83a2k3vel8.jpg
-- webkubor/4.8z6g4o28hx.webp
-- webkubor/w-2.8s39a1y9dj.webp
-- webkubor/w-5.2krv9w2i9f.webp
-- webkubor/me.1zi6wrx8na.webp
-- webkubor/2.54xolpkak7.webp
-- webkubor/3.2domdmy6in.webp
-- webkubor/1.45lu5dg17.webp
+`https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/[FILE_PATH]`
 
 ---
 © 2026 **AetherFleet Coordination** | Powered by CortexOS.
