@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" fill="none">
+  <defs>
+    <linearGradient id="bgGradient" x1="156" y1="74" x2="1418" y2="838" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0E1730" />
+      <stop offset="0.56" stop-color="#122756" />
+      <stop offset="1" stop-color="#0C5F74" />
+    </linearGradient>
+    <radialGradient id="haloOne" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1316 178) rotate(132.505) scale(428.457 337.383)">
+      <stop offset="0" stop-color="#4B7DFF" stop-opacity="0.55" />
+      <stop offset="1" stop-color="#4B7DFF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="haloTwo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(274 752) rotate(-17.6857) scale(466.853 266.852)">
+      <stop offset="0" stop-color="#19CFC0" stop-opacity="0.46" />
+      <stop offset="1" stop-color="#19CFC0" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="panelStroke" x1="382" y1="196" x2="1114" y2="674" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="rgba(255,255,255,0.22)" />
+      <stop offset="1" stop-color="rgba(255,255,255,0.06)" />
+    </linearGradient>
+    <linearGradient id="markGradient" x1="512" y1="248" x2="704" y2="462" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2458FF" />
+      <stop offset="0.58" stop-color="#2E7DFF" />
+      <stop offset="1" stop-color="#18CFC0" />
+    </linearGradient>
+    <linearGradient id="trailGradient" x1="600" y1="380" x2="680" y2="302" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#163C7D" />
+      <stop offset="1" stop-color="#18CFC0" />
+    </linearGradient>
+    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="26" />
+    </filter>
+  </defs>
+
+  <title>Browser Agent Lab Brand Banner</title>
+  <desc>Hero banner showing Browser Agent Lab as an AI browser workbench for observing pages and tracing agent workflows.</desc>
+
+  <rect width="1600" height="900" rx="0" fill="url(#bgGradient)" />
+  <rect width="1600" height="900" fill="url(#haloOne)" />
+  <rect width="1600" height="900" fill="url(#haloTwo)" />
+
+  <g opacity="0.12">
+    <path d="M0 161H1600" stroke="#C8D7FF" />
+    <path d="M0 321H1600" stroke="#C8D7FF" />
+    <path d="M0 481H1600" stroke="#C8D7FF" />
+    <path d="M0 641H1600" stroke="#C8D7FF" />
+    <path d="M240 0V900" stroke="#C8D7FF" />
+    <path d="M560 0V900" stroke="#C8D7FF" />
+    <path d="M880 0V900" stroke="#C8D7FF" />
+    <path d="M1200 0V900" stroke="#C8D7FF" />
+  </g>
+
+  <rect x="104" y="104" width="1392" height="692" rx="44" fill="rgba(10,18,38,0.48)" stroke="rgba(255,255,255,0.12)" />
+
+  <g transform="translate(178 178)">
+    <text x="0" y="34" fill="#8FA7D1" font-size="24" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif" font-weight="700" letter-spacing="7">
+      BROWSER AGENT WORKBENCH
+    </text>
+    <text x="0" y="152" fill="#F7FAFF" font-size="96" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif" font-weight="800">
+      Browser Agent Lab
+    </text>
+    <text x="0" y="230" fill="#A9BEDF" font-size="36" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif" font-weight="500">
+      A browser extension that makes PageAgent observable, reusable, and site-aware.
+    </text>
+
+    <g transform="translate(0 322)">
+      <rect width="248" height="64" rx="20" fill="#2158FF" />
+      <text x="38" y="41" fill="#FFFFFF" font-size="26" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif" font-weight="700">
+        Observe the page
+      </text>
+
+      <rect x="270" width="232" height="64" rx="20" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)" />
+      <text x="308" y="41" fill="#DCE7FB" font-size="26" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif" font-weight="700">
+        Trace every step
+      </text>
+
+      <rect x="524" width="292" height="64" rx="20" fill="rgba(24,207,192,0.14)" stroke="rgba(24,207,192,0.4)" />
+      <text x="562" y="41" fill="#D5FFF8" font-size="26" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif" font-weight="700">
+        Save reusable workflows
+      </text>
+    </g>
+  </g>
+
+  <g transform="translate(1018 214)">
+    <rect x="18" y="24" width="296" height="390" rx="34" fill="rgba(255,255,255,0.06)" />
+    <rect x="0" y="0" width="296" height="390" rx="34" fill="rgba(15,29,60,0.82)" stroke="rgba(255,255,255,0.1)" />
+    <rect x="24" y="26" width="248" height="116" rx="24" fill="url(#markGradient)" />
+    <path d="M80 54H137L178 96V205C178 227.091 160.091 245 138 245H80C57.9086 245 40 227.091 40 205V94C40 71.9086 57.9086 54 80 54Z" fill="#F8FBFF" />
+    <path d="M137 54V88C137 104.569 150.431 118 167 118H178L137 54Z" fill="#D9E7FF" />
+    <rect x="68" y="86" width="52" height="10" rx="5" fill="#C9D8F7" />
+    <rect x="68" y="106" width="72" height="10" rx="5" fill="#E0EAFB" />
+    <path d="M93 164C93 128.654 121.654 100 157 100C178.971 100 198.367 110.975 209.99 127.738" stroke="#18366D" stroke-width="16" stroke-linecap="round" />
+    <path d="M81 198L121 158L149 186L194 122" stroke="url(#trailGradient)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="194" cy="122" r="16" fill="#0F2A57" />
+    <circle cx="194" cy="122" r="8" fill="#9AF6E7" />
+
+    <rect x="24" y="174" width="248" height="92" rx="22" fill="rgba(255,255,255,0.04)" />
+    <text x="44" y="208" fill="#8EA7D0" font-size="18" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif" font-weight="700">
+      Recent activity
+    </text>
+    <text x="44" y="242" fill="#F6FAFF" font-size="18" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif" font-weight="600">
+      1. Read page structure
+    </text>
+    <text x="44" y="268" fill="#B2C5E4" font-size="16" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif">
+      2. Found action entry
+    </text>
+    <text x="44" y="294" fill="#B2C5E4" font-size="16" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif">
+      3. Logged agent trace
+    </text>
+
+    <rect x="24" y="292" width="248" height="76" rx="22" fill="rgba(18, 219, 193, 0.1)" stroke="rgba(24,207,192,0.38)" />
+    <text x="44" y="327" fill="#D9FFF7" font-size="18" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif" font-weight="700">
+      Live status
+    </text>
+    <text x="44" y="352" fill="#A9F3E7" font-size="16" font-family="'SF Pro Display', 'Inter', 'Segoe UI', sans-serif">
+      PageAgent trace is active
+    </text>
+  </g>
+
+  <g filter="url(#softBlur)" opacity="0.24">
+    <circle cx="1206" cy="638" r="94" fill="#19CFC0" />
+  </g>
+</svg>
