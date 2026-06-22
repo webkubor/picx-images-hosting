@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pictures-lib",
+  "compatibility_date": "2026-05-06",
+  "pages_build_output_dir": "./dist",
+  "r2_buckets": [
+    {
+      "binding": "PICTURES_R2",
+      "bucket_name": "images"
+    }
+  ]
+}

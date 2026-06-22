@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pictures Lib</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="shell">
+        <section class="hero">
+          <div>
+            <div class="brand-row">
+              <span class="brandmark" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 64 64" fill="currentColor">
+                  <path d="M13 42 27 25l9 10 5-6 10 13v7H13z" />
+                  <circle cx="44" cy="20" r="6" fill="#cf5b2c"/>
+                </svg>
+              </span>
+              <h1>Pictures Lib</h1>
+            </div>
+            <p class="subtitle">整理并管理您的 GitHub 与 Cloudflare R2 图床。支持 R2 鉴权真删除，GitHub 仅查看。</p>
+          </div>
+          <div class="stats" id="stats"></div>
+        </section>
+        <div class="toolbar">
+          <input id="search" type="search" placeholder="搜索文件名、目录、URL..." />
+          <select id="source"><option value="all">全部来源</option></select>
+          <select id="folder"><option value="all">全部目录</option></select>
+          <select id="sort">
+            <option value="newest">最新上传优先</option>
+            <option value="name">文件名 A-Z</option>
+            <option value="size">文件大小优先</option>
+          </select>
+          <button class="toolbar-button" id="adminTokenControl" type="button">删除口令</button>
+        </div>
+      </div>
+    </header>
+    <main class="shell">
+      <div class="meta-line" id="meta"></div>
+      <div class="selection-bar" id="selectionBar" hidden>
+        <span id="selectionSummary">未选择 R2 图片</span>
+        <div class="selection-actions">
+          <button id="selectVisibleR2" type="button">选择当前 R2</button>
+          <button id="clearSelection" type="button">清空选择</button>
+          <button class="danger" id="bulkDelete" type="button">删除已选</button>
+        </div>
+      </div>
+      <section class="grid" id="grid"></section>
+      <section class="empty" id="empty">
+        <div class="empty-icon">📂</div>
+        <p>没有找到匹配的图片</p>
+      </section>
+    </main>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
