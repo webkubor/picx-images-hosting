@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T21:41:07.086985",
+  "updated": "2026-06-23T21:46:36.337159+08:00",
   "images": [
     {
       "name": "01-schedule.jpg",
@@ -92,12 +92,6 @@
       "uploaded": "2026-06-22T22:09:33+08:00"
     },
     {
-      "name": "08_push.jpg",
-      "path": "concert/08_push.jpg",
-      "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/08_push.jpg",
-      "uploaded": ""
-    },
-    {
       "name": "09.jpg",
       "path": "concert/09.jpg",
       "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/09.jpg",
@@ -110,22 +104,10 @@
       "uploaded": "2026-06-22T22:09:33+08:00"
     },
     {
-      "name": "10_push.jpg",
-      "path": "concert/10_push.jpg",
-      "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/10_push.jpg",
-      "uploaded": ""
-    },
-    {
       "name": "11.jpg",
       "path": "concert/11.jpg",
       "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/11.jpg",
       "uploaded": "2026-06-22T22:09:33+08:00"
-    },
-    {
-      "name": "11_push.jpg",
-      "path": "concert/11_push.jpg",
-      "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/11_push.jpg",
-      "uploaded": ""
     },
     {
       "name": "12.jpg",
