@@ -1,12 +1,6 @@
 {
-  "updated": "2026-06-23T21:17:28.096656",
+  "updated": "2026-06-23T21:41:07.086985",
   "images": [
-    {
-      "name": "01-beijing.png",
-      "path": "concert/01-beijing.png",
-      "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/01-beijing.png",
-      "uploaded": "2026-06-22T18:34:47+08:00"
-    },
     {
       "name": "01-schedule.jpg",
       "path": "concert/01-schedule.jpg",
@@ -29,12 +23,6 @@
       "name": "02-guangzhou.png",
       "path": "concert/02-guangzhou.png",
       "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/02-guangzhou.png",
-      "uploaded": "2026-06-22T18:34:47+08:00"
-    },
-    {
-      "name": "02.png",
-      "path": "concert/02.png",
-      "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/02.png",
       "uploaded": "2026-06-22T18:34:47+08:00"
     },
     {
@@ -162,12 +150,6 @@
       "path": "concert/15.jpg",
       "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/15.jpg",
       "uploaded": "2026-06-22T22:11:54+08:00"
-    },
-    {
-      "name": "cogview-test.jpg",
-      "path": "concert/cogview-test.jpg",
-      "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/cogview-test.jpg",
-      "uploaded": "2026-06-23T00:46:29+08:00"
     }
   ]
 }
