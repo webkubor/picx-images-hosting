@@ -1,16 +1,10 @@
 {
-  "updated": "2026-06-23T22:04:22.134269",
+  "updated": "2026-06-23T14:10:04.234Z",
   "images": [
     {
       "name": "01-schedule.jpg",
       "path": "concert/01-schedule.jpg",
       "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/01-schedule.jpg",
-      "uploaded": "2026-06-22T18:34:47+08:00"
-    },
-    {
-      "name": "01.png",
-      "path": "concert/01.png",
-      "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/01.png",
       "uploaded": "2026-06-22T18:34:47+08:00"
     },
     {
