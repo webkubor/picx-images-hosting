@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T21:46:36.337159+08:00",
+  "updated": "2026-06-23T13:59:58.323Z",
   "images": [
     {
       "name": "01-schedule.jpg",
@@ -65,12 +65,6 @@
       "name": "05-shenzhen.png",
       "path": "concert/05-shenzhen.png",
       "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/05-shenzhen.png",
-      "uploaded": "2026-06-22T18:34:47+08:00"
-    },
-    {
-      "name": "05.png",
-      "path": "concert/05.png",
-      "cdn": "https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/05.png",
       "uploaded": "2026-06-22T18:34:47+08:00"
     },
     {
