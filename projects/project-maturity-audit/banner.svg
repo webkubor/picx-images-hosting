@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" fill="none">
+  <defs>
+    <radialGradient id="v1" cx="0.12" cy="0.05" r="0.8">
+      <stop offset="0%" stop-color="#5fa8b2" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#5fa8b2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="v2" cx="0.92" cy="0.95" r="0.7">
+      <stop offset="0%" stop-color="#92a8b3" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#92a8b3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="underline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#92a8b3" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#92a8b3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hairline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5fa8b2" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#5fa8b2" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#5fa8b2" stop-opacity="0"/>
+    </linearGradient>
+    <!-- 分数环：从低分红 → 高分绿 -->
+    <linearGradient id="ring" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d74b4b"/>
+      <stop offset="55%" stop-color="#e8a85f"/>
+      <stop offset="100%" stop-color="#6aa88a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="440" fill="#0e1a1c"/>
+  <rect width="1280" height="440" fill="url(#v1)"/>
+  <rect width="1280" height="440" fill="url(#v2)"/>
+  <rect x="0" y="0" width="1280" height="1" fill="#5fa8b2" opacity="0.16"/>
+
+  <text x="96" y="168" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif"
+        font-size="58" font-weight="700" fill="#eaf4f4" letter-spacing="-0.5">项目成熟度体检</text>
+  <rect x="96" y="192" width="128" height="3" rx="1.5" fill="url(#underline)"/>
+
+  <text x="96" y="242" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif"
+        font-size="21" fill="#9db8b8">陌生人会在 10 秒内 star、安装、信任你的项目吗？</text>
+  <text x="96" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="15" fill="#5f8585" letter-spacing="0.3">Claude Code Skill · 八维度证据化评分 · 先报告后修复</text>
+
+  <!-- 八维度小方块 -->
+  <g>
+    <rect x="96" y="316" width="52" height="6" rx="3" fill="#6aa88a" opacity="0.85"/>
+    <rect x="156" y="316" width="52" height="6" rx="3" fill="#6aa88a" opacity="0.7"/>
+    <rect x="216" y="316" width="52" height="6" rx="3" fill="#e8a85f" opacity="0.8"/>
+    <rect x="276" y="316" width="52" height="6" rx="3" fill="#6aa88a" opacity="0.6"/>
+    <rect x="336" y="316" width="52" height="6" rx="3" fill="#e8a85f" opacity="0.65"/>
+    <rect x="396" y="316" width="52" height="6" rx="3" fill="#6aa88a" opacity="0.75"/>
+    <rect x="456" y="316" width="52" height="6" rx="3" fill="#d74b4b" opacity="0.7"/>
+    <rect x="516" y="316" width="52" height="6" rx="3" fill="#d74b4b" opacity="0.5"/>
+  </g>
+  <text x="96" y="348" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12.5" fill="#4f7070"
+        letter-spacing="0.2">门面 · 分发 · 发布工程 · 质量护栏 · 社区卫生 · 文档 · 安全 · 度量</text>
+
+  <!-- 右侧评分环 -->
+  <g transform="translate(1060, 212)">
+    <circle r="86" fill="none" stroke="#1c2e30" stroke-width="14"/>
+    <circle r="86" fill="none" stroke="url(#ring)" stroke-width="14" stroke-linecap="round"
+            stroke-dasharray="378 540" transform="rotate(-90)"/>
+    <text y="10" text-anchor="middle" font-family="-apple-system, 'Segoe UI', sans-serif"
+          font-size="52" font-weight="700" fill="#eaf4f4">7.0</text>
+    <text y="38" text-anchor="middle" font-family="-apple-system, 'PingFang SC', sans-serif"
+          font-size="13" fill="#6f9494">加权总分</text>
+  </g>
+
+  <rect x="0" y="400" width="1280" height="1" fill="url(#hairline)"/>
+</svg>
