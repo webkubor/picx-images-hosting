@@ -1,5 +1,15 @@
 # picx-images-hosting
 
+
+<p align="center">
+  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/github/stars/webkubor/picx-images-hosting?style=for-the-badge&color=coral" alt="Stars"></a>
+  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/github/languages/top/webkubor/picx-images-hosting?style=for-the-badge&color=333333" alt="语言"></a>
+  <a href="https://github.com/webkubor/picx-images-hosting/commits"><img src="https://img.shields.io/github/last-commit/webkubor/picx-images-hosting?style=for-the-badge&color=4c9a6b" alt="最近提交"></a>
+  <a href="https://github.com/webkubor/picx-images-hosting/forks"><img src="https://img.shields.io/github/forks/webkubor/picx-images-hosting?style=for-the-badge&color=8b949e" alt="forks"></a>
+  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/github/license/webkubor/picx-images-hosting?style=for-the-badge&color=gold" alt="License"></a>
+  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/badge/Image%20CDN-333333?style=for-the-badge" alt="CDN"></a>
+</p>
+
 个人图床：所有公开图片的单一来源，通过 GitHub raw + jsDelivr CDN 分发。
 
 ## 用法
