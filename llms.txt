@@ -1,13 +1,14 @@
 # picx-images-hosting
 
-> 个人图床：只存存证截图与临时小图（单文件 ≤ 2MB），GitHub raw + jsDelivr 分发。
-> 原图唯一权威来源是本地资源库（U 盘 AI素材资源）与 Cloudflare R2。
+> GitHub 开源项目推广素材库：logo / banner / OG 图 / 演示 GIF+MP4，图片 ≤ 2MB、视频 ≤ 10MB。
+> GitHub raw + jsDelivr 分发；原图权威来源在本地资源库（U 盘 AI素材资源）与 Cloudflare R2。
 
 ## 引用方式
 - CDN（优先）：`https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<路径>`
-- 兜底：GitHub raw 直链
+- 兜底：GitHub raw 直链；复制即用片段见 TEMPLATES.md
 
 ## 关键约束（对 AI 助手）
-- 新增图片一律走 `tools/add.sh`（自动压缩、限 2MB、重生成 INDEX.md）。
-- 已有图片不改名、不移动、不删除。
-- 2026-10-27 起废止旧的「只进不出」政策：与 U 盘重复的图片已清除，README 为唯一政策来源。
+- 新增素材一律 `tools/add.sh`，提交前 `tools/check.sh`（CI 同款强制）。
+- 已有图片不改名、不移动、不删除；同一素材全仓只留一份。
+- 推广素材进顶层 `<项目名>/` 目录，命名见 README「目录约定」。
+- 2026-10-27 起废止旧「只进不出」政策，README 为唯一政策来源。

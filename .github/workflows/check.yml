@@ -1,0 +1,16 @@
+name: assets-check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 素材合规检查（尺寸红线 / 重复检测 / INDEX 新鲜度）
+        run: tools/check.sh
