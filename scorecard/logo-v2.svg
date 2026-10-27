@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Scorecard</title>
+  <desc id="desc">A scored audit radar with a completed check.</desc>
+  <rect width="256" height="256" rx="56" fill="#161b22"/>
+  <circle cx="128" cy="128" r="78" fill="none" stroke="#52677d" stroke-opacity=".5" stroke-width="2"/>
+  <circle cx="128" cy="128" r="48" fill="none" stroke="#52677d" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M128 50v156M54 104l148 48M82 188l92-120" fill="none" stroke="#52677d" stroke-opacity=".5" stroke-width="2"/>
+  <path d="m128 61 51 32 20 56-46 49-71-12-28-60 29-46Z" fill="#5ad3be" fill-opacity=".24" stroke="#6ccdbc" stroke-width="6" stroke-linejoin="round"/>
+  <path d="m104 131 18 18 35-41" fill="none" stroke="#f6fafb" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
