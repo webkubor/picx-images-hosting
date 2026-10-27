@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+# free-imgbed 全局 CLI：在任何目录压缩上传图片/视频，提交推送后直接拿到链接。
+#
+#   imgbed init [git-url] [目录]   首次：克隆图床仓并登记（默认克隆模板仓，目录默认 ~/free-imgbed）
+#   imgbed push <文件> [目录]      任意位置上传：压缩 → 提交 → 推送 → 打印直链（--no-push 只到本地）
+#   imgbed link <仓内路径>         打印已存在文件的直链
+#   imgbed install                 软链到 ~/.local/bin，之后任意位置敲 imgbed 可用
+#
+# 多仓切换：imgbed push 前设置 FREE_IMGBED_REPO=/path/to/repo，或改写
+# ${XDG_CONFIG_HOME:-~/.config}/free-imgbed/repo.conf 里的 REPO= 行。
+set -euo pipefail
+
+CONF_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/free-imgbed"
+CONF="$CONF_DIR/repo.conf"
+DEFAULT_REPO_URL="https://github.com/webkubor/free-imgbed.git"
+
+die() { echo "✗ $*" >&2; exit 1; }
+
+cmd="${1:-}"; [ -n "$cmd" ] || { sed -n '3,12p' "$0"; exit 0; }
+shift
+
+repo_root() {
+  local r=""
+  if [ -n "${FREE_IMGBED_REPO:-}" ]; then r="$FREE_IMGBED_REPO"
+  elif [ -f "$CONF" ]; then r=$(grep -E '^REPO=' "$CONF" | head -1 | cut -d= -f2-)
+  fi
+  [ -n "$r" ] || die "还没登记图床仓库。先执行: imgbed init [你的仓库git地址]"
+  [ -f "$r/tools/add.sh" ] || die "登记的仓库不完整(缺 tools/add.sh): $r —— 重新 imgbed init 修正"
+  printf '%s' "$r"
+}
+
+case "$cmd" in
+  init)
+    URL=${1:-$DEFAULT_REPO_URL}
+    DIR=${2:-"$HOME/free-imgbed"}
+    if [ -d "$DIR/.git" ]; then
+      echo "↳ $DIR 已是 git 仓库，直接登记"
+    else
+      git clone "$URL" "$DIR"
+    fi
+    mkdir -p "$CONF_DIR"
+    printf 'REPO=%s\n' "$DIR" > "$CONF"
+    echo "✓ 已登记图床仓库: $DIR"
+    echo "  下一步任意目录: imgbed push 图片.png 项目目录/"
+    echo "  用自己 fork 的仓库: imgbed init git@github.com:<你>/<你的仓>.git <目录>"
+    ;;
+  push)
+    NO_PUSH=0; ARGS=()
+    for a in "$@"; do case "$a" in --no-push) NO_PUSH=1 ;; *) ARGS+=("$a") ;; esac; done
+    [ ${#ARGS[@]} -ge 1 ] || die "用法: imgbed push <文件> [目录]  (--no-push 可选)"
+    SRC=$([[ ${ARGS[0]} = /* ]] && printf '%s' "${ARGS[0]}" || printf '%s/%s' "$PWD" "${ARGS[0]}")
+    [ -f "$SRC" ] || die "文件不存在: $SRC"
+    R=$(repo_root)
+    OUT=$(cd "$R" && tools/add.sh "$SRC" "${ARGS[1]:-}")
+    echo "$OUT"
+    LINK=$(echo "$OUT" | grep -oE 'https://[^ ]+' | head -1) || true
+    [ -n "$LINK" ] || die "上传脚本未返回链接"
+    NAME=${SRC##*/}
+    cd "$R"
+    DEST=$(echo "$OUT" | grep -oE '^✓ [^ ]+' | head -1 | sed 's/^✓ //')
+    git add -- "$DEST" INDEX.md
+    git diff --cached --quiet && die "没有可提交的变更（同名文件已存在？）"
+    git commit -q -m "upload: ${ARGS[1]:-temp}/${NAME}（via imgbed CLI）"
+    if [ "$NO_PUSH" = 1 ]; then
+      echo "↳ --no-push：已提交到本地，未推送。链接推送后生效。"
+    elif git push -q origin "$(git branch --show-current)" 2>/dev/null; then
+      echo "↳ 已推送到 GitHub，链接即时生效（CDN 缓存 ~12h，首次访问即拉取）"
+    else
+      echo "⚠ git push 失败 —— 链接在推送成功后才生效。到 $R 手动 git pull --rebase 后再推。" >&2
+    fi
+    echo ""
+    echo "🔗 $LINK"
+    ;;
+  link)
+    [ $# -ge 1 ] || die "用法: imgbed link <仓内路径>"
+    R=$(repo_root)
+    P=$1; P=${P#"$R"/}; P=${P#/}
+    [ -f "$R/$P" ] || die "仓库里没有这个文件: $P"
+    BR=$(git -C "$R" branch --show-current)
+    echo "https://cdn.jsdelivr.net/gh/$(git -C "$R" remote get-url origin | sed -E 's#.*(github.com[:/])##; s#\.git$##')@$BR/$P"
+    ;;
+  install)
+    SELF=$(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null || echo "${BASH_SOURCE[0]}")
+    R=$(repo_root 2>/dev/null) || R=$(cd "$(dirname "$SELF")/.." && pwd -P)
+    mkdir -p "$HOME/.local/bin"
+    ln -sf "$R/tools/imgbed" "$HOME/.local/bin/imgbed"
+    echo "✓ 已软链: ~/.local/bin/imgbed → $R/tools/imgbed"
+    if ! echo ":$PATH:" | grep -q ":$HOME/.local/bin:"; then
+      echo "⚠ ~/.local/bin 不在 PATH。加一行到你的 shell 配置:"
+      echo "  export PATH=\"\$HOME/.local/bin:\$PATH\""
+    else
+      echo "现在任意目录都可以: imgbed push 图片.png 目录/"
+    fi
+    ;;
+  *)
+    die "未知子命令: $cmd（init / push / link / install）"
+    ;;
+esac

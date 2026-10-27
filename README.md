@@ -70,6 +70,8 @@ tools/add.sh ~/Desktop/my-logo.png 我的项目名/
 ```
 
 > 💡 不想碰终端？GitHub 网页上 **Add file → Upload files** 直接拖图也能传，链接规则相同——只是没压缩，超 2MB 会被 CI 拦下，所以还是推荐命令行。
+>
+> 🌍 **在别的项目里做图，懒得切目录？** 装一次全局 CLI，之后任何目录 `imgbed push 图片.png 目录/` 一条到位——压缩、提交、推送、直链全自动（见下）。
 
 ## 🔗 图床链接长什么样
 
@@ -96,13 +98,23 @@ tools/add.sh ~/Desktop/my-logo.png 我的项目名/
 
 ## ⌨️ 日常命令
 
+**仓库内（在图床仓目录里用）：**
+
 | 命令 | 作用 |
 |---|---|
 | `tools/add.sh <图片\|视频> [目录]` | 压缩上传；`-k` 保原格式，`--avif` 转 AVIF |
 | `tools/check.sh` | 本地预检（与 CI 同一套） |
 | `tools/index.sh` | 重生成 [INDEX.md](INDEX.md) |
 
-自动处理：长边 >2560px 等比缩小 → 按图分派压缩 → 超红线拒绝 → 重生成索引并打印直链。
+**全局 CLI（装一次，任何项目里用）：**
+
+```bash
+tools/imgbed install          # 软链到 ~/.local/bin，之后任意位置可用 imgbed
+imgbed init <你的fork地址>    # 登记图床仓库（首次）
+imgbed push banner.png my-project/   # 任意目录：压缩→提交→推送→打印直链
+imgbed link my-project/banner.webp   # 查已有文件的直链
+```
+
 依赖：`brew install webp`（必需）、`libavif`（AVIF 可选）、`oxipng pngquant`（保格式可选）。
 
 ## 🗜 压缩管线（透明度安全）
@@ -123,7 +135,35 @@ tools/add.sh ~/Desktop/my-logo.png 我的项目名/
 - `free-imgbed/`：本方案自己的 logo（吃自己的狗粮 🐶）
 - `web/` 是配套 R2 相册应用快照；其余历史路径只读保留
 
-## 🤖 CI
+## 🤖 AI Agent 接入（一行提示词）
+
+用 AI 编码工具（Claude Code / Codex / WorkBuddy / AGY / Hermes Agent / OpenClaw …）的话，**你一行命令都不用学**，把提示词丢给 agent 就行。
+
+**第一次，接入（一句话）：**
+
+```text
+帮我接入我的免费图床 free-imgbed：克隆 https://github.com/webkubor/free-imgbed
+并运行其中的 tools/imgbed install 完成全局安装；如果我有 GitHub 上的 fork 仓库，
+用 imgbed init <我的fork地址> 登记。装好后告诉我怎么用。
+```
+
+**之后日常，传图（一句话）：**
+
+```text
+把 ./banner.png 传到图床的 my-project/ 目录，压缩后把直链给我
+```
+
+agent 会自动完成压缩、提交、推送，并回你一条点开就能看的 CDN 直链。
+
+| 工具 | 怎么接入 |
+|---|---|
+| Claude Code | 提示词直接粘进对话；写进 `CLAUDE.md` 则每个项目常驻可用 |
+| Codex | 提示词粘进对话；写进 `AGENTS.md` 常驻 |
+| WorkBuddy / AGY / Hermes Agent / OpenClaw | 粘进对话或项目的 agent 配置/记忆文件即可，提示词通用 |
+
+> 多项目团队可以把接入提示词放进各自的 agent 配置文件，一次配置、全项目受益。
+
+## 🛡 CI
 
 `assets-check` 在每次 push / PR 跑 `tools/check.sh`：尺寸红线、全仓重复检测、索引新鲜度，不过即挡。
 

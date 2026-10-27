@@ -31,6 +31,7 @@ done
 [ ${#ARGS[@]} -ge 1 ] || die "用法: tools/add.sh [-k] [--avif] <图片|视频> [目标目录]（默认 temp/YYYY-MM/，推广素材建议 <项目名>/）"
 SRC=${ARGS[0]}
 DEST_DIR=${ARGS[1]:-"temp/$(date +%Y-%m)"}
+DEST_DIR=${DEST_DIR%/}
 [ -f "$SRC" ] || die "文件不存在: $SRC"
 
 REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || die "请在仓库内运行"
