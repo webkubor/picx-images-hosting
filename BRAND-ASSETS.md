@@ -11,6 +11,7 @@
 | facet | `facet/icon.svg` | 正式标识，现役路径 | 项目 256×256 SVG；与 `logo.svg` 内容相同，保留已被引用的 `icon.svg`，避免重复文件 |
 | chat-mood-gen | `chat-mood-gen/logo.svg` | 正式 logo | 项目已有 256×256 SVG |
 | wallpaper-generator | `wallpaper-generator/logo.svg` | 正式 logo | 项目已有 512×512 SVG |
+| scorecard | `scorecard/logo.svg` | README 专用标识 | 按应用 `src/components/Icon.vue` 的开口评分环品牌几何重绘；项目原 `public/logo.svg` 与 GHAM 完全相同，尚未更改应用内部资源 |
 | dsh-llm-hub | `dsh-llm-hub/logo.png` | 正式 logo | 项目已有 512×512 PNG；现役 banner 仍走 R2 |
 | voxflow / voxcraft | `voxflow/logo-icon.webp` | 共享正式标识，现役路径 | 两个仓库原文件完全相同，只保留一份并共享 URL |
 | reel-kit | `reel-kit/logo.svg` + `reel-kit/logo-light.svg` | 明暗两版字标 | 两份内容不同，README 使用 `picture` 按主题切换 |
@@ -18,7 +19,7 @@
 
 ## 待设计或核验
 
-- **Scorecard**：`public/logo.svg` 与 GHAM 的 logo 逐字节相同，文件内还写着 `aria-label="GHAM"`。不能上传或在 README 中用作 Scorecard 标识；需要专属设计。
+- **Scorecard 应用资源**：`public/logo.svg` 与 GHAM 的 logo 逐字节相同，文件内还写着 `aria-label="GHAM"`。README 已有独立标识；站点内部原资源仍需在项目仓库里按组件和 favicon 一起修正。
 - **Bloom for Typora**：项目仅有花形 favicon；README 目前展示 banner，需按主题品牌另行确定正式字标或 logo。
 - **Kyvault / xiaobai-kanban / boiling-snow**：README 顶部现有 banner/宣传图，不能仅凭文件名或 alt 文本认定它们是 logo。
 - **没有可确认标识的项目**：先保留文本标题或现有 banner；不自动生成相同模板的占位 logo。
