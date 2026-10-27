@@ -43,13 +43,14 @@ done < <(sort "$tmp" | awk -F'\t' 'seen[$1]++ { print $2 }')
 [ "$n_dup" -eq 0 ] && echo "  无重复文件"
 
 echo "== INDEX 新鲜度 =="
+# 记录重生成前的内容指纹，跑完 index.sh 再比：变了说明索引原本过期
+BEFORE=$(grep '^- ' INDEX.md 2>/dev/null | md5sum | cut -d' ' -f1 || echo none)
 tools/index.sh >/dev/null
-# 新鲜度只比正文（目录清单行），快照时间戳不参与
-if diff <(grep '^- ' INDEX.md 2>/dev/null || true) \
-        <(git show HEAD:INDEX.md 2>/dev/null | grep '^- ' || true) >/dev/null; then
+AFTER=$(grep '^- ' INDEX.md 2>/dev/null | md5sum | cut -d' ' -f1 || echo none)
+if [ "$BEFORE" = "$AFTER" ]; then
   echo "  INDEX.md 与目录一致"
 else
-  echo "✗ INDEX.md 已过期，运行 tools/index.sh 后一并提交"
+  echo "✗ INDEX.md 落后于实际目录，已自动重生成 —— 请把 INDEX.md 一并提交"
   fail=1
 fi
 
