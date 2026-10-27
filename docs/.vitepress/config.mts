@@ -4,9 +4,9 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'free-imgbed',
   description: '开箱即用的 GitHub 免费图床：一个仓库就是一台图床',
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/free-imgbed/logo.svg' }]],
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg' }]],
   themeConfig: {
-    logo: '/free-imgbed/logo.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg',
     siteTitle: 'free-imgbed',
     nav: [
       { text: '指南', link: '/guide/getting-started' },
