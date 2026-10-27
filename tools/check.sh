@@ -8,7 +8,7 @@ cd "$(git rev-parse --show-toplevel)"
 
 IMG_MAX=$((2 * 1024 * 1024))
 VID_MAX=$((10 * 1024 * 1024))
-EXTS='png|jpg|jpeg|webp|gif|svg|bmp|mp4|mov|webm'
+EXTS='avif|png|jpg|jpeg|webp|gif|svg|bmp|mp4|mov|webm'
 VID_RE='\.(mp4|mov|webm)$'
 
 if command -v md5sum >/dev/null 2>&1; then hash() { md5sum "$1" | cut -d' ' -f1; }

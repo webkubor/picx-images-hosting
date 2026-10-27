@@ -2,8 +2,10 @@
 
 ## 这是什么
 
-GitHub 开源项目**推广素材库**：logo / banner / OG 图 / 演示 GIF+MP4 / 宣传截图，
-GitHub raw + jsDelivr 分发。内容仓，无构建无测试（`web/` 是 R2 相册应用快照，非图床本体）。
+GitHub 开源项目**推广素材库**，同时是一套**开箱即用的 GitHub 免费图床方案**（fork 即用）：
+logo / banner / OG 图 / 演示 GIF+MP4 / 宣传截图，GitHub raw + jsDelivr 分发。
+内容仓，无构建无测试（`web/` 是 R2 相册应用快照，非图床本体）。
+许可：代码 MIT（见 LICENSE），`<项目>/` 下图片 © webkubor 保留所有权利。
 
 ## 红线（CI 强制，2026-10-27 起）
 

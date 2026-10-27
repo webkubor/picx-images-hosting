@@ -27,6 +27,24 @@
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<项目>/og.png">
 ```
 
+## 渐进增强：AVIF + WebP + PNG（`<picture>`）
+
+`tools/add.sh --avif x.png` 额外产出 `.avif`（比 WebP 再小 20-30%）；三份都在时用：
+
+```html
+<picture>
+  <source srcset="https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<项目>/banner.avif" type="image/avif">
+  <source srcset="https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<项目>/banner.webp" type="image/webp">
+  <img src="https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<项目>/banner.png" alt="banner">
+</picture>
+```
+
+## 国内受众：R2 镜像
+
+jsDelivr 自 2022 年起在中国大陆无 ICP、访问不稳。面向国内读者的页面，把素材同步到
+Cloudflare R2 + 自定义域（本库配套管理端见 `web/`，线上 `img.webkubor.online`），
+引用换成 `https://img.webkubor.online/<同路径>`，两套链接按受众选用。
+
 ## 演示动效：GIF 内嵌 + MP4 外链
 
 GitHub README 不渲染外链 `<video>`，所以动画用 GIF 内嵌、完整视频给链接（kyvault 即此用法）：

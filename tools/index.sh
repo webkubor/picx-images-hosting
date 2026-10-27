@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
 
-EXTS='png|jpg|jpeg|webp|gif|svg|bmp|mp4|mov|webm'
+EXTS='avif|png|jpg|jpeg|webp|gif|svg|bmp|mp4|mov|webm'
 tmp=$(mktemp); trap 'rm -f "$tmp.body" "$tmp.out"' EXIT
 total=0; dirs=0
 for d in */; do
