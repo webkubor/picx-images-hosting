@@ -1,41 +1,60 @@
+<div align="center">
+
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg" width="112" alt="free-imgbed logo">
+
 # free-imgbed
 
-<p align="center">
-  <a href="https://github.com/webkubor/free-imgbed"><img src="https://img.shields.io/github/stars/webkubor/free-imgbed?style=for-the-badge&color=coral" alt="Stars"></a>
-  <a href="https://github.com/webkubor/free-imgbed/actions/workflows/check.yml"><img src="https://github.com/webkubor/free-imgbed/actions/workflows/check.yml/badge.svg" alt="assets-check"></a>
-  <a href="https://github.com/webkubor/free-imgbed/blob/main/LICENSE"><img src="https://img.shields.io/badge/code%20license-MIT-4c9a6b?style=for-the-badge" alt="License"></a>
-  <a href="https://github.com/webkubor/free-imgbed"><img src="https://img.shields.io/badge/img%20max-2MB-coral?style=for-the-badge" alt="img cap"></a>
-  <a href="https://github.com/webkubor/free-imgbed"><img src="https://img.shields.io/badge/video%20max-10MB-coral?style=for-the-badge" alt="video cap"></a>
-</p>
+**一个 GitHub 仓库，就是一台免费图床。**<br>
+<sub><i>One GitHub repo is all it takes to run your own image CDN.</i></sub>
 
-**开箱即用的 GitHub 免费图床**：一个仓库就是一台图床 —— 图片经 GitHub raw + jsDelivr 全球 CDN 分发，
-CI 自动拦截超限与重复，`tools/` 三条命令管压缩上传。fork 改名即是你的图床。
-本仓同时是 webkubor 的开源项目推广素材库（本方案的活示例）。
+<a href="https://github.com/webkubor/free-imgbed/stargazers"><img src="https://img.shields.io/github/stars/webkubor/free-imgbed?style=flat-square&color=FF6F61" alt="Stars"></a>
+<a href="https://github.com/webkubor/free-imgbed/actions/workflows/check.yml"><img src="https://github.com/webkubor/free-imgbed/actions/workflows/check.yml/badge.svg" alt="assets-check"></a>
+<a href="https://github.com/webkubor/free-imgbed/blob/main/LICENSE"><img src="https://img.shields.io/badge/code%20license-MIT-4c9a6b?style=flat-square" alt="License"></a>
+<img src="https://img.shields.io/badge/%E5%9B%BE%E7%89%87%E2%89%A42MB-FF9F45?style=flat-square" alt="img cap">
+<img src="https://img.shields.io/badge/%E8%A7%86%E9%A2%91%E2%89%A410MB-8b949e?style=flat-square" alt="video cap">
 
-## 快速开始
+图片走 GitHub raw + jsDelivr 全球 CDN · fork 改名即用 · 本仓本身就是活示例
 
-1. fork 本仓（或 clone 后推到你自己的新仓），改成你喜欢的名字
-2. 本地 clone，把 `<项目>/` 里的示例素材换成你的内容
-3. 上传：`tools/add.sh <图片> <目录>`，按打印出的提示 commit + push
-4. 任意项目里引用：`https://cdn.jsdelivr.net/gh/<你的用户名>/<你的仓>@main/<路径>`
-   ——README / TEMPLATES 里的片段把前缀替换掉即可直接用
+</div>
 
-## 红线（CI 强制）
+---
 
-1. **图片 ≤ 2MB，视频 ≤ 10MB**（jsDelivr 单文件上限 20MB，留余量）
-2. **先压缩后进仓**：`tools/add.sh` 一条命令完成
-3. **已上传文件不改名、不覆盖、不删除** —— 外链绑死路径
-4. **内容重复即失败** —— 同一素材全仓只留一份
+## ✨ 特性
 
-## 日常命令
+- **零依赖起步** —— 不用装任何服务，仓库即图床，`clone` 仅 ~2MB
+- **透明度安全的压缩管线** —— 带 alpha 的 PNG 走无损 WebP（实测逐位保留），不透明才上有损；永远不会越压越大
+- **AVIF 渐进增强** —— `--avif` 一键再省 20-30%，`<picture>` 三源模板现成可抄
+- **CI 强制红线** —— 图片 ≤2MB / 视频 ≤10MB、全仓内容查重、索引新鲜度，超了就挡，不靠自觉
+- **开源项目推广素材管理** —— 按项目归档 logo / banner / OG 图 / 演示 GIF+MP4，引用模板复制即用
+
+## 🚀 快速开始
 
 ```bash
-tools/add.sh <图片|视频> [目标目录]   # 压缩上传；-k 保原格式，--avif 转 AVIF
-tools/check.sh                       # 本地预检（与 CI 同一套）
-tools/index.sh                       # 重生成索引
+# 1. fork（或 clone 后推到你自己的新仓），改成你喜欢的名字
+# 2. 本地 clone，把示例素材换成你的
+git clone git@github.com:<你的用户名>/<你的仓>.git
+
+# 3. 上传：一条命令，自动缩放 + 压缩 + 生成直链
+tools/add.sh 我的图片.png <项目名>/
+
+# 4. 任意项目里引用
+# https://cdn.jsdelivr.net/gh/<你的用户名>/<你的仓>@main/<路径>
 ```
 
-## 压缩管线（透明度安全）
+<!-- fork 后记得把上面命令和本文件里的仓库地址换成你自己的 -->
+
+## ⌨️ 日常命令
+
+| 命令 | 作用 |
+|---|---|
+| `tools/add.sh <图片\|视频> [目录]` | 压缩上传；`-k` 保原格式，`--avif` 转 AVIF |
+| `tools/check.sh` | 本地预检（与 CI 同一套） |
+| `tools/index.sh` | 重生成 [INDEX.md](INDEX.md) |
+
+自动处理：长边 >2560px 等比缩小 → 按图分派压缩 → 超红线拒绝 → 重生成索引并打印直链。
+依赖：`brew install webp`（必需）、`libavif`（AVIF 可选）、`oxipng pngquant`（保格式可选）。
+
+## 🗜 压缩管线（透明度安全）
 
 | 输入 | 处理 | 透明度 |
 |---|---|---|
@@ -44,34 +63,37 @@ tools/index.sh                       # 重生成索引
 | `--avif` | AVIF 代替 WebP（再小 20-30%）；透明走无损 | 逐位保留（实测像素全等） |
 | `og.*` / `-k` | 原格式内优化：oxipng / optipng 无损优先 | 保留 |
 
-依赖：`brew install webp`（必需）、`brew install libavif`（AVIF 可选）、
-`brew install oxipng pngquant`（保格式可选，pngquant 为有损量化兜底，alpha 保留）。
-og 社交分享卡默认不转现代格式 —— 部分社交平台抓取器兼容性差，PNG/JPG 最稳。
+> og 社交分享卡默认不转现代格式 —— 部分社交平台抓取器兼容性差，PNG/JPG 最稳。
 
-## 目录约定
+## 📁 目录约定
 
-- **`<项目名>/`**：该 GitHub 仓库的推广素材，命名建议
-  `logo.*`、`banner.*`、`og.*`、`demo.gif` + `demo.mp4`、`shot-*.png`
+- **`<项目名>/`**：该仓库的推广素材，命名建议 `logo.*`、`banner.*`、`og.*`、`demo.gif` + `demo.mp4`、`shot-*.png`
 - `temp/YYYY-MM/`：临时图（`add.sh` 默认落点）
-- `blog/projects/…` 等历史路径只读保留；`web/` 是配套 R2 相册应用快照
+- `free-imgbed/`：本方案自己的 logo（吃自己的狗粮 🐶）
+- `web/` 是配套 R2 相册应用快照；其余历史路径只读保留
 
-## 引用
+## 🔗 引用
 
-复制即用片段（含 `<picture>` 渐进增强、国内 R2 镜像说明）见 [TEMPLATES.md](TEMPLATES.md)。
-CDN 前缀：`https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/<路径>`；
-求稳可用 git 标签替代 `@main`；缓存约 12h，`?updated=<时间戳>` 立即刷新。
+复制即用片段（居中 logo、`<picture>` 渐进增强、国内 R2 镜像、缓存刷新）见 **[TEMPLATES.md](TEMPLATES.md)**。
 
-## CI
+```
+https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/<路径>
+```
+
+## 🤖 CI
 
 `assets-check` 在每次 push / PR 跑 `tools/check.sh`：尺寸红线、全仓重复检测、索引新鲜度，不过即挡。
 
-## 许可
+## 📜 历史与许可
 
-- **代码**（`tools/`、`.github/`、脚本与文档）：[MIT](LICENSE)，随便用、随便改
-- **图片素材**（各 `<项目>/` 目录内）：© webkubor 保留所有权利，仅供其本人项目使用，第三方使用请先联系
-- fork 做自己的图床时，请替换素材目录为你自己的内容
+<details>
+<summary>演进史（点开）</summary>
 
-## 历史
+本仓原为个人图床（PicX 上传的图片堆）。2026-10-27 起三步转身：
+① 与本地资源库（U 盘）逐文件 MD5 比对，清除 541 张重复图（443MB），废止「只进不出」旧政策；
+② 转型开源项目推广素材库 + 免费图床方案，加入 CI 与压缩管线；
+③ `git filter-repo` 重写历史剥离已删素材，clone 体积 418MiB → 2MB，更名 free-imgbed。
 
-2026-10-27 与 U 盘逐文件 MD5 比对清除 541 张重复图（443MB），旧「只进不出」政策废止，以本 README 为准；
-同日重写 git 历史、剥离已删素材的大对象，clone 体积由 418MiB 降至个位数 MB —— fork 零负担。
+</details>
+
+**许可**：代码（`tools/`、`.github/`、文档）[MIT](LICENSE) 随便用；**图片素材**（各 `<项目>/` 目录内）© webkubor 保留所有权利，第三方使用请先联系。fork 做自己的图床时，请替换素材为你自己的内容。
