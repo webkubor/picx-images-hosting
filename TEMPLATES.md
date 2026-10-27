@@ -19,6 +19,8 @@
 
 ## OG / 社交分享卡（项目官网 `<head>`）
 
+> og 图保持 PNG/JPG，别用 WebP：`add.sh` 会自动对 `og.*` 保原格式优化。
+
 ```html
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<项目>/og.png">
 <meta name="twitter:card" content="summary_large_image">

@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
-# 统一压缩上传入口：tools/add.sh <图片|视频> [目标目录]
+# 统一压缩上传入口：tools/add.sh [-k] <图片|视频> [目标目录]
+#   -k, --keep-format  保原格式优化（不转 WebP）；og.* 社交卡自动走此路径
 # 红线：图片 ≤ 2MB、视频 ≤ 10MB；先压缩后进仓；同名即拒绝（外链绑死路径）。
+# 压缩管线（透明度安全）：
+#   透明 PNG → 无损 WebP（alpha 逐位保留，通常再省 40-70%）
+#   不透明 png/jpg → 有损 WebP q80
+#   og.* / -k → 原格式内优化（oxipng/optipng/pngquant 任一可用时），社交抓取器对 WebP 兼容不稳
 # 推广素材建议落 <项目名>/，命名 logo.* banner.* og.* demo.gif + demo.mp4 shot-*.png
 set -euo pipefail
 
@@ -11,10 +16,18 @@ MAX_SIDE=2560
 WEBP_Q=80
 
 die() { echo "✗ $*" >&2; exit 1; }
+note() { echo "↳ $*"; }
 
-[ $# -ge 1 ] || die "用法: tools/add.sh <图片|视频> [目标目录]（默认 temp/YYYY-MM/，推广素材建议 <项目名>/）"
-SRC=$1
-DEST_DIR=${2:-"temp/$(date +%Y-%m)"}
+KEEP_FORMAT=0; ARGS=()
+for a in "$@"; do
+  case "$a" in
+    -k|--keep-format) KEEP_FORMAT=1 ;;
+    *) ARGS+=("$a") ;;
+  esac
+done
+[ ${#ARGS[@]} -ge 1 ] || die "用法: tools/add.sh [-k] <图片|视频> [目标目录]（默认 temp/YYYY-MM/，推广素材建议 <项目名>/）"
+SRC=${ARGS[0]}
+DEST_DIR=${ARGS[1]:-"temp/$(date +%Y-%m)"}
 [ -f "$SRC" ] || die "文件不存在: $SRC"
 
 REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || die "请在仓库内运行"
@@ -29,35 +42,66 @@ case "$EXT" in
 esac
 MAX=$([ "$KIND" = vid ] && echo "$VID_MAX" || echo "$IMG_MAX")
 
+# og.* 社交分享卡固定保原格式：部分社交平台抓取器对 WebP 支持不稳
+case "$NAME" in og|og-*|og_*) KEEP_FORMAT=1 ;; esac
+
+has_alpha() {
+  if command -v sips >/dev/null 2>&1; then
+    [ "$(sips -g hasAlpha "$1" 2>/dev/null | awk '/hasAlpha/{print tolower($2)}')" = yes ]
+  else
+    file -b "$1" | grep -qiE 'alpha|rgba'
+  fi
+}
+bytes() { wc -c < "$1" | tr -d ' '; }
+
 mkdir -p "$DEST_DIR"
 WORK=$(mktemp -d); trap 'rm -rf "$WORK"' EXIT
 cp "$SRC" "$WORK/$BASE"
 CUR="$WORK/$BASE"
 
-# 图片：长边超限先等比缩小；>100KB 的 png/jpg 转 WebP，不更小则放弃
 if [ "$KIND" = img ]; then
-  if command -v sips >/dev/null; then
+  # 长边超限先等比缩小
+  if command -v sips >/dev/null 2>&1; then
     read -r W H <<<"$(sips -g pixelWidth -g pixelHeight "$CUR" 2>/dev/null | awk '/pixel/{print $2}' | tr '\n' ' ')"
     if [ "${W:-0}" -gt "$MAX_SIDE" ] || [ "${H:-0}" -gt "$MAX_SIDE" ]; then
       sips -Z "$MAX_SIDE" "$CUR" >/dev/null
-      echo "↳ 长边 ${W}x${H} 超过 ${MAX_SIDE}px，已等比缩小"
+      note "长边 ${W}x${H} 超过 ${MAX_SIDE}px，已等比缩小"
     fi
   fi
-  case "$EXT" in
-    png|jpg|jpeg)
-      if [ "$(wc -c < "$CUR" | tr -d ' ')" -gt "$CONVERT_THRESHOLD" ]; then
-        if command -v cwebp >/dev/null; then
-          cwebp -quiet -q "$WEBP_Q" "$CUR" -o "$WORK/$NAME.webp" && \
-            [ "$(wc -c < "$WORK/$NAME.webp" | tr -d ' ')" -lt "$(wc -c < "$CUR" | tr -d ' ')" ] && \
-            { CUR="$WORK/$NAME.webp"; EXT=webp; echo "↳ 已转 WebP (q$WEBP_Q)"; } || echo "↳ WebP 未更小，保留原格式"
-        else
-          echo "⚠ 未安装 cwebp（brew install webp），跳过压缩" >&2
-        fi
-      fi ;;
-  esac
+
+  if [ "$EXT" = png ] || [ "$EXT" = jpg ] || [ "$EXT" = jpeg ]; then
+    if [ "$(bytes "$CUR")" -le "$CONVERT_THRESHOLD" ]; then
+      note "小于 ${CONVERT_THRESHOLD} 字节，跳过压缩"
+    elif [ "$KEEP_FORMAT" = 1 ]; then
+      # 原格式内优化：无损工具链优先
+      if command -v oxipng >/dev/null 2>&1; then
+        oxipng -q -o 2 "$CUR" && note "oxipng 无损优化完成"
+      elif command -v optipng >/dev/null 2>&1; then
+        optipng -quiet -o2 "$CUR" && note "optipng 无损优化完成"
+      elif command -v pngquant >/dev/null 2>&1 && [ "$EXT" = png ]; then
+        pngquant --force --output "$CUR" --speed 1 "$CUR" 2>/dev/null && note "pngquant 量化完成（调色板法，透明度保留）"
+      else
+        note "保原格式优化需任一: brew install oxipng / optipng / pngquant（未安装，跳过）"
+      fi
+    elif command -v cwebp >/dev/null 2>&1; then
+      if has_alpha "$CUR"; then
+        FLAVOR=(-lossless -z 9); note "检测到透明通道 → 无损 WebP（alpha 逐位保留）"
+      else
+        FLAVOR=(-q "$WEBP_Q"); note "不透明图 → 有损 WebP q$WEBP_Q"
+      fi
+      if cwebp -quiet "${FLAVOR[@]}" "$CUR" -o "$WORK/$NAME.webp" 2>/dev/null &&
+         [ "$(bytes "$WORK/$NAME.webp")" -lt "$(bytes "$CUR")" ]; then
+        CUR="$WORK/$NAME.webp"; EXT=webp
+      else
+        note "WebP 未更小，保留原格式"
+      fi
+    else
+      note "未安装 cwebp（brew install webp），跳过压缩"
+    fi
+  fi
 fi
 
-SIZE=$(wc -c < "$CUR" | tr -d ' ')
+SIZE=$(bytes "$CUR")
 [ "$SIZE" -le "$MAX" ] || die "处理后 $(($SIZE / 1024 / 1024))MB 超过 $((MAX / 1024 / 1024))MB 红线。原图放 U 盘(AI素材资源)或 R2，不进本仓。"
 
 DEST="$DEST_DIR/$NAME.$EXT"

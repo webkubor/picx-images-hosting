@@ -25,7 +25,16 @@ tools/add.sh <图片|视频> [目标目录]   # 默认落点 temp/YYYY-MM/
 tools/check.sh                       # 本地预检（与 CI 同一套）
 ```
 
-自动处理：长边 >2560px 等比缩小（sips）→ >100KB 的 png/jpg 转 WebP（cwebp q80，`brew install webp`）→ 超红线拒绝 → 重生成 [INDEX.md](INDEX.md) 并打印直链。
+自动处理：长边 >2560px 等比缩小（sips）→ 按图分派压缩 → 超红线拒绝 → 重生成 [INDEX.md](INDEX.md) 并打印直链。
+
+| 输入 | 处理 | 透明度 |
+|---|---|---|
+| 带 alpha 的 PNG | 无损 WebP（`cwebp -lossless -z9`），不更小则放弃 | **逐位保留**（实测往返一致） |
+| 不透明 png/jpg | 有损 WebP q80 | 无透明，不涉及 |
+| `og.*` / `-k` / `--keep-format` | 原格式内无损优化（oxipng / optipng / pngquant 任一） | 保留 |
+
+依赖：`brew install webp`（必需）；`brew install oxipng pngquant`（保格式路径可选）。
+og 社交分享卡默认不转 WebP —— 部分社交平台抓取器对 WebP 支持不稳，用 PNG/JPG 最稳。
 
 ## 目录约定
 
