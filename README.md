@@ -1,50 +1,48 @@
 # picx-images-hosting
 
-
 <p align="center">
   <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/github/stars/webkubor/picx-images-hosting?style=for-the-badge&color=coral" alt="Stars"></a>
-  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/github/languages/top/webkubor/picx-images-hosting?style=for-the-badge&color=333333" alt="语言"></a>
   <a href="https://github.com/webkubor/picx-images-hosting/commits"><img src="https://img.shields.io/github/last-commit/webkubor/picx-images-hosting?style=for-the-badge&color=4c9a6b" alt="最近提交"></a>
-  <a href="https://github.com/webkubor/picx-images-hosting/forks"><img src="https://img.shields.io/github/forks/webkubor/picx-images-hosting?style=for-the-badge&color=8b949e" alt="forks"></a>
   <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/github/license/webkubor/picx-images-hosting?style=for-the-badge&color=gold" alt="License"></a>
-  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/badge/Image%20CDN-333333?style=for-the-badge" alt="CDN"></a>
+  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/badge/max%20size-2MB-coral?style=for-the-badge" alt="size cap"></a>
 </p>
 
-个人图床：所有公开图片的单一来源，通过 GitHub raw + jsDelivr CDN 分发。
+个人图床：**只存「存证截图」和「临时小图」**，通过 GitHub raw + jsDelivr CDN 分发。
+素材原图、完整资产与大图一律不进这里 —— 它们住在本地资源库（U 盘 `AI素材资源`）和 Cloudflare R2。
 
-## 用法
+## 红线
 
-仓库里的每张图片都可以这样引用：
+1. **单文件 ≤ 2MB**，超限放 U 盘或 R2。
+2. **先压缩后进仓**，用 `tools/add.sh` 一条命令完成（见下）。
+3. **已上传文件不改名、不覆盖、不删除** —— 外链绑死路径。
+4. **不存原图/大图**，原图永远以 U 盘为准，仓里只是分发副本。
+
+## 统一压缩上传
+
+```bash
+tools/add.sh <图片> [目标目录]     # 默认落点 temp/YYYY-MM/
+```
+
+自动处理：长边 >2560px 等比缩小（sips）→ >100KB 的 png/jpg 转 WebP（cwebp q80，`brew install webp`）→ 超 2MB 拒绝 → 落盘后重生成 [INDEX.md](INDEX.md) 并打印 jsDelivr 直链。
+
+## 目录约定
+
+- `<项目名>/`（如 `dsh-env-inspector/`、`tombstone-reaper/`）：项目存证截图
+- `temp/YYYY-MM/`：临时图（`add.sh` 默认落点）
+- `blog/projects/…`：历史演示素材（只读保留）
+- `web/`：R2 相册应用 pictures-lib 的仓内快照（非图床本体）
+
+## 引用方式
 
 ```
 https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<相对路径>
 ```
 
-例如 `concert/02-beijing-v2.png`：
+jsDelivr 缓存约 12 小时，紧急刷新可在链接后加 `?updated=<时间戳>`；GitHub raw 直链做兜底。
 
-```
-https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/concert/02-beijing-v2.png
-```
+## 历史
 
-任何仓库的 README 文档、项目官网、博客文章只要引用这个前缀的链接，就和这张图绑死——改图不改链接。
-
-## 目录
-
-目录按主题分组：`concert/`、`coffee/`、`wallpaper/`、`brand/`、`boiling-snow-film/`、`projects/`、`web/`、`xianbei/` 等。完整列表见 [INDEX.md](INDEX.md)。
-
-`INDEX.md` 是一次性脚本跑出来的（仓内没有留下该脚本），当前快照是 2026-09-18 14:47 UTC / 38 个目录 / 518 张图。索引与实际目录不一致时，以实际目录为准，按下面的格式手工补一行即可。
-
-## 上传新图
-
-> 2026 起本仓**冻结新增**（见 git log 里的 `chore: 撤回误上传`），新图改走 Cloudflare R2，再以自定义域名引用。
-> 历史图片仍按原路径留在 GitHub raw + jsDelivr CDN 上，不影响已有链接。
-
-如果你确实需要往这里补一张兼容历史的图：
-
-1. 在合适的子目录放下原始文件（保持目录命名单数风格：`concert/` 而不是 `concerts/`）。
-2. 补一条 `INDEX.md` 里的对应行，格式跟邻近条目保持一致：`- [目录名/](目录名/) — N images`。
-3. `git add . && git commit && git push`。
-4. 引用方刷新缓存（jsDelivr 缓存约 12 小时，可加 `?updated=<ts>` 立刻失效）。
+- 2026-10-27 与 U 盘逐文件 MD5 比对，清除 541 张重复图（443MB）：**U 盘有全量副本，内容不丢，但引用旧路径的外链自此失效**。此前的「只进不出」政策同时废止，以本 README 为准。
 
 ## 许可
 

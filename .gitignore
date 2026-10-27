@@ -1,3 +1,3 @@
-
-# Cloudflare Wrangler cache
-concert/.wrangler/
+.DS_Store
+.wrangler/
+node_modules/
