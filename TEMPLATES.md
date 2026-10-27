@@ -59,4 +59,4 @@ GitHub README 不渲染外链 `<video>`，所以动画用 GIF 内嵌、完整视
 
 - jsDelivr 缓存约 12 小时；同路径换图后，在链接后加 `?updated=<时间戳>` 立即刷新
 - 首次上传后若链接 404，等一次缓存周期或用 raw 直链兜底：
-  `https://raw.githubusercontent.com/webkubor/free-imgbed/master/<路径>`
+  `https://raw.githubusercontent.com/webkubor/free-imgbed/main/<路径>`

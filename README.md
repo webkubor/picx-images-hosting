@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://github.com/webkubor/free-imgbed"><img src="https://img.shields.io/github/stars/webkubor/free-imgbed?style=for-the-badge&color=coral" alt="Stars"></a>
   <a href="https://github.com/webkubor/free-imgbed/actions/workflows/check.yml"><img src="https://github.com/webkubor/free-imgbed/actions/workflows/check.yml/badge.svg" alt="assets-check"></a>
-  <a href="https://github.com/webkubor/free-imgbed/blob/master/LICENSE"><img src="https://img.shields.io/badge/code%20license-MIT-4c9a6b?style=for-the-badge" alt="License"></a>
+  <a href="https://github.com/webkubor/free-imgbed/blob/main/LICENSE"><img src="https://img.shields.io/badge/code%20license-MIT-4c9a6b?style=for-the-badge" alt="License"></a>
   <a href="https://github.com/webkubor/free-imgbed"><img src="https://img.shields.io/badge/img%20max-2MB-coral?style=for-the-badge" alt="img cap"></a>
   <a href="https://github.com/webkubor/free-imgbed"><img src="https://img.shields.io/badge/video%20max-10MB-coral?style=for-the-badge" alt="video cap"></a>
 </p>
