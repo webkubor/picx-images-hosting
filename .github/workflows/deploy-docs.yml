@@ -2,8 +2,7 @@ name: deploy-docs
 
 on:
   push:
-    branches: [main]
-    paths: ['docs/**', '.github/workflows/deploy-docs.yml']
+    branches: [main]      # 无 paths 过滤：站点会镜像图片目录，任何素材变更都需重新部署
   workflow_dispatch:
 
 permissions:
