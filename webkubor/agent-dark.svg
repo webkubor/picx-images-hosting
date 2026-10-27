@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+<title id="t">Agent Eyes：一次 401 从出现到被验证修好</title>
+<desc id="d">终端依次出现：dev GET /api/orders 401；eyes 收到证据：请求、响应头、控制台、脱敏后的登录态；agent 读证据定位：本地登录 cookie 过期，代码没问题；eyes 本地 cookie 自修复完成，代码一行没动；dev GET /api/orders 200；agent 用同一请求复验通过，全程没靠猜 ✓。右侧状态球依次显示在看、在想、在修、验证通过；下方时间轴显示这四步的推进。</desc>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',sans-serif}.mono,.mono text{font-family:ui-monospace,'SF Mono',Menlo,Consolas,'PingFang SC','Microsoft YaHei',monospace}.st{font-size:20px;font-weight:600;fill:#fef6f9}.p0,.p1,.p2{opacity:0}.p3{opacity:1}.ring{transform-origin:1010px 180px;animation:spin 6s linear infinite,work 16s linear infinite both}.bob{animation:bob 3.2s ease-in-out infinite}.eyes ellipse{transform-box:fill-box;transform-origin:center;animation:blink 4s ease-in-out infinite}.badge{transform-box:fill-box;transform-origin:center;animation:badge 16s ease-out infinite both}.cur{opacity:1;animation:caret 1.05s steps(2,end) infinite}.tl .fill{transform-box:fill-box;transform-origin:left center;animation:fill 16s linear infinite both}.tl .head{transform-box:fill-box;transform-origin:center;animation:head 16s linear infinite both}.tl .seg text{opacity:.75}@keyframes l0{0%{opacity:0}2.5%{opacity:0}4.4%{opacity:1}92.5%{opacity:1}94.4%{opacity:0}100%{opacity:0}}.l0{animation:l0 16s linear infinite both}@keyframes l1{0%{opacity:0}12.5%{opacity:0}14.4%{opacity:1}92.5%{opacity:1}94.4%{opacity:0}100%{opacity:0}}.l1{animation:l1 16s linear infinite both}@keyframes l2{0%{opacity:0}22.5%{opacity:0}24.4%{opacity:1}92.5%{opacity:1}94.4%{opacity:0}100%{opacity:0}}.l2{animation:l2 16s linear infinite both}@keyframes l3{0%{opacity:0}32.5%{opacity:0}34.4%{opacity:1}92.5%{opacity:1}94.4%{opacity:0}100%{opacity:0}}.l3{animation:l3 16s linear infinite both}@keyframes l4{0%{opacity:0}42.5%{opacity:0}44.4%{opacity:1}92.5%{opacity:1}94.4%{opacity:0}100%{opacity:0}}.l4{animation:l4 16s linear infinite both}@keyframes l5{0%{opacity:0}52.5%{opacity:0}54.4%{opacity:1}92.5%{opacity:1}94.4%{opacity:0}100%{opacity:0}}.l5{animation:l5 16s linear infinite both}@keyframes p0{0%{opacity:1}1.9%{opacity:1}22.5%{opacity:1}24.4%{opacity:0}100%{opacity:0}}.p0{animation:p0 16s linear infinite both}@keyframes p1{0%{opacity:0}22.5%{opacity:0}24.4%{opacity:1}32.5%{opacity:1}34.4%{opacity:0}100%{opacity:0}}.p1{animation:p1 16s linear infinite both}@keyframes p2{0%{opacity:0}32.5%{opacity:0}34.4%{opacity:1}52.5%{opacity:1}54.4%{opacity:0}100%{opacity:0}}.p2{animation:p2 16s linear infinite both}@keyframes p3{0%{opacity:0}52.5%{opacity:0}54.4%{opacity:1}92.5%{opacity:1}94.4%{opacity:0}100%{opacity:0}}.p3{animation:p3 16s linear infinite both}@keyframes spin{to{transform:rotate(360deg)}}@keyframes work{0%{opacity:0}22.5%{opacity:0}25%{opacity:1}52.5%{opacity:1}55%{opacity:0}100%{opacity:0}}@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes blink{0%,44%,52%,100%{transform:scaleY(1)}48%{transform:scaleY(.1)}}@keyframes caret{0%,49%{opacity:1}50%,100%{opacity:.15}}@keyframes fill{0%{transform:scaleX(0)}56.3%{transform:scaleX(1)}100%{transform:scaleX(1)}}@keyframes head{0%{transform:translateX(-724px);opacity:0}3%{opacity:1}56.3%{transform:translateX(0);opacity:1}57.5%{opacity:0}100%{transform:translateX(0);opacity:0}}@keyframes badge{0%{opacity:0;transform:scale(.4)}52.5%{opacity:0;transform:scale(.4)}54.7%{opacity:1;transform:scale(1.12)}56.3%{opacity:1;transform:none}92.5%{opacity:1;transform:none}94.4%{opacity:0;transform:none}100%{opacity:0}}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect width="1200" height="420" rx="24" fill="#31252a"/>
+<rect x=".5" y=".5" width="1199" height="419" rx="23.5" fill="none" stroke="#514349"/>
+
+<defs>
+  <filter id="tshadow" x="-6%" y="-10%" width="112%" height="126%">
+    <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="rgba(0,0,0,0.5)"/>
+  </filter>
+</defs>
+<rect x="40" y="40" width="780" height="340" rx="16" fill="#271b21" stroke="#514349" filter="url(#tshadow)"/>
+<circle cx="66" cy="64" r="5.5" fill="#ffaac8"/><circle cx="86" cy="64" r="5.5" fill="#b4a09b"/><circle cx="106" cy="64" r="5.5" fill="#8a9a5b"/>
+<text class="mono" x="430" y="69" text-anchor="middle" fill="#dcccd3" font-size="18">localhost:5173  vite + agent-eyes</text>
+<path d="M40 88h780" stroke="#514349"/>
+<g class="mono" font-size="18" fill="#fef6f9"><g class="ln l0"><rect class="cur" x="54" y="109" width="2.5" height="19" rx="1.2" fill="#ff78be"/><text x="68" y="124" fill="#dcccd3" font-weight="600">dev</text><text x="144" y="124" xml:space="preserve">GET /api/orders  <tspan fill="#e25654" font-weight="700">401</tspan></text></g><g class="ln l1"><rect class="cur" x="54" y="143" width="2.5" height="19" rx="1.2" fill="#ff78be"/><text x="68" y="158" fill="#ffaac8" font-weight="600">eyes</text><text x="144" y="158" xml:space="preserve">收到证据：请求、响应头、控制台、脱敏后的登录态</text></g><g class="ln l2"><rect class="cur" x="54" y="177" width="2.5" height="19" rx="1.2" fill="#ff78be"/><text x="68" y="192" fill="#5fa8b2" font-weight="600">agent</text><text x="144" y="192" xml:space="preserve">读证据定位：本地登录 cookie 过期，代码没问题</text></g><g class="ln l3"><rect class="cur" x="54" y="211" width="2.5" height="19" rx="1.2" fill="#ff78be"/><text x="68" y="226" fill="#ffaac8" font-weight="600">eyes</text><text x="144" y="226" xml:space="preserve">本地 cookie 自修复完成，代码一行没动</text></g><g class="ln l4"><rect class="cur" x="54" y="245" width="2.5" height="19" rx="1.2" fill="#ff78be"/><text x="68" y="260" fill="#dcccd3" font-weight="600">dev</text><text x="144" y="260" xml:space="preserve">GET /api/orders  <tspan fill="#8a9a5b" font-weight="700">200</tspan></text></g><g class="ln l5"><rect class="cur" x="54" y="279" width="2.5" height="19" rx="1.2" fill="#ff78be"/><text x="68" y="294" fill="#5fa8b2" font-weight="600">agent</text><text x="144" y="294" xml:space="preserve"><tspan fill="#8a9a5b" font-weight="700">✓</tspan> 用同一请求复验通过，全程没靠猜</text></g></g>
+
+<g class="tl">
+  <g class="seg"><rect x="71" y="348" width="175" height="4" rx="2" fill="rgba(220,204,211,0.22)"/><text x="158.5" y="368" text-anchor="middle" font-size="18" fill="#dcccd3">在看</text></g><g class="seg"><rect x="252" y="348" width="175" height="4" rx="2" fill="rgba(220,204,211,0.22)"/><text x="339.5" y="368" text-anchor="middle" font-size="18" fill="#dcccd3">在想</text></g><g class="seg"><rect x="433" y="348" width="175" height="4" rx="2" fill="rgba(220,204,211,0.22)"/><text x="520.5" y="368" text-anchor="middle" font-size="18" fill="#dcccd3">在修</text></g><g class="seg"><rect x="614" y="348" width="175" height="4" rx="2" fill="rgba(220,204,211,0.22)"/><text x="701.5" y="368" text-anchor="middle" font-size="18" fill="#dcccd3">验证通过</text></g>
+  <rect class="fill" x="68" y="348" width="724" height="4" rx="2" fill="#ff78be" opacity=".55"/>
+  <circle class="head" cx="792" cy="350" r="5" fill="#ff78be"/>
+</g>
+
+<defs>
+  <radialGradient id="g" cx="38%" cy="32%" r="75%">
+    <stop offset="0" stop-color="#ffecf1"/>
+    <stop offset=".55" stop-color="#ffaac8"/>
+    <stop offset="1" stop-color="#ffaac8"/>
+  </radialGradient>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="rgba(255,170,200,0.32)"/>
+    <stop offset=".6" stop-color="rgba(255,170,200,0.1)"/>
+    <stop offset="1" stop-color="rgba(255,170,200,0)"/>
+  </radialGradient>
+</defs>
+<circle cx="1010" cy="180" r="126" fill="url(#glow)"/>
+<circle class="ring" cx="1010" cy="180" r="82" fill="none" stroke="#ffaac8" stroke-width="2" stroke-dasharray="3 9"/>
+<g class="bob">
+  <circle cx="1010" cy="180" r="64" fill="url(#g)"/>
+  <g class="eyes" fill="#31252a"><ellipse cx="990" cy="176" rx="6.5" ry="10"/><ellipse cx="1030" cy="176" rx="6.5" ry="10"/></g>
+</g>
+<g class="badge"><circle cx="1060" cy="132" r="15" fill="#8a9a5b"/><path d="M1053 132l5 5 9-10" fill="none" stroke="#31252a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="st p0" x="1010" y="306" text-anchor="middle">在看</text><text class="st p1" x="1010" y="306" text-anchor="middle">在想</text><text class="st p2" x="1010" y="306" text-anchor="middle">在修</text><text class="st p3" x="1010" y="306" text-anchor="middle">验证通过</text>
+<text x="1010" y="350" text-anchor="middle" font-size="18" fill="#dcccd3">状态球来自 ai-orb</text>
+</svg>

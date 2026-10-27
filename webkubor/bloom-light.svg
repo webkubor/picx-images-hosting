@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+<title id="t">Bloom 色板：同一色相，只解亮度</title>
+<desc id="d">六个 Bloom 莫兰迪原色在浅色底上的对比度：Petal 2.3:1 解为 4.5:1，Sage 2.8:1 解为 4.5:1，Mist 2.3:1 解为 4.5:1，Spring 3.3:1 解为 4.5:1，Ripple 2.5:1 解为 4.5:1，Stone 2.3:1 解为 4.5:1。共 6 个需要调整亮度。</desc>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',sans-serif}.h1{font-size:38px;font-weight:600;fill:#2a1e22}.h1.b{fill:#d0268c}.chip{font-size:18px;fill:#5f5156}.sub{font-size:19px;fill:#5f5156}.nm{font-size:19px;font-weight:600;fill:#2a1e22}.lb{font-size:18px;fill:#5f5156}.rr{font-size:20px;font-weight:600}.rr.raw{font-weight:500}.sw{opacity:0}.g1{animation:drift 26s cubic-bezier(.45,.05,.55,.95) infinite}.g2{animation:drift2 32s cubic-bezier(.45,.05,.55,.95) infinite}@keyframes drift{0%,100%{transform:translate(0px,0px)}50%{transform:translate(30px,-16px)}}@keyframes drift2{0%,100%{transform:translate(0px,0px)}50%{transform:translate(-26px,12px)}}@keyframes sw{0%,11%{opacity:0;transform:translateX(0px)}13%{opacity:.5;transform:translateX(0px)}28%{opacity:.5;transform:translateX(300px)}31%,100%{opacity:0;transform:translateX(300px)}}@keyframes c0{0%,14%{fill:#e8859b}30%,88%{fill:#b2546b}100%{fill:#e8859b}}@keyframes k0{0%,14%{transform:translateX(0px)}30%{transform:translateX(4px)}38%{transform:translateX(-1px)}44%,88%{transform:translateX(0px)}100%{transform:translateX(0px)}}.c0{animation:c0 9s cubic-bezier(.2,.8,.2,1) infinite both}.k0{animation:k0 9s cubic-bezier(.2,.8,.2,1) infinite both}@keyframes c1{0%,14%{fill:#8a9a5b}30%,88%{fill:#6a783a}100%{fill:#8a9a5b}}@keyframes k1{0%,14%{transform:translateX(0px)}30%{transform:translateX(4px)}38%{transform:translateX(-1px)}44%,88%{transform:translateX(0px)}100%{transform:translateX(0px)}}.c1{animation:c1 9s cubic-bezier(.2,.8,.2,1) infinite both}.k1{animation:k1 9s cubic-bezier(.2,.8,.2,1) infinite both}@keyframes c2{0%,14%{fill:#92a8b3}30%,88%{fill:#617580}100%{fill:#92a8b3}}@keyframes k2{0%,14%{transform:translateX(0px)}30%{transform:translateX(4px)}38%{transform:translateX(-1px)}44%,88%{transform:translateX(0px)}100%{transform:translateX(0px)}}.c2{animation:c2 9s cubic-bezier(.2,.8,.2,1) infinite both}.k2{animation:k2 9s cubic-bezier(.2,.8,.2,1) infinite both}@keyframes c3{0%,14%{fill:#a073d7}30%,88%{fill:#8a5dbe}100%{fill:#a073d7}}@keyframes k3{0%,14%{transform:translateX(0px)}30%{transform:translateX(4px)}38%{transform:translateX(-1px)}44%,88%{transform:translateX(0px)}100%{transform:translateX(0px)}}.c3{animation:c3 9s cubic-bezier(.2,.8,.2,1) infinite both}.k3{animation:k3 9s cubic-bezier(.2,.8,.2,1) infinite both}@keyframes c4{0%,14%{fill:#5fa8b2}30%,88%{fill:#317c86}100%{fill:#5fa8b2}}@keyframes k4{0%,14%{transform:translateX(0px)}30%{transform:translateX(4px)}38%{transform:translateX(-1px)}44%,88%{transform:translateX(0px)}100%{transform:translateX(0px)}}.c4{animation:c4 9s cubic-bezier(.2,.8,.2,1) infinite both}.k4{animation:k4 9s cubic-bezier(.2,.8,.2,1) infinite both}@keyframes c5{0%,14%{fill:#b4a09b}30%,88%{fill:#816e6a}100%{fill:#b4a09b}}@keyframes k5{0%,14%{transform:translateX(0px)}30%{transform:translateX(4px)}38%{transform:translateX(-1px)}44%,88%{transform:translateX(0px)}100%{transform:translateX(0px)}}.c5{animation:c5 9s cubic-bezier(.2,.8,.2,1) infinite both}.k5{animation:k5 9s cubic-bezier(.2,.8,.2,1) infinite both}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect width="1200" height="420" rx="24" fill="#fef6f9"/>
+
+<defs>
+  <clipPath id="pc"><rect width="1200" height="420" rx="24"/></clipPath>
+  <clipPath id="cc0"><rect x="0" y="196" width="168" height="76" rx="14"/></clipPath><clipPath id="cc1"><rect x="0" y="196" width="168" height="76" rx="14"/></clipPath><clipPath id="cc2"><rect x="0" y="196" width="168" height="76" rx="14"/></clipPath><clipPath id="cc3"><rect x="0" y="196" width="168" height="76" rx="14"/></clipPath><clipPath id="cc4"><rect x="0" y="196" width="168" height="76" rx="14"/></clipPath><clipPath id="cc5"><rect x="0" y="196" width="168" height="76" rx="14"/></clipPath>
+  <linearGradient id="cg0" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#ffa8bb"/><stop offset="1" stop-color="#d57188"/></linearGradient><linearGradient id="cg1" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#a9b97e"/><stop offset="1" stop-color="#788847"/></linearGradient><linearGradient id="cg2" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#b3c7d2"/><stop offset="1" stop-color="#7f96a1"/></linearGradient><linearGradient id="cg3" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#be95f3"/><stop offset="1" stop-color="#8e60c5"/></linearGradient><linearGradient id="cg4" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#84c7d0"/><stop offset="1" stop-color="#4996a0"/></linearGradient><linearGradient id="cg5" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#d3c0bb"/><stop offset="1" stop-color="#a28e89"/></linearGradient>
+  <radialGradient id="hl" cx="24%" cy="14%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity="0.2"/><stop offset=".5" stop-color="#fff" stop-opacity="0.05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <linearGradient id="shi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.3"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="swg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".6" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <radialGradient id="gh0" cx="76%" cy="2%" r="60%"><stop offset="0" stop-color="rgba(232,133,155,0.2)"/><stop offset="1" stop-color="rgba(232,133,155,0)"/></radialGradient>
+  <radialGradient id="gh1" cx="12%" cy="100%" r="58%"><stop offset="0" stop-color="rgba(45,120,130,0.12)"/><stop offset="1" stop-color="rgba(45,120,130,0)"/></radialGradient>
+  <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(208,38,140,0.95)"/><stop offset="1" stop-color="rgba(208,38,140,0.15)"/></linearGradient>
+  <linearGradient id="rg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="rgba(208,38,140,0.6)"/><stop offset=".45" stop-color="#e9d9e0"/><stop offset="1" stop-color="rgba(233,217,224,0)"/></linearGradient>
+  <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.1" fill="rgba(95,81,86,0.17)"/></pattern>
+  <filter id="sd" x="-20%" y="-40%" width="140%" height="200%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.1"/></filter>
+</defs>
+
+<g clip-path="url(#pc)">
+  <g class="g1"><rect x="-160" y="-160" width="1520" height="740" fill="url(#gh0)"/></g>
+  <g class="g2"><rect x="-160" y="-160" width="1520" height="740" fill="url(#gh1)"/></g>
+  <rect width="1200" height="420" fill="url(#dots)"/>
+</g>
+<rect x=".5" y=".5" width="1199" height="419" rx="23.5" fill="none" stroke="#e9d9e0"/>
+
+<text class="h1" x="56" y="58">原色当字最低 2.3:1</text>
+<text class="h1 b" x="56" y="122">只解亮度 → 全部 ≥ 4.5:1</text>
+<text class="sub" x="56" y="164">莫兰迪原色直接当字最低只有 2.3:1；色相与彩度不动，只把亮度解到刚好达标</text>
+<g class="pill">
+  <rect x="844" y="32" width="300" height="36" rx="18" fill="#faeef3" stroke="#e9d9e0"/>
+  <text class="chip" x="862" y="56">WCAG 文字 4.5:1 · 6/6 需解亮度</text>
+</g>
+<path d="M56 196H1144" stroke="url(#rg)" stroke-width="1.5"/>
+
+<g transform="translate(56 0)">
+  <g filter="url(#sd)">
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#cg0)"/>
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#hl)"/>
+  </g>
+  <g clip-path="url(#cc0)"><g class="sw" style="animation-delay:0.0s"><rect x="-96" y="196" width="96" height="76" fill="url(#swg)"/></g></g>
+  <text class="rr raw" x="0" y="300" fill="#5f5156">当字 2.3:1</text>
+  <g class="kf k0 c0" fill="#b2546b" style="animation-delay:0.0s">
+    <rect x="0" y="316" width="40" height="18" rx="9"/>
+    <rect x="0" y="316" width="40" height="18" rx="9" fill="url(#shi)"/>
+    <text class="lb" x="50" y="332" fill="#5f5156">解出</text>
+    <text class="rr" x="168" y="332" text-anchor="end" fill="#2a1e22">4.5:1<tspan fill="#667436"> ✓</tspan></text>
+  </g>
+  <text class="nm" x="0" y="372">Petal <tspan fill="#5f5156">花瓣</tspan></text>
+</g>
+<g transform="translate(240 0)">
+  <g filter="url(#sd)">
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#cg1)"/>
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#hl)"/>
+  </g>
+  <g clip-path="url(#cc1)"><g class="sw" style="animation-delay:0.3s"><rect x="-96" y="196" width="96" height="76" fill="url(#swg)"/></g></g>
+  <text class="rr raw" x="0" y="300" fill="#5f5156">当字 2.8:1</text>
+  <g class="kf k1 c1" fill="#6a783a" style="animation-delay:0.3s">
+    <rect x="0" y="316" width="40" height="18" rx="9"/>
+    <rect x="0" y="316" width="40" height="18" rx="9" fill="url(#shi)"/>
+    <text class="lb" x="50" y="332" fill="#5f5156">解出</text>
+    <text class="rr" x="168" y="332" text-anchor="end" fill="#2a1e22">4.5:1<tspan fill="#667436"> ✓</tspan></text>
+  </g>
+  <text class="nm" x="0" y="372">Sage <tspan fill="#5f5156">橄榄</tspan></text>
+</g>
+<g transform="translate(424 0)">
+  <g filter="url(#sd)">
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#cg2)"/>
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#hl)"/>
+  </g>
+  <g clip-path="url(#cc2)"><g class="sw" style="animation-delay:0.6s"><rect x="-96" y="196" width="96" height="76" fill="url(#swg)"/></g></g>
+  <text class="rr raw" x="0" y="300" fill="#5f5156">当字 2.3:1</text>
+  <g class="kf k2 c2" fill="#617580" style="animation-delay:0.6s">
+    <rect x="0" y="316" width="40" height="18" rx="9"/>
+    <rect x="0" y="316" width="40" height="18" rx="9" fill="url(#shi)"/>
+    <text class="lb" x="50" y="332" fill="#5f5156">解出</text>
+    <text class="rr" x="168" y="332" text-anchor="end" fill="#2a1e22">4.5:1<tspan fill="#667436"> ✓</tspan></text>
+  </g>
+  <text class="nm" x="0" y="372">Mist <tspan fill="#5f5156">雾蓝</tspan></text>
+</g>
+<g transform="translate(608 0)">
+  <g filter="url(#sd)">
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#cg3)"/>
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#hl)"/>
+  </g>
+  <g clip-path="url(#cc3)"><g class="sw" style="animation-delay:0.9s"><rect x="-96" y="196" width="96" height="76" fill="url(#swg)"/></g></g>
+  <text class="rr raw" x="0" y="300" fill="#5f5156">当字 3.3:1</text>
+  <g class="kf k3 c3" fill="#8a5dbe" style="animation-delay:0.9s">
+    <rect x="0" y="316" width="40" height="18" rx="9"/>
+    <rect x="0" y="316" width="40" height="18" rx="9" fill="url(#shi)"/>
+    <text class="lb" x="50" y="332" fill="#5f5156">解出</text>
+    <text class="rr" x="168" y="332" text-anchor="end" fill="#2a1e22">4.5:1<tspan fill="#667436"> ✓</tspan></text>
+  </g>
+  <text class="nm" x="0" y="372">Spring <tspan fill="#5f5156">薰衣草</tspan></text>
+</g>
+<g transform="translate(792 0)">
+  <g filter="url(#sd)">
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#cg4)"/>
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#hl)"/>
+  </g>
+  <g clip-path="url(#cc4)"><g class="sw" style="animation-delay:1.2s"><rect x="-96" y="196" width="96" height="76" fill="url(#swg)"/></g></g>
+  <text class="rr raw" x="0" y="300" fill="#5f5156">当字 2.5:1</text>
+  <g class="kf k4 c4" fill="#317c86" style="animation-delay:1.2s">
+    <rect x="0" y="316" width="40" height="18" rx="9"/>
+    <rect x="0" y="316" width="40" height="18" rx="9" fill="url(#shi)"/>
+    <text class="lb" x="50" y="332" fill="#5f5156">解出</text>
+    <text class="rr" x="168" y="332" text-anchor="end" fill="#2a1e22">4.5:1<tspan fill="#667436"> ✓</tspan></text>
+  </g>
+  <text class="nm" x="0" y="372">Ripple <tspan fill="#5f5156">湖青</tspan></text>
+</g>
+<g transform="translate(976 0)">
+  <g filter="url(#sd)">
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#cg5)"/>
+    <rect x="0" y="196" width="168" height="76" rx="14" fill="url(#hl)"/>
+  </g>
+  <g clip-path="url(#cc5)"><g class="sw" style="animation-delay:1.5s"><rect x="-96" y="196" width="96" height="76" fill="url(#swg)"/></g></g>
+  <text class="rr raw" x="0" y="300" fill="#5f5156">当字 2.3:1</text>
+  <g class="kf k5 c5" fill="#816e6a" style="animation-delay:1.5s">
+    <rect x="0" y="316" width="40" height="18" rx="9"/>
+    <rect x="0" y="316" width="40" height="18" rx="9" fill="url(#shi)"/>
+    <text class="lb" x="50" y="332" fill="#5f5156">解出</text>
+    <text class="rr" x="168" y="332" text-anchor="end" fill="#2a1e22">4.5:1<tspan fill="#667436"> ✓</tspan></text>
+  </g>
+  <text class="nm" x="0" y="372">Stone <tspan fill="#5f5156">岩灰</tspan></text>
+</g>
+</svg>

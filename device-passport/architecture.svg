@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="100%" height="100%">
+  <defs>
+    <!-- Dark Cyber Obsidian Gradients -->
+    <linearGradient id="canvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <linearGradient id="seedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+
+    <linearGradient id="cyanBlueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.7)"/>
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.9)"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <pattern id="matrixGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="rgba(255, 255, 255, 0.025)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="520" rx="16" fill="url(#canvasBg)"/>
+  <rect width="1000" height="520" rx="16" fill="url(#matrixGrid)"/>
+  <rect width="998" height="518" x="1" y="1" rx="15" fill="none" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.5"/>
+
+  <!-- Section 1: Header / Epistemological Axiom -->
+  <g transform="translate(40, 35)">
+    <text x="0" y="0" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="2">FIRST PRINCIPLES · THE AXIOM OF TEMPORAL COHERENCE</text>
+    <text x="0" y="24" fill="#f8fafc" font-family="-apple-system, system-ui, sans-serif" font-size="20" font-weight="700" letter-spacing="-0.5">
+      The 4-Tuple Identity State-Space Manifold: P = ⟨H, S, G, C⟩
+    </text>
+    <text x="0" y="44" fill="#94a3b8" font-family="-apple-system, system-ui, sans-serif" font-size="12">
+      "An observer in spacetime cannot simultaneously possess contradictory physical attributes across observation frames."
+    </text>
+  </g>
+
+  <!-- Flow Arrow: Seed Injection -->
+  <g transform="translate(60, 130)">
+    <!-- Seed Token Input Box -->
+    <rect width="180" height="90" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="16" y="28" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="10" font-weight="700">INPUT INVARIANT</text>
+    <text x="16" y="52" fill="#f8fafc" font-family="-apple-system, system-ui, sans-serif" font-size="14" font-weight="700">Account Seed (s)</text>
+    <text x="16" y="70" fill="#64748b" font-family="ui-monospace, monospace" font-size="11">s ∈ Σ*, e.g. "user_42"</text>
+  </g>
+
+  <!-- Connector Line 1 -->
+  <path d="M 240 175 L 300 175" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,4"/>
+  <circle cx="300" cy="175" r="4" fill="#f59e0b"/>
+
+  <!-- PRNG Engine -->
+  <g transform="translate(310, 125)">
+    <rect width="170" height="100" rx="10" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="14" y="26" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="10" font-weight="700">DETERMINISTIC COLLAPSE</text>
+    <text x="14" y="48" fill="#f8fafc" font-family="-apple-system, system-ui, sans-serif" font-size="13" font-weight="700">Murmur3 + Mulberry</text>
+    <text x="14" y="68" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10">H(P_s) ≡ 0 (Zero Drift)</text>
+    <text x="14" y="86" fill="#10b981" font-family="ui-monospace, monospace" font-size="10">Entropy Stability: 100%</text>
+  </g>
+
+  <!-- Connector Lines to 4 Sub-spaces -->
+  <path d="M 480 175 C 510 175, 520 120, 550 120" stroke="url(#cyanBlueGrad)" stroke-width="2"/>
+  <path d="M 480 175 C 510 175, 520 200, 550 200" stroke="url(#cyanBlueGrad)" stroke-width="2"/>
+  <path d="M 480 175 C 510 175, 520 280, 550 280" stroke="url(#cyanBlueGrad)" stroke-width="2"/>
+  <path d="M 480 175 C 510 175, 520 360, 550 360" stroke="url(#cyanBlueGrad)" stroke-width="2"/>
+
+  <!-- 4 Sub-spaces Boxes -->
+  <!-- Space 1: Hardware -->
+  <g transform="translate(550, 95)">
+    <rect width="210" height="60" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.2"/>
+    <text x="12" y="20" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9" font-weight="700">1. HARDWARE SPACE (H)</text>
+    <text x="12" y="38" fill="#e2e8f0" font-family="-apple-system, system-ui, sans-serif" font-size="11" font-weight="600">Screen DPR ⊗ GPU ⊗ RAM</text>
+    <text x="12" y="52" fill="#64748b" font-family="ui-monospace, monospace" font-size="9">Retina ↔ Apple M / Win ↔ RTX</text>
+  </g>
+
+  <!-- Space 2: Software & OS -->
+  <g transform="translate(550, 175)">
+    <rect width="210" height="60" rx="8" fill="url(#cardGrad)" stroke="#818cf8" stroke-width="1.2"/>
+    <text x="12" y="20" fill="#818cf8" font-family="ui-monospace, monospace" font-size="9" font-weight="700">2. SYSTEM STACK SPACE (S)</text>
+    <text x="12" y="38" fill="#e2e8f0" font-family="-apple-system, system-ui, sans-serif" font-size="11" font-weight="600">OS Kernel ⊗ Browser Engine</text>
+    <text x="12" y="52" fill="#64748b" font-family="ui-monospace, monospace" font-size="9">Win11 (15.0) / macOS (14.6)</text>
+  </g>
+
+  <!-- Space 3: Geo-Chrono -->
+  <g transform="translate(550, 255)">
+    <rect width="210" height="60" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.2"/>
+    <text x="12" y="20" fill="#10b981" font-family="ui-monospace, monospace" font-size="9" font-weight="700">3. GEO-CHRONO SPACE (G)</text>
+    <text x="12" y="38" fill="#e2e8f0" font-family="-apple-system, system-ui, sans-serif" font-size="11" font-weight="600">IP ⊗ Timezone ⊗ Accept-Lang</text>
+    <text x="12" y="52" fill="#64748b" font-family="ui-monospace, monospace" font-size="9">Tokyo IP ↔ ja-JP, JST (+540)</text>
+  </g>
+
+  <!-- Space 4: Client Hints -->
+  <g transform="translate(550, 335)">
+    <rect width="210" height="60" rx="8" fill="url(#cardGrad)" stroke="#c084fc" stroke-width="1.2"/>
+    <text x="12" y="20" fill="#c084fc" font-family="ui-monospace, monospace" font-size="9" font-weight="700">4. CLIENT-HINTS TENSOR (C)</text>
+    <text x="12" y="38" fill="#e2e8f0" font-family="-apple-system, system-ui, sans-serif" font-size="11" font-weight="600">RFC 8942 High-Entropy Vector</text>
+    <text x="12" y="52" fill="#64748b" font-family="ui-monospace, monospace" font-size="9">sec-ch-ua-arch, bitness, model</text>
+  </g>
+
+  <!-- Merging into Coherence Gate -->
+  <path d="M 760 125 C 785 125, 790 235, 810 235" stroke="#38bdf8" stroke-width="1.5"/>
+  <path d="M 760 205 C 785 205, 790 235, 810 235" stroke="#818cf8" stroke-width="1.5"/>
+  <path d="M 760 285 C 785 285, 790 235, 810 235" stroke="#10b981" stroke-width="1.5"/>
+  <path d="M 760 365 C 785 365, 790 235, 810 235" stroke="#c084fc" stroke-width="1.5"/>
+
+  <!-- Output Shield Gate -->
+  <g transform="translate(810, 160)">
+    <rect width="150" height="150" rx="14" fill="url(#cardGrad)" stroke="#10b981" stroke-width="2" filter="url(#neonGlow)"/>
+    <circle cx="75" cy="45" r="22" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1.5"/>
+    <text x="75" y="50" text-anchor="middle" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="800">100%</text>
+    <text x="75" y="85" text-anchor="middle" fill="#f8fafc" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="700">COHERENCE</text>
+    <text x="75" y="102" text-anchor="middle" fill="#34d399" font-family="ui-monospace, monospace" font-size="10">Grade A+ Certified</text>
+    <rect x="20" y="115" width="110" height="20" rx="4" fill="rgba(16, 185, 129, 0.2)"/>
+    <text x="75" y="129" text-anchor="middle" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="9" font-weight="700">0 CONTRADICTIONS</text>
+  </g>
+
+  <!-- Bottom Evaluation Metric Bar -->
+  <g transform="translate(40, 440)">
+    <rect width="920" height="55" rx="10" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    
+    <!-- Metric 1 -->
+    <text x="24" y="24" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10">SHANNON ENTROPY H(X)</text>
+    <text x="24" y="44" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="14" font-weight="700">5.24 bits/char <tspan fill="#64748b" font-size="10">(Optimal Natural Band: 4.6–5.6)</tspan></text>
+
+    <!-- Metric 2 -->
+    <text x="350" y="24" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10">CONTRADICTION ELIMINATION</text>
+    <text x="350" y="44" fill="#10b981" font-family="ui-monospace, monospace" font-size="14" font-weight="700">0.00% <tspan fill="#64748b" font-size="10">(vs legacy fake-useragent 58.2%)</tspan></text>
+
+    <!-- Metric 3 -->
+    <text x="680" y="24" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10">BYPASS RATE RATIO</text>
+    <text x="680" y="44" fill="#c084fc" font-family="ui-monospace, monospace" font-size="14" font-weight="700">5.3x Higher <tspan fill="#64748b" font-size="10">(Cloudflare &amp; DataDome bypass)</tspan></text>
+  </g>
+</svg>

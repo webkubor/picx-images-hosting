@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="230" viewBox="0 0 640 230" font-family="-apple-system, 'SF Pro Text', 'PingFang SC', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f1d2b"/>
+      <stop offset="100%" stop-color="#16151f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2738"/>
+      <stop offset="100%" stop-color="#221f2c"/>
+    </linearGradient>
+    <radialGradient id="dot" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="640" height="230" fill="url(#bg)"/>
+  <rect x="0" y="0" width="640" height="230" fill="#000" opacity="0.0"/>
+  <circle cx="80" cy="60" r="120" fill="#7c3aed" opacity="0.10" filter="url(#blur)"/>
+  <circle cx="560" cy="180" r="140" fill="#3b82f6" opacity="0.10" filter="url(#blur)"/>
+
+  <!-- panel container -->
+  <rect x="32" y="22" width="576" height="176" rx="12" fill="#1a1825" stroke="#2d2b3a" stroke-width="1"/>
+
+  <!-- head -->
+  <g transform="translate(48,46)">
+    <text x="0" y="14" font-size="14" font-weight="650" fill="#e5e7eb">🌟 Webkubor DSH 扩展家族</text>
+    <text x="544" y="14" font-size="10" fill="#9ca3af" text-anchor="end">一键构建完整智能体开发环境</text>
+  </g>
+
+  <!-- 2 cards in 1 row, each 266x100 -->
+  <!-- card 1: Bloom Theme -->
+  <g transform="translate(48,80)">
+    <rect width="266" height="100" rx="8" fill="url(#card)" stroke="#2d2b3a"/>
+    <text x="14" y="24" font-size="14">🌸</text>
+    <text x="34" y="26" font-size="12" font-weight="600" fill="#e5e7eb">Bloom Theme</text>
+    <text x="14" y="50" font-size="10.5" fill="#9ca3af">落霞 Bloom 极客质感毛玻璃主题与代码高亮</text>
+    <circle cx="14" cy="76" r="3.5" fill="url(#dot)"/>
+    <text x="24" y="80" font-size="10.5" font-weight="600" fill="#10b981">已激活</text>
+    <text x="252" y="80" font-size="10" fill="#6b7280" text-anchor="end">GitHub ↗</text>
+  </g>
+
+  <!-- card 2: LLM Hub -->
+  <g transform="translate(326,80)">
+    <rect width="266" height="100" rx="8" fill="url(#card)" stroke="#2d2b3a"/>
+    <text x="14" y="24" font-size="14">🎛️</text>
+    <text x="34" y="26" font-size="12" font-weight="600" fill="#e5e7eb">LLM Hub</text>
+    <text x="14" y="50" font-size="10.5" fill="#9ca3af">多模型网关、余额配额、多 Key 轮换与极客大屏</text>
+    <circle cx="14" cy="76" r="3.5" fill="url(#dot)"/>
+    <text x="24" y="80" font-size="10.5" font-weight="600" fill="#10b981">已激活</text>
+    <text x="252" y="80" font-size="10" fill="#6b7280" text-anchor="end">GitHub ↗</text>
+  </g>
+
+  <!-- caption hint -->
+  <text x="320" y="218" font-size="9" fill="#6b7280" text-anchor="middle">设置 → 模型 → 底部「Webkubor DSH 扩展家族」</text>
+</svg>

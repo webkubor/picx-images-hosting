@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="t d">
+<title id="t">webkubor：把审美做成可验证的工程</title>
+<desc id="d">六片 Bloom 莫兰迪花瓣在量环中展开；字标先以原色写出（对比度 2.3:1），再沉为墨色（15.1:1），标尺标出 WCAG AA 与 AAA 门槛。</desc>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',sans-serif}.small{font-size:18px;fill:#5f5156}.word{font-size:88px;font-weight:600;letter-spacing:-2px;fill:#2a1e22}.ink{animation:ink 1.4s ease-out both}.pt{opacity:.8;mix-blend-mode:multiply;transform-box:fill-box;transform-origin:50% 100%;animation:unfurl 1.3s cubic-bezier(.2,.8,.2,1) both}.bloom{transform-origin:212px 170px;animation:spin 140s linear 1.6s infinite}.ring{transform-origin:212px 170px;animation:spin 90s linear infinite reverse}.arcs{transform-origin:212px 170px;animation:spin 220s linear infinite}.halo{transform-box:fill-box;transform-origin:center;animation:breathe 4.8s ease-in-out 1.6s infinite}.rule{stroke-dasharray:1;animation:draw 1.1s cubic-bezier(.2,.8,.2,1) 1.1s both}.ticks{animation:fade .6s ease-out 1.8s both}.mark{animation:slide 1.5s cubic-bezier(.2,.8,.2,1) 2.1s both}.scan{animation:scan 9s cubic-bezier(.2,.8,.2,1) 3.6s infinite}.lb-raw{opacity:1;animation:rawFinal 2.4s cubic-bezier(.2,.8,.2,1) 1.5s both}.lb-ink{opacity:1;animation:fade .5s ease-out 3.5s both}.tag{animation:fade .9s ease-out 2.6s both}.tag2{animation:fade .9s ease-out 3s both}.sig{animation:fade .9s ease-out 3.4s both}@keyframes unfurl{from{opacity:0;transform:scale(.12) rotate(-28deg)}to{opacity:.8;transform:none}}@keyframes ink{0%{fill:#e8859b;opacity:0}15%{fill:#e8859b;opacity:1}55%{fill:#e8859b}100%{fill:#2a1e22}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.6);opacity:.25}}@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}@keyframes fade{from{opacity:0}}@keyframes slide{from{transform:translateX(-445.4px);opacity:0}12%{transform:translateX(-445.4px);opacity:1}to{transform:none}}@keyframes scan{0%{transform:translateX(0);opacity:0}8%{opacity:.9}92%{opacity:.9}100%{transform:translateX(700px);opacity:0}}@keyframes raw{0%,25%{opacity:0}35%,70%{opacity:1}85%,100%{opacity:0}}@keyframes rawFinal{0%,25%{opacity:0}35%,100%{opacity:1}}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect width="1200" height="340" rx="24" fill="#fef6f9"/>
+
+<defs>
+  <radialGradient id="hg" cx="16%" cy="32%" r="72%">
+    <stop offset="0" stop-color="rgba(232,133,155,0.18)"/>
+    <stop offset=".5" stop-color="rgba(232,133,155,0.05)"/>
+    <stop offset="1" stop-color="rgba(232,133,155,0)"/>
+  </radialGradient>
+</defs>
+<rect width="1200" height="340" fill="url(#hg)"/>
+<g class="arcs"><circle cx="212" cy="170" r="172" fill="none" stroke="rgba(95,81,86,0.16)" stroke-width="1" stroke-dasharray="3 9"/><circle cx="212" cy="170" r="196" fill="none" stroke="rgba(95,81,86,0.11)" stroke-width="1" stroke-dasharray="8 16"/></g>
+<rect x=".5" y=".5" width="1199" height="339" rx="23.5" fill="none" stroke="#e9d9e0"/>
+
+<defs><linearGradient id="pg0" x1="0" y1="1" x2="0" y2="0">
+  <stop offset="0" stop-color="#eb94a7"/>
+  <stop offset="1" stop-color="#f2b8c5"/>
+</linearGradient>
+<linearGradient id="pg1" x1="0" y1="1" x2="0" y2="0">
+  <stop offset="0" stop-color="#98a66f"/>
+  <stop offset="1" stop-color="#bbc4a0"/>
+</linearGradient>
+<linearGradient id="pg2" x1="0" y1="1" x2="0" y2="0">
+  <stop offset="0" stop-color="#9fb2bc"/>
+  <stop offset="1" stop-color="#c0cdd3"/>
+</linearGradient>
+<linearGradient id="pg3" x1="0" y1="1" x2="0" y2="0">
+  <stop offset="0" stop-color="#ab84dc"/>
+  <stop offset="1" stop-color="#c8aee8"/>
+</linearGradient>
+<linearGradient id="pg4" x1="0" y1="1" x2="0" y2="0">
+  <stop offset="0" stop-color="#72b2bb"/>
+  <stop offset="1" stop-color="#a2cdd2"/>
+</linearGradient>
+<linearGradient id="pg5" x1="0" y1="1" x2="0" y2="0">
+  <stop offset="0" stop-color="#bdaba7"/>
+  <stop offset="1" stop-color="#d4c8c5"/>
+</linearGradient></defs>
+<g class="ring" fill="none" stroke="rgba(95,81,86,0.45)">
+  <circle cx="212" cy="170" r="132" stroke-dasharray="1 7"/>
+  <circle cx="212" cy="170" r="146" stroke-opacity=".5"/>
+</g>
+<g stroke="rgba(95,81,86,0.6)" stroke-width="1.5"><line transform="translate(212 170) rotate(0)" x1="0" y1="-150" x2="0" y2="-140"/><line transform="translate(212 170) rotate(90)" x1="0" y1="-150" x2="0" y2="-140"/><line transform="translate(212 170) rotate(180)" x1="0" y1="-150" x2="0" y2="-140"/><line transform="translate(212 170) rotate(270)" x1="0" y1="-150" x2="0" y2="-140"/></g>
+<g class="bloom"><g transform="translate(212 170) rotate(0)"><path class="pt" style="animation-delay:0.00s" d="M0 -26C-33-48-40-78 0-102C40-78 33-48 0-26Z" fill="url(#pg0)"/></g><g transform="translate(212 170) rotate(60)"><path class="pt" style="animation-delay:0.10s" d="M0 -26C-33-48-40-78 0-102C40-78 33-48 0-26Z" fill="url(#pg1)"/></g><g transform="translate(212 170) rotate(120)"><path class="pt" style="animation-delay:0.20s" d="M0 -26C-33-48-40-78 0-102C40-78 33-48 0-26Z" fill="url(#pg2)"/></g><g transform="translate(212 170) rotate(180)"><path class="pt" style="animation-delay:0.30s" d="M0 -26C-33-48-40-78 0-102C40-78 33-48 0-26Z" fill="url(#pg3)"/></g><g transform="translate(212 170) rotate(240)"><path class="pt" style="animation-delay:0.40s" d="M0 -26C-33-48-40-78 0-102C40-78 33-48 0-26Z" fill="url(#pg4)"/></g><g transform="translate(212 170) rotate(300)"><path class="pt" style="animation-delay:0.50s" d="M0 -26C-33-48-40-78 0-102C40-78 33-48 0-26Z" fill="url(#pg5)"/></g></g>
+<circle class="halo" cx="212" cy="170" r="15" fill="none" stroke="#d0268c" stroke-width="1.5"/>
+<circle cx="212" cy="170" r="5" fill="#d0268c"/>
+<text class="word" x="416" y="150"><tspan class="ink" style="animation-delay:0.50s">w</tspan><tspan class="ink" style="animation-delay:0.58s">e</tspan><tspan class="ink" style="animation-delay:0.66s">b</tspan><tspan class="ink" style="animation-delay:0.74s">k</tspan><tspan class="ink" style="animation-delay:0.82s">u</tspan><tspan class="ink" style="animation-delay:0.90s">b</tspan><tspan class="ink" style="animation-delay:0.98s">o</tspan><tspan class="ink" style="animation-delay:1.06s">r</tspan></text>
+
+<path class="rule" d="M420 198h700" stroke="#5f5156" stroke-width="1.5" pathLength="1"/>
+<path class="ticks" d="M420 198v8M455 198v4M490 198v4M525 198v4M560 198v4M595 198v8M630 198v4M665 198v4M700 198v4M735 198v4M770 198v8M805 198v4M840 198v4M875 198v4M910 198v4M945 198v8M980 198v4M1015 198v4M1050 198v4M1085 198v4M1120 198v8" stroke="#5f5156"/>
+<g class="ticks small"><text x="420" y="224" text-anchor="middle">1</text><text x="542.5" y="224" text-anchor="middle">4.5 AA</text><text x="630" y="224" text-anchor="middle">7 AAA</text><text x="1120" y="224" text-anchor="middle">21</text></g>
+<g class="scan"><path d="M420 164v46" stroke="#d0268c" stroke-width="1.5" opacity="0"/></g>
+<g transform="translate(914.2 198)"><g class="mark">
+  <path d="M-6-14h12l-6 9z" fill="#d0268c"/>
+  <text class="small lb-raw" y="-48" text-anchor="middle">原色当字 2.3:1</text>
+  <text class="small lb-ink" y="-22" text-anchor="middle">落墨 15.1:1</text></g></g>
+<text class="tag" x="420" y="270" font-size="26" font-weight="500" fill="#2a1e22">把审美做成可验证的工程</text>
+<text class="tag2" x="420" y="304" font-size="18" fill="#5f5156">Taste, made testable.</text>
+<text class="sig" x="1120" y="304" font-size="18" fill="#5f5156" text-anchor="end">webkubor.online</text>
+</svg>

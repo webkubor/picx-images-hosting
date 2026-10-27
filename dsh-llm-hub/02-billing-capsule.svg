@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280" font-family="-apple-system, 'SF Pro Text', 'PingFang SC', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f1d2b"/>
+      <stop offset="100%" stop-color="#16151f"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2738"/>
+      <stop offset="100%" stop-color="#221f2c"/>
+    </linearGradient>
+    <linearGradient id="success" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="muted" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3a3748"/>
+      <stop offset="100%" stop-color="#2d2b3a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="280" fill="url(#bg2)"/>
+
+  <!-- title bar -->
+  <text x="36" y="38" font-size="14" font-weight="650" fill="#e5e7eb">📦 模型卡片 · 套餐智能识别</text>
+  <text x="684" y="38" font-size="10.5" fill="#9ca3af" text-anchor="end">ModelGo 中转 · 11 个模型 · key 已配置</text>
+
+  <!-- one provider card expanded -->
+  <rect x="36" y="58" width="648" height="178" rx="10" fill="url(#card2)" stroke="#2d2b3a"/>
+
+  <!-- left: provider meta -->
+  <g transform="translate(56,82)">
+    <text x="0" y="0" font-size="12" font-weight="650" fill="#e5e7eb">ModelGo 中转</text>
+    <text x="0" y="18" font-size="10.5" fill="#9ca3af">https://api.modelgo.com · anthropic-messages</text>
+    <text x="0" y="36" font-size="10" fill="#6b7280">key ✓ · gpt-6-astra · claude-sonnet-4.5 · …</text>
+
+    <!-- billing capsule -->
+    <g transform="translate(0,58)">
+      <rect width="148" height="22" rx="11" fill="#1a1825" stroke="#2d2b3a"/>
+      <!-- left pill: pay-as-you-go active -->
+      <rect x="2" y="2" width="72" height="18" rx="9" fill="url(#success)"/>
+      <text x="38" y="15" font-size="10.5" font-weight="600" fill="#fff" text-anchor="middle">按量付费</text>
+      <!-- right pill: subscription -->
+      <rect x="76" y="2" width="68" height="18" rx="9" fill="url(#muted)"/>
+      <text x="110" y="15" font-size="10.5" fill="#d1d5db" text-anchor="middle">套餐</text>
+    </g>
+
+    <!-- caption -->
+    <text x="0" y="98" font-size="9.5" fill="#9ca3af">已按 /usage + /token_plan/remains 自动识别，</text>
+    <text x="0" y="112" font-size="9.5" fill="#9ca3af">可用时默认切到「套餐」分组。</text>
+  </g>
+
+  <!-- right: visual proof of toggle -->
+  <g transform="translate(420,82)">
+    <!-- before: scatter -->
+    <text x="0" y="0" font-size="10.5" fill="#9ca3af">切换前</text>
+    <rect x="0" y="10" width="240" height="60" rx="6" fill="#1a1825" stroke="#2d2b3a"/>
+    <text x="10" y="28" font-size="10" fill="#9ca3af">gpt-6-astra</text>
+    <text x="10" y="42" font-size="10" fill="#9ca3af">claude-sonnet-4.5</text>
+    <text x="10" y="56" font-size="10" fill="#9ca3af">deepseek-r1</text>
+
+    <!-- after: split -->
+    <text x="0" y="84" font-size="10.5" fill="#9ca3af">切换后</text>
+    <rect x="0" y="94" width="240" height="74" rx="6" fill="#1a1825" stroke="#2d2b3a"/>
+    <text x="10" y="112" font-size="10" font-weight="600" fill="#10b981">套餐</text>
+    <text x="50" y="112" font-size="10" fill="#d1d5db">claude-sonnet-4.5 · gpt-6-astra</text>
+    <text x="10" y="134" font-size="10" fill="#9ca3af">按量 · deepseek-r1 · qwen-2.5</text>
+    <text x="10" y="150" font-size="10" fill="#9ca3af">按量 · gemini-2.5-pro · …</text>
+  </g>
+
+  <!-- caption -->
+  <text x="360" y="266" font-size="9" fill="#6b7280" text-anchor="middle">设置 → 模型 → 单个 provider 卡 · 账单胶囊</text>
+</svg>

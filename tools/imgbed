@@ -93,6 +93,6 @@ case "$cmd" in
     fi
     ;;
   *)
-    die "未知子命令: $cmd（init / push / link / install）"
+    die "未知子命令: ${cmd}（init / push / link / install）"
     ;;
 esac

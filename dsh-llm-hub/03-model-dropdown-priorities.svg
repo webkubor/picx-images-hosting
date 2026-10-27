@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" font-family="-apple-system, 'SF Pro Text', 'PingFang SC', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f1d2b"/>
+      <stop offset="100%" stop-color="#16151f"/>
+    </linearGradient>
+    <linearGradient id="card3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2738"/>
+      <stop offset="100%" stop-color="#221f2c"/>
+    </linearGradient>
+    <linearGradient id="pillSub" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="pillUsage" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="360" fill="url(#bg3)"/>
+
+  <!-- composer surface (faded) -->
+  <rect x="0" y="0" width="720" height="360" fill="#0d0c12" opacity="0.5"/>
+  <text x="36" y="46" font-size="14" font-weight="650" fill="#e5e7eb">🎯 模型下拉 · 套餐优先</text>
+  <text x="684" y="46" font-size="10.5" fill="#9ca3af" text-anchor="end">composer 模型选择器</text>
+
+  <!-- mock composer input -->
+  <rect x="36" y="68" width="648" height="48" rx="8" fill="url(#card3)" stroke="#2d2b3a"/>
+  <text x="56" y="98" font-size="12" fill="#9ca3af">描述你想要构建的内容，/ 调用指令，@ 文件或对话</text>
+
+  <!-- dropdown panel -->
+  <g transform="translate(36,134)">
+    <rect width="648" height="206" rx="10" fill="url(#card3)" stroke="#2d2b3a"/>
+
+    <!-- section header: 套餐 -->
+    <g transform="translate(20,18)">
+      <rect width="40" height="14" rx="7" fill="url(#pillSub)"/>
+      <text x="20" y="11" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">套餐</text>
+      <text x="48" y="11" font-size="10" fill="#10b981" font-weight="600">优先</text>
+    </g>
+
+    <!-- sub items -->
+    <g transform="translate(20,40)">
+      <rect width="608" height="26" rx="4" fill="#1f1d2b"/>
+      <text x="14" y="17" font-size="11" fill="#e5e7eb">claude-sonnet-4.5</text>
+      <text x="180" y="17" font-size="9" fill="#10b981">套餐 · 剩 42h / week</text>
+    </g>
+    <g transform="translate(20,70)">
+      <rect width="608" height="26" rx="4" fill="#1f1d2b"/>
+      <text x="14" y="17" font-size="11" fill="#e5e7eb">gpt-6-astra</text>
+      <text x="180" y="17" font-size="9" fill="#10b981">套餐 · 套餐余额 92%</text>
+    </g>
+
+    <!-- divider -->
+    <line x1="20" y1="106" x2="628" y2="106" stroke="#2d2b3a" stroke-dasharray="2 2"/>
+
+    <!-- section header: 按量 -->
+    <g transform="translate(20,114)">
+      <rect width="48" height="14" rx="7" fill="url(#pillUsage)"/>
+      <text x="24" y="11" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">按量</text>
+    </g>
+
+    <g transform="translate(20,136)">
+      <rect width="608" height="26" rx="4" fill="#1f1d2b"/>
+      <text x="14" y="17" font-size="11" fill="#e5e7eb">deepseek-r1</text>
+      <text x="180" y="17" font-size="9" fill="#9ca3af">按量 · $3.40 / 1M</text>
+    </g>
+    <g transform="translate(20,166)">
+      <rect width="608" height="22" rx="4" fill="transparent"/>
+      <text x="14" y="16" font-size="10" fill="#9ca3af">展开其余 4 个按量模型</text>
+    </g>
+  </g>
+
+  <text x="360" y="350" font-size="9" fill="#6b7280" text-anchor="middle">套餐模式识别后自动置顶 · 单击切换模式走 settings</text>
+</svg>
