@@ -14,7 +14,7 @@
 | 形态 | 长这样 | 适合 |
 |---|---|---|
 | CDN（推荐） | `cdn.jsdelivr.net/gh/用户/仓@main/路径` | 网页、README（缓存 ~12h，`?updated=<时间戳>` 立即刷新） |
-| 自有域名 | `imgbed.webkubor.online/路径` | 品牌一致的外链；站点每次部署自动镜像全部图片目录 |
+| 自有域名 | `https://imgbed.webkubor.online/路径` | 品牌一致的 HTTPS 外链；站点每次部署镜像图片目录，等部署完成后使用 |
 | raw 兜底 | `raw.githubusercontent.com/用户/仓/main/路径` | CDN 抽风时的备份 |
 | 国内镜像 | `img.webkubor.online/路径` | 大陆读者，见 [R2 镜像](./r2-mirror)（仅同步过的图） |
 

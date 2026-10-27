@@ -29,4 +29,4 @@
 
 VitePress 教程： [快速开始](docs/guide/getting-started.md) · [命名与链接](docs/guide/naming-and-links.md) · [全局 CLI](docs/guide/cli.md) · [压缩及透明度](docs/guide/compression.md) · [AI Agent 接入](docs/guide/ai-agents.md) · [自定义域名](docs/guide/custom-domain.md) · [引用模板](docs/guide/templates.md)。
 
-文档站部署在 `imgbed.webkubor.online`；域名的 HTTPS 证书验证完成前，以上仓库内链接可直接阅读，图片引用优先使用已可用的 **HTTPS jsDelivr 链接**。
+自有域名也提供 HTTPS 图片地址，例如 [imgbed.webkubor.online/free-imgbed/logo.svg](https://imgbed.webkubor.online/free-imgbed/logo.svg)。新图须等 Pages 部署完成才会出现在自有域名下；目前文档首页偶发超时，README 图片优先使用上面已验证的 jsDelivr HTTPS 链接。

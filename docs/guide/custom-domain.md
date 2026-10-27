@@ -29,8 +29,11 @@ gh api repos/<你>/<仓>/pages -X PUT -f cname=imgbed.你的域名.com -F https_
 ## 3. 验证
 
 ```bash
-curl -sI https://imgbed.webkubor.online | head -5
+curl -sI https://imgbed.webkubor.online/
+curl -sI https://imgbed.webkubor.online/free-imgbed/logo.svg
 ```
+
+本仓域名目前由 Cloudflare 代理，HTTPS 图片请求已实测可用；文档首页偶发超时，稳定性仍需观察。GitHub Pages 的 `https_enforced` 仍为 `false`，因此 HTTP 链接不会自动跳转；对外请直接引用 `https://`，关键 README 图片优先用 jsDelivr HTTPS。
 
 ## 自动化（Agent/Skill）
 
