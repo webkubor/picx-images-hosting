@@ -19,7 +19,8 @@ export default defineConfig({
         items: [
           { text: '快速开始', link: '/guide/getting-started' },
           { text: '图片命名与链接', link: '/guide/naming-and-links' },
-          { text: '查看与管理图片', link: '/guide/browsing' }
+          { text: '查看与管理图片', link: '/guide/browsing' },
+          { text: '项目 logo 墙', link: '/guide/logo-gallery' }
         ]
       },
       {

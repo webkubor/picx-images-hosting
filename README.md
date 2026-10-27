@@ -30,3 +30,25 @@
 VitePress 教程： [快速开始](docs/guide/getting-started.md) · [命名与链接](docs/guide/naming-and-links.md) · [全局 CLI](docs/guide/cli.md) · [压缩及透明度](docs/guide/compression.md) · [AI Agent 接入](docs/guide/ai-agents.md) · [自定义域名](docs/guide/custom-domain.md) · [引用模板](docs/guide/templates.md)。
 
 自有域名也提供 HTTPS 图片地址，例如 [imgbed.webkubor.online/free-imgbed/logo.svg](https://imgbed.webkubor.online/free-imgbed/logo.svg)。新图须等 Pages 部署完成才会出现在自有域名下；目前文档首页偶发超时，README 图片优先使用上面已验证的 jsDelivr HTTPS 链接。
+
+<!-- logo-gallery:start -->
+
+## 🖼 项目 logo 墙
+
+仓库里各项目的标识，按项目归档；深浅两版用 `<picture>` 按系统主题自动切换。
+
+| 项目 | 标识 | 文件 |
+|---|---|---|
+| chat-mood-gen | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/chat-mood-gen/logo.svg" width="120" alt="chat-mood-gen logo"> | `chat-mood-gen/logo.svg` |
+| claude-usage-statusline | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/claude-usage-statusline/logo.svg" width="120" alt="claude-usage-statusline logo"> | `claude-usage-statusline/logo.svg` |
+| device-passport | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/device-passport/logo.svg" width="120" alt="device-passport logo"> | `device-passport/logo.svg` |
+| dsh-llm-hub | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/dsh-llm-hub/logo.png" width="120" alt="dsh-llm-hub logo"> | `dsh-llm-hub/logo.png` |
+| facet | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/facet/icon.svg" width="120" alt="facet logo"> | `facet/icon.svg` |
+| free-imgbed | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg" width="120" alt="free-imgbed logo"> | `free-imgbed/logo.svg` |
+| reel-kit | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/reel-kit/logo.svg" width="120" alt="reel-kit logo"> | `reel-kit/logo.svg` |
+| scorecard | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/scorecard/logo-v2.svg" width="120" alt="scorecard logo"> | `scorecard/logo-v2.svg` |
+| supercli | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/supercli/logo-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/supercli/logo.svg" width="120" alt="supercli logo"></picture> | `supercli/logo.svg` |
+| voxflow | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/voxflow/logo-icon.webp" width="120" alt="voxflow logo"> | `voxflow/logo-icon.webp` |
+| wallpaper-generator | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/wallpaper-generator/logo.svg" width="120" alt="wallpaper-generator logo"> | `wallpaper-generator/logo.svg` |
+
+<!-- logo-gallery:end -->
