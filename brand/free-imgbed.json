@@ -1,0 +1,18 @@
+{
+  "id": "free-imgbed",
+  "name": "free-imgbed",
+  "sourceRepo": "webkubor/free-imgbed",
+  "sourceFiles": ["README.md", "free-imgbed/logo.svg", "free-imgbed/logo-v2.svg"],
+  "oldAsset": "free-imgbed/logo.svg",
+  "asset": "free-imgbed/mark-v3.svg",
+  "darkAsset": null,
+  "tokens": {
+    "primary": "#C3483D",
+    "accent": "#FF9F45",
+    "onLight": "#C3483D",
+    "onDark": "#C3483D",
+    "background": "transparent"
+  },
+  "rationale": "旧标识及未提交的 logo-v2 草稿共同记录珊瑚红 #FF6F61 与橙色 #FF9F45 的既有配色。本次新定规范将珊瑚红压深为 #C3483D，以提高浅底识别度；橙色保留作相片内容点色。取景窗和上行箭头表达图片进入图床并通过链接分发；箭头为本次形态解释，不宣称是项目原有规范。",
+  "status": "ready"
+}

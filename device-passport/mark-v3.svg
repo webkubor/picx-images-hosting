@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="device-passport-title device-passport-desc">
+  <title id="device-passport-title">device-passport</title>
+  <desc id="device-passport-desc">A hardware chip holds two identical stepped signatures, expressing device-state consistency across time. Transparent canvas; light-surface edition.</desc>
+  <path fill="#047857" fill-rule="evenodd" d="M80 52H176A28 28 0 0 1 204 80V176A28 28 0 0 1 176 204H80A28 28 0 0 1 52 176V80A28 28 0 0 1 80 52ZM80 70A10 10 0 0 0 70 80V176A10 10 0 0 0 80 186H176A10 10 0 0 0 186 176V80A10 10 0 0 0 176 70Z"/>
+  <path fill="#047857" d="M91 32H109V58H91ZM147 32H165V58H147ZM91 198H109V224H91ZM147 198H165V224H147ZM32 91H58V109H32ZM32 147H58V165H32ZM198 91H224V109H198ZM198 147H224V165H198Z"/>
+  <path fill="#047857" d="M88 109H109L125 93H168V107H131L115 123H88ZM88 149H109L125 133H168V147H131L115 163H88Z"/>
+</svg>

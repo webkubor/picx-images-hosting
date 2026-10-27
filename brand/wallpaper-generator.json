@@ -1,0 +1,18 @@
+{
+  "id": "wallpaper-generator",
+  "name": "氛围壁纸工坊（wallpaper-generator）",
+  "sourceRepo": "webkubor/wallpaper-generator",
+  "sourceFiles": ["README.md", "src/styles/theme.scss", "public/logo.svg"],
+  "oldAsset": "wallpaper-generator/logo.svg",
+  "asset": "wallpaper-generator/mark-v3.svg",
+  "darkAsset": "wallpaper-generator/mark-v3-dark.svg",
+  "tokens": {
+    "primary": "#9AA7A1",
+    "accent": "#C4B2A3",
+    "onLight": "#3F3A36",
+    "onDark": "#E6E0D8",
+    "background": "transparent"
+  },
+  "rationale": "主题文件将 #9AA7A1 命名为 sage 并指定为 primary，#C4B2A3 是命名 clay，#3F3A36 是浅主题 ink；深主题将 ink 定义为 #E6E0D8。裁切角与地平线表达按设备比例组织壁纸画幅；浅底前景使用 ink 保证对比，sage 和 clay 是色彩点缀，深底版有意保留浅主题 clay #C4B2A3，未逐项复刻原生深主题 clay #B29F91；不将低对比的 sage 单独用作浅底主体。",
+  "status": "ready"
+}

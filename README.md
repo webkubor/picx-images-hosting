@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg" width="112" alt="free-imgbed logo">
+  <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/mark-v3.svg" width="112" alt="free-imgbed logo">
 
   # free-imgbed
 
@@ -19,13 +19,15 @@
 
 本页 logo 就是一个可点开的真实图片链接：
 
-`https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg`
+`https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/mark-v3.svg`
 
 在其他项目里传图，可先在图床仓库执行 `tools/imgbed install`，登记自己的 Fork：`imgbed init <你的仓库地址>`；此后在任意目录执行 `imgbed push logo.png my-project/`，由 CLI 压缩、提交、推送并打印直链。
 
 > 图片上限 2 MB，视频上限 10 MB。已有图片路径被外部 README 引用时不要改名或覆盖；要换图，上传一个带版本号的新文件。
 
 ## 文档
+
+品牌交付：[新旧 logo 与颜色体系对照](https://imgbed.webkubor.online/design/logo-review.html) · [18 项待设计任务](https://imgbed.webkubor.online/design/logo-briefs.html) · [设计师 skill](.agents/skills/logo-brand-designer/SKILL.md) · [交付说明](design/DELIVERY.md)。每个新版都有透明底 1:1 SVG、颜色 token 和设计理念；页面可切深浅背景和尺寸，也可复制完整任务交给自己的设计 Agent。
 
 VitePress 教程： [快速开始](docs/guide/getting-started.md) · [命名与链接](docs/guide/naming-and-links.md) · [全局 CLI](docs/guide/cli.md) · [压缩及透明度](docs/guide/compression.md) · [AI Agent 接入](docs/guide/ai-agents.md) · [自定义域名](docs/guide/custom-domain.md) · [引用模板](docs/guide/templates.md)。
 
@@ -35,20 +37,21 @@ VitePress 教程： [快速开始](docs/guide/getting-started.md) · [命名与�
 
 ## 🖼 项目 logo 墙
 
-仓库里各项目的标识，按项目归档；深浅两版用 `<picture>` 按系统主题自动切换。
+优先展示 `brand/*.json` 指定的新符号；深色主题用 `<picture>` 按系统偏好加载对应 `darkAsset`。旧素材 URL 继续保留。
 
 | 项目 | 标识 | 文件 |
 |---|---|---|
-| chat-mood-gen | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/chat-mood-gen/logo.svg" width="120" alt="chat-mood-gen logo"> | `chat-mood-gen/logo.svg` |
-| claude-usage-statusline | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/claude-usage-statusline/logo.svg" width="120" alt="claude-usage-statusline logo"> | `claude-usage-statusline/logo.svg` |
-| device-passport | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/device-passport/logo.svg" width="120" alt="device-passport logo"> | `device-passport/logo.svg` |
-| dsh-llm-hub | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/dsh-llm-hub/logo.png" width="120" alt="dsh-llm-hub logo"> | `dsh-llm-hub/logo.png` |
-| facet | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/facet/icon.svg" width="120" alt="facet logo"> | `facet/icon.svg` |
-| free-imgbed | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg" width="120" alt="free-imgbed logo"> | `free-imgbed/logo.svg` |
-| reel-kit | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/reel-kit/logo.svg" width="120" alt="reel-kit logo"> | `reel-kit/logo.svg` |
-| scorecard | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/scorecard/logo-v2.svg" width="120" alt="scorecard logo"> | `scorecard/logo-v2.svg` |
-| supercli | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/supercli/logo-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/supercli/logo.svg" width="120" alt="supercli logo"></picture> | `supercli/logo.svg` |
-| voxflow | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/voxflow/logo-icon.webp" width="120" alt="voxflow logo"> | `voxflow/logo-icon.webp` |
-| wallpaper-generator | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/wallpaper-generator/logo.svg" width="120" alt="wallpaper-generator logo"> | `wallpaper-generator/logo.svg` |
+| chat-mood-gen | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/chat-mood-gen/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/chat-mood-gen/mark-v3.svg" width="120" height="120" alt="chat-mood-gen logo"></picture> | `chat-mood-gen/mark-v3.svg` |
+| claude-usage-statusline | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/claude-usage-statusline/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/claude-usage-statusline/mark-v3.svg" width="120" height="120" alt="claude-usage-statusline logo"></picture> | `claude-usage-statusline/mark-v3.svg` |
+| device-passport | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/device-passport/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/device-passport/mark-v3.svg" width="120" height="120" alt="device-passport logo"></picture> | `device-passport/mark-v3.svg` |
+| dsh-llm-hub | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/dsh-llm-hub/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/dsh-llm-hub/mark-v3.svg" width="120" height="120" alt="dsh-llm-hub logo"></picture> | `dsh-llm-hub/mark-v3.svg` |
+| facet | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/facet/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/facet/mark-v3.svg" width="120" height="120" alt="facet logo"></picture> | `facet/mark-v3.svg` |
+| free-imgbed | <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/mark-v3.svg" width="120" height="120" alt="free-imgbed logo"> | `free-imgbed/mark-v3.svg` |
+| reel-kit | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/reel-kit/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/reel-kit/mark-v3.svg" width="120" height="120" alt="reel-kit logo"></picture> | `reel-kit/mark-v3.svg` |
+| scorecard | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/scorecard/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/scorecard/mark-v3.svg" width="120" height="120" alt="scorecard logo"></picture> | `scorecard/mark-v3.svg` |
+| supercli | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/supercli/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/supercli/mark-v3.svg" width="120" height="120" alt="supercli logo"></picture> | `supercli/mark-v3.svg` |
+| vite-plugin-agent-eyes | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/vite-plugin-agent-eyes/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/vite-plugin-agent-eyes/mark-v3.svg" width="120" height="120" alt="vite-plugin-agent-eyes logo"></picture> | `vite-plugin-agent-eyes/mark-v3.svg` |
+| voxflow | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/voxflow/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/voxflow/mark-v3.svg" width="120" height="120" alt="voxflow logo"></picture> | `voxflow/mark-v3.svg` |
+| wallpaper-generator | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/wallpaper-generator/mark-v3-dark.svg"><img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/wallpaper-generator/mark-v3.svg" width="120" height="120" alt="wallpaper-generator logo"></picture> | `wallpaper-generator/mark-v3.svg` |
 
 <!-- logo-gallery:end -->

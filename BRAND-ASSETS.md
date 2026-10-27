@@ -17,9 +17,15 @@
 | reel-kit | `reel-kit/logo.svg` + `reel-kit/logo-light.svg` | 明暗两版字标 | 两份内容不同，README 使用 `picture` 按主题切换 |
 | vite-plugin-agent-eyes | `blog/projects/vite-plugin-agent-eyes/logo.webp` | 现役 logo | 保留旧路径以维持外链 |
 
+## 本地新版符号交付
+
+12 项新版符号及深底版本以 `brand/*.json` 为展示真源，画廊优先使用 `asset` / `darkAsset`，上表保留现役旧路径的历史来源。可在[新旧评审页](design/logo-review.html)比较图形、查看 hex 与生产资料；[交付说明](design/DELIVERY.md)记录本次建议色、检查范围与限制。此状态不代表远端已发布或其它项目已切换引用。
+
+真实待设计项目见 [18 项设计任务](design/logo-briefs.html)；其中色板均标为待评审建议。`path-guard` 的定位以生产 README 的命令副本诊断为准，`release-sync-skill` 为版本台账同步；`ego-lite-ref` 为上游参照实现，不列入自有品牌委托。
+
 ## 待设计或核验
 
-- **Scorecard 历史链接**：旧 `scorecard/logo.svg` 是过渡版本，保留外链以免断图；新引用统一用 `scorecard/logo-v2.svg`。应用仓旧的 GHAM 标记同时更新。
+- **Scorecard 历史链接**：旧 `scorecard/logo.svg` 是过渡版本，`scorecard/logo-v2.svg` 是上一代雷达；两者保留外链。本仓画廊使用 manifest 的 `scorecard/mark-v3.svg` 与深底版，其它项目应用资源未在本次修改。
 - **Bloom for Typora**：项目仅有花形 favicon；README 目前展示 banner，需按主题品牌另行确定正式字标或 logo。
 - **Kyvault / xiaobai-kanban / boiling-snow**：README 顶部现有 banner/宣传图，不能仅凭文件名或 alt 文本认定它们是 logo。
 - **有 banner、缺独立 logo**：Kyvault、xiaobai-kanban、Boiling Snow、Bloom for Typora、dsh-bloom-theme、ego-lite-ref。先保留现有 banner；在各项目确定专属视觉后再增补 logo。

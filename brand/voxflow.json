@@ -1,0 +1,22 @@
+{
+  "id": "voxflow",
+  "name": "VoxFlow 声流",
+  "sourceRepo": "webkubor/voxflow",
+  "sourceFiles": [
+    "README.md",
+    "web/ui/src/assets/tokens.css",
+    "assets/branding/logo-icon.png"
+  ],
+  "oldAsset": "voxflow/logo-icon.webp",
+  "asset": "voxflow/mark-v3.svg",
+  "darkAsset": "voxflow/mark-v3-dark.svg",
+  "tokens": {
+    "primary": "#6366F1",
+    "accent": "#7080FF",
+    "onLight": "#6366F1",
+    "onDark": "#A5B4FC",
+    "background": "transparent"
+  },
+  "rationale": "本次新设计解释：把旧图的连续声波与下方流线收束为两条独立轮廓，表达本地音频工作台。primary 是 web/ui/src/assets/tokens.css:66 的既有全站主色；accent 是该文件 :46 记录的旧图核心实测色，不作本次 SVG 的第二色。onDark 的 #A5B4FC 是本次新定的浅靛蓝主题适配色，不冒充旧规范。VoxFlow 源资料明确没有记载旧 logo 的历史寓意（tokens.css:60-64）。",
+  "status": "ready"
+}

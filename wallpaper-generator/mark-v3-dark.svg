@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">wallpaper-generator</title>
+  <desc id="desc">A changing wallpaper crop frame around a small horizon scene, with a light frame for dark backgrounds.</desc>
+  <g transform="translate(-6.4 -6.4) scale(1.05)">
+  <g fill="none" stroke="#E6E0D8" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+    <path d="M92 43H66a20 20 0 0 0-20 20v26M164 43h26a20 20 0 0 1 20 20v26M210 165v26a20 20 0 0 1-20 20h-26M92 211H66a20 20 0 0 1-20-20v-26"/>
+  </g>
+  <g>
+  <path d="M166 89a17 17 0 1 1 0 34 17 17 0 1 1 0-34Z" fill="#C4B2A3"/>
+  <path d="M65 179 105 120 136 154 157 131 191 179Z" fill="#9AA7A1"/>
+  </g>
+  </g>
+</svg>

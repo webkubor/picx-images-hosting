@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="scorecard-title scorecard-desc">
+  <title id="scorecard-title">Scorecard</title>
+  <desc id="scorecard-desc">An irregular blue assessment radar with a check, surrounded by one open measurement ring. Transparent canvas; light-surface edition.</desc>
+  <path fill="#0D1117" d="M206.6 72.1A96 96 0 1 0 222.5 144.7L208.7 142.2A82 82 0 1 1 195.1 80.2Z"/>
+  <path fill="#58A6FF" d="M128 52 180 85 202 143 155 202 81 188 54 126 82 77Z"/>
+  <path fill="#0D1117" d="m98.3 130.7 19 19a8 8 0 0 0 11.8-.5l38-45a8 8 0 0 0-12.2-10.4l-32.4 38.5-12.9-12.9a8 8 0 0 0-11.3 11.3Z"/>
+</svg>

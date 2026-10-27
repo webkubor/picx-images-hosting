@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="VoxFlow 声流，深底版">
+  <title>VoxFlow 声流（深底版）</title>
+  <path d="M32 127 H48 C63 127 66 104 77 85 C79 81 82 81 84 85 C94 111 96 169 107 169 C116 169 119 48 131 48 C144 48 145 169 156 169 C166 169 171 97 181 97 C187 97 190 131 204 131 C216 131 218 108 224 98" fill="none" stroke="#A5B4FC" stroke-width="13" transform="matrix(.98 0 0 .98 2.56 2.56)" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 159 C74 227 143 224 176 188 C198 164 198 155 224 151" fill="none" stroke="#A5B4FC" stroke-width="13" transform="matrix(.98 0 0 .98 2.56 2.56)" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

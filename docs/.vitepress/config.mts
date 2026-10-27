@@ -4,13 +4,15 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'free-imgbed',
   description: '开箱即用的 GitHub 免费图床：一个仓库就是一台图床',
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg' }]],
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/mark-v3.svg' }]],
   themeConfig: {
-    logo: 'https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/mark-v3.svg',
     siteTitle: 'free-imgbed',
     nav: [
       { text: '指南', link: '/guide/getting-started' },
       { text: '模板', link: '/guide/templates' },
+      { text: '标识评审', link: '/design/logo-review.html' },
+      { text: '待设计', link: '/design/logo-briefs.html' },
       { text: 'GitHub', link: 'https://github.com/webkubor/free-imgbed' }
     ],
     sidebar: [
@@ -20,7 +22,9 @@ export default defineConfig({
           { text: '快速开始', link: '/guide/getting-started' },
           { text: '图片命名与链接', link: '/guide/naming-and-links' },
           { text: '查看与管理图片', link: '/guide/browsing' },
-          { text: '项目 logo 墙', link: '/guide/logo-gallery' }
+          { text: '项目 logo 墙', link: '/guide/logo-gallery' },
+          { text: '新旧标识评审', link: '/design/logo-review.html' },
+          { text: '待设计任务', link: '/design/logo-briefs.html' }
         ]
       },
       {

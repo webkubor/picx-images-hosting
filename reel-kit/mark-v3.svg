@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="reel-kit 卷轴">
+  <title>reel-kit 卷轴</title>
+  <path d="M216 128 A88 88 0 1 1 40 128 A88 88 0 1 1 216 128 Z M168 128 A40 40 0 1 1 88 128 A40 40 0 1 1 168 128 Z" fill="none" stroke="#CC584D" stroke-width="14"/>
+  <path d="M139 128 A11 11 0 1 1 117 128 A11 11 0 1 1 139 128 Z M139 66 A11 11 0 1 1 117 66 A11 11 0 1 1 139 66 Z M139 190 A11 11 0 1 1 117 190 A11 11 0 1 1 139 190 Z M77 128 A11 11 0 1 1 55 128 A11 11 0 1 1 77 128 Z M201 128 A11 11 0 1 1 179 128 A11 11 0 1 1 201 128 Z" fill="#CC584D"/>
+</svg>

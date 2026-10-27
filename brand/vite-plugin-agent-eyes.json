@@ -1,0 +1,21 @@
+{
+  "id": "vite-plugin-agent-eyes",
+  "name": "vite-plugin-agent-eyes",
+  "sourceRepo": "webkubor/vite-plugin-agent-eyes",
+  "sourceFiles": [
+    "README.md",
+    "website/.vitepress/config.ts"
+  ],
+  "oldAsset": "blog/projects/vite-plugin-agent-eyes/logo.webp",
+  "asset": "vite-plugin-agent-eyes/mark-v3.svg",
+  "darkAsset": "vite-plugin-agent-eyes/mark-v3-dark.svg",
+  "tokens": {
+    "primary": "#39D353",
+    "accent": "#178A35",
+    "onLight": "#178A35",
+    "onDark": "#39D353",
+    "background": "transparent"
+  },
+  "rationale": "保留现役绿色眼睛与线路，只留上下两个观测端点；本次新设计解释将视线与上下数据通路关联到运行时遥测和提交前门禁（README.md:13-14）。primary 取自网站 website/.vitepress/config.ts:19 明定的 theme-color #39d353；accent/onLight #178A35 为本次新定的加深前景色，以便浅底可读，onDark 沿用已存在的主题绿。旧图为无透明度的白底 WebP，没有可引用的本地 SVG 母稿。",
+  "status": "ready"
+}

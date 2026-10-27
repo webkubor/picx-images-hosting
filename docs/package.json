@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
+    "brand:prepare": "python3 ../tools/brand-ui.py --publish",
+    "dev": "python3 ../tools/brand-ui.py --publish && vitepress dev",
+    "build": "python3 ../tools/brand-ui.py --publish && vitepress build",
     "preview": "vitepress preview"
   },
   "devDependencies": {

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="dsh-llm-hub-title dsh-llm-hub-desc">
+  <title id="dsh-llm-hub-title">dsh-llm-hub</title>
+  <desc id="dsh-llm-hub-desc">Three model-catalog sockets share one gateway backplane and a blue junction. Transparent canvas; dark-surface edition.</desc>
+  <path fill="#5EC27F" d="M51 84H69V104L128 138 187 104V84H205V114L137 154V172H119V154L51 114Z"/>
+  <path fill="#5EC27F" fill-rule="evenodd" d="M42 30H78A12 12 0 0 1 90 42V78A12 12 0 0 1 78 90H42A12 12 0 0 1 30 78V42A12 12 0 0 1 42 30ZM48 48V72H72V48ZM178 30H214A12 12 0 0 1 226 42V78A12 12 0 0 1 214 90H178A12 12 0 0 1 166 78V42A12 12 0 0 1 178 30ZM184 48V72H208V48ZM110 166H146A12 12 0 0 1 158 178V214A12 12 0 0 1 146 226H110A12 12 0 0 1 98 214V178A12 12 0 0 1 110 166ZM116 184V208H140V184Z"/>
+  <path fill="#4C7EF3" d="M128 118 150 140 128 162 106 140Z"/>
+</svg>

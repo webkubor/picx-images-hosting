@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="usage-statusline-title usage-statusline-desc">
+  <title id="usage-statusline-title">claude-usage-statusline</title>
+  <desc id="usage-statusline-desc">Three open usage tracks show increasing fill, with a coral threshold at the right of the fullest track. Transparent canvas; light-surface edition.</desc>
+  <path fill="#3A3A42" fill-rule="evenodd" d="M50 32H206A18 18 0 0 1 224 50A18 18 0 0 1 206 68H50A18 18 0 0 1 32 50A18 18 0 0 1 50 32ZM50 40A10 10 0 0 0 50 60H206A10 10 0 0 0 206 40ZM50 110H206A18 18 0 0 1 224 128A18 18 0 0 1 206 146H50A18 18 0 0 1 32 128A18 18 0 0 1 50 110ZM50 118A10 10 0 0 0 50 138H206A10 10 0 0 0 206 118ZM50 188H206A18 18 0 0 1 224 206A18 18 0 0 1 206 224H50A18 18 0 0 1 32 206A18 18 0 0 1 50 188ZM50 196A10 10 0 0 0 50 216H206A10 10 0 0 0 206 196Z"/>
+  <path fill="#74B388" d="M50 40A10 10 0 0 0 50 60H84V40ZM50 118A10 10 0 0 0 50 138H137V118ZM50 196A10 10 0 0 0 50 216H137V196Z"/>
+  <path fill="#D1B566" d="M137 118H154V138H137ZM137 196H181V216H137Z"/>
+  <path fill="#D65D5D" d="M181 196H204V216H181Z"/>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "id": "dsh-llm-hub",
+  "name": "dsh-llm-hub",
+  "sourceRepo": "webkubor/dsh-llm-hub",
+  "sourceFiles": [
+    "README.md",
+    "docs/images/logo.png",
+    "lib/client.js"
+  ],
+  "oldAsset": "dsh-llm-hub/logo.png",
+  "asset": "dsh-llm-hub/mark-v3.svg",
+  "darkAsset": "dsh-llm-hub/mark-v3-dark.svg",
+  "tokens": {
+    "primary": "#287A43",
+    "accent": "#4C7EF3",
+    "onLight": "#287A43",
+    "onDark": "#5EC27F",
+    "background": "transparent"
+  },
+  "rationale": "本次设计解释：README.md:27–38 的模型目录、网关健康及用量管理，用三个开口目录插槽共享一个汇聚背板表达；三口仅为可辨构图，不限制厂商数量。保留旧标识的绿系，取消同心圆、实底和字样，避免与 Scorecard 雷达混同。docs/images/logo.png 带 ICC 配置，Pillow 对中心 (241,241)–(270,270) 共900像素取样，原始 RGB 全为 #78C085，经 ImageCms profileToProfile 转至 sRGB 后全为 #5EC27F；旧图与图床 logo.png 的 SHA256 相同。onDark #5EC27F 是这次取样形成的新规范，不是源码已有 hex token。primary/onLight #287A43 是本次为浅底对比建议的同色相加深色，并非既有规范；白底对比实算 5.31:1。accent #4C7EF3 取 README.md:13、23 本项目 npm/网关徽章，本次新定为汇聚节点色，不将宿主 lib/client.js:469、486–495 的状态与账单色当作项目品牌色。32px 两版均已渲染并目视检查，插槽负空间与蓝节点可辨；品牌绿的测量只覆盖旧图核心区域，不代表对辉光或整幅图做平均。",
+  "status": "ready"
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Agent Eyes 观测之眼">
+  <title>Agent Eyes 观测之眼</title>
+  <path d="M35 128 Q128 43 221 128 Q128 213 35 128 Z" fill="none" stroke="#178A35" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M128 85 V38 M128 171 V218" fill="none" stroke="#178A35" stroke-width="14" stroke-linecap="round"/>
+  <path d="M137 35 A9 9 0 1 1 119 35 A9 9 0 1 1 137 35 Z M137 221 A9 9 0 1 1 119 221 A9 9 0 1 1 137 221 Z M155 128 A27 27 0 1 1 101 128 A27 27 0 1 1 155 128 Z" fill="#178A35"/>
+</svg>

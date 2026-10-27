@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">SuperCLI</title>
+  <desc id="desc">The official folded S geometry and its command input cursor, in a light color for dark backgrounds.</desc>
+  <path d="M47 13H26L13 26v6l24 11H17v8h22l12-12v-7L27 21h20zM43 47h9v3h-9z" fill="#EEF1F7" transform="matrix(4.85 0 0 4.85 -27.2 -27.2)"/>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "id": "device-passport",
+  "name": "device-passport",
+  "sourceRepo": "webkubor/device-passport",
+  "sourceFiles": [
+    "README.md",
+    "assets/logo.svg"
+  ],
+  "oldAsset": "device-passport/logo.svg",
+  "asset": "device-passport/mark-v3.svg",
+  "darkAsset": "device-passport/mark-v3-dark.svg",
+  "tokens": {
+    "primary": "#047857",
+    "accent": "#34D399",
+    "onLight": "#047857",
+    "onDark": "#34D399",
+    "background": "transparent"
+  },
+  "rationale": "本次设计解释：取 README.md:48–59 的设备状态时间一致性为语义，在 assets/logo.svg:221–271 的芯片与总线几何上重新组织为一个粗芯片轮廓，内部两条完全相同的阶梯签名表达不同时间仍保持同一设备状态。没有沿用盾牌、官方护照形制、认证勾、光效或轨道；不承诺认证或功能效果。primary/onLight #047857 直接取自 assets/logo.svg:62–67 的 emeraldBeam 末端；accent/onDark #34D399 取自:32–37 的盾边绿。明确选择翠绿为本次主色，青蓝停靠色不参与投票；现有颜色的标识角色为本次新规范。浅底版全用 #047857，深底版全用独立 token #34D399，使两条签名始终同色。主体占画布 75%，32px 已由 rsvg-convert 渲染并目视观察到芯片与两条阶梯；这一语义是本次设计解释，不能从 32px 图形直接推断产品细节。",
+  "status": "ready"
+}

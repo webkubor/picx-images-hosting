@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">free-imgbed</title>
+  <desc id="desc">An image window opens into an upload arrow. Transparent canvas, solid coral frame and orange image content.</desc>
+  <path d="M129 54H62a30 30 0 0 0-30 30v108a30 30 0 0 0 30 30h132a30 30 0 0 0 30-30v-74h-16v74a14 14 0 0 1-14 14H62a14 14 0 0 1-14-14V84a14 14 0 0 1 14-14h67Z" fill="#C3483D"/>
+  <path d="m180 34-36 38h27v66h18V72h27Z" fill="#C3483D"/>
+  <path d="M115 104a13 13 0 1 1-26 0 13 13 0 1 1 26 0ZM64 186l33-44 26 28 16-17 24 33Z" fill="#FF9F45"/>
+</svg>

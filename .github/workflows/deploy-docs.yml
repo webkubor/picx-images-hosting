@@ -34,7 +34,7 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           for d in */; do
             d="${d%/}"
-            case "$d" in docs|web|tools|node_modules) continue ;; esac
+            case "$d" in docs|web|tools|node_modules|design|brand) continue ;; esac
             if find "$d" -type f | grep -qiE '\.(png|jpe?g|webp|gif|svg|bmp|mp4|mov|webm|avif)$'; then
               cp -r "$d" docs/.vitepress/dist/
               echo "  + $d/"

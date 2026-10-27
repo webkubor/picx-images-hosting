@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Facet</title>
+  <desc id="desc">A folded content page with two broad facets standing for structured knowledge.</desc>
+  <path d="M56 36h97l67 67v101a16 16 0 0 1-16 16H52a16 16 0 0 1-16-16V56a20 20 0 0 1 20-20Z" fill="#0F766E"/>
+  <path d="M153 36v52a15 15 0 0 0 15 15h52z" fill="#F59E0B"/>
+  <path d="M76 139h84M76 176h58" fill="none" stroke="#FFFDF7" stroke-linecap="round" stroke-width="16"/>
+</svg>

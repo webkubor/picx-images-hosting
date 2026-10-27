@@ -14,5 +14,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: 素材合规检查（尺寸红线 / 重复检测 / INDEX 新鲜度）
         run: tools/check.sh
-      - name: README logo 墙与仓库资产一致
+      - name: README 与文档 logo 墙一致
         run: tools/gallery.sh --check
+      - name: 品牌评审与简报页面新鲜度
+        run: python3 tools/brand-ui.py --check
+      - name: 安装品牌 SVG 渲染依赖
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y librsvg2-bin
+          python3 -m pip install 'Pillow>=11,<13'
+      - name: 验证品牌 token、透明背景与方形画布
+        run: python3 tools/check-brand.py --render-dir /tmp/free-imgbed-brand-ci
+      - name: 品牌校验器失败路径回归
+        run: python3 tools/test-brand.py

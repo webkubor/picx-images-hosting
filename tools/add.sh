@@ -97,8 +97,9 @@ cp "$SRC" "$WORK/$BASE"
 CUR="$WORK/$BASE"
 
 if [ "$KIND" = img ]; then
-  if command -v sips >/dev/null 2>&1; then
+  if [ "$EXT" != svg ] && command -v sips >/dev/null 2>&1; then
     read -r W H <<<"$(sips -g pixelWidth -g pixelHeight "$CUR" 2>/dev/null | awk '/pixel/{print $2}' | tr '\n' ' ')"
+    W=${W%%.*}; H=${H%%.*}
     if [ "${W:-0}" -gt "$MAX_SIDE" ] || [ "${H:-0}" -gt "$MAX_SIDE" ]; then
       sips -Z "$MAX_SIDE" "$CUR" >/dev/null
       note "长边 ${W}x${H} 超过 ${MAX_SIDE}px，已等比缩小"
