@@ -9,13 +9,18 @@
 - `@main` —— 分支或标签；求稳可换成 `@v1`：标签不动、图就不动
 - `free-imgbed/logo.svg` —— **仓内路径 = 你放的目录 + 文件名**，这就是「图片名」的来源
 
-## 三种等价形态
+## 四种等价形态
 
 | 形态 | 长这样 | 适合 |
 |---|---|---|
 | CDN（推荐） | `cdn.jsdelivr.net/gh/用户/仓@main/路径` | 网页、README（缓存 ~12h，`?updated=<时间戳>` 立即刷新） |
+| 自有域名 | `imgbed.webkubor.online/路径` | 品牌一致的外链；站点每次部署自动镜像全部图片目录 |
 | raw 兜底 | `raw.githubusercontent.com/用户/仓/main/路径` | CDN 抽风时的备份 |
-| 国内镜像 | `img.webkubor.online/路径` | 大陆读者，见 [R2 镜像](./r2-mirror) |
+| 国内镜像 | `img.webkubor.online/路径` | 大陆读者，见 [R2 镜像](./r2-mirror)（仅同步过的图） |
+
+::: note
+自有域名走 GitHub Pages 直出，推广素材量级完全够用；超大流量场景用 jsDelivr 或 R2。
+:::
 
 ## 命名规则
 

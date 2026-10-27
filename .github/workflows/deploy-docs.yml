@@ -30,6 +30,17 @@ jobs:
           cache-dependency-path: docs/pnpm-lock.yaml
       - run: pnpm --dir docs install --frozen-lockfile
       - run: pnpm --dir docs build
+      - name: 镜像图片目录到站点（自有域名直出图片）
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          for d in */; do
+            d="${d%/}"
+            case "$d" in docs|web|tools|node_modules) continue ;; esac
+            if find "$d" -type f | grep -qiE '\.(png|jpe?g|webp|gif|svg|bmp|mp4|mov|webm|avif)$'; then
+              cp -r "$d" docs/.vitepress/dist/
+              echo "  + $d/"
+            fi
+          done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
