@@ -134,7 +134,7 @@ DEST="$DEST_DIR/$NAME.$EXT"
 mv "$CUR" "$DEST"
 echo "✓ $DEST  ($(( SIZE / 1024 ))KB)"
 
-BASE_URL="https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master"
+BASE_URL="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@master"
 echo "  $BASE_URL/$DEST"
 tools/index.sh >/dev/null 2>&1 || true
 echo "下一步: git add \"$DEST\" INDEX.md && git commit -m 'upload: $DEST' && git push"

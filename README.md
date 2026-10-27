@@ -1,11 +1,11 @@
-# picx-images-hosting
+# free-imgbed
 
 <p align="center">
-  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/github/stars/webkubor/picx-images-hosting?style=for-the-badge&color=coral" alt="Stars"></a>
-  <a href="https://github.com/webkubor/picx-images-hosting/actions/workflows/check.yml"><img src="https://github.com/webkubor/picx-images-hosting/actions/workflows/check.yml/badge.svg" alt="assets-check"></a>
-  <a href="https://github.com/webkubor/picx-images-hosting/blob/master/LICENSE"><img src="https://img.shields.io/badge/code%20license-MIT-4c9a6b?style=for-the-badge" alt="License"></a>
-  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/badge/img%20max-2MB-coral?style=for-the-badge" alt="img cap"></a>
-  <a href="https://github.com/webkubor/picx-images-hosting"><img src="https://img.shields.io/badge/video%20max-10MB-coral?style=for-the-badge" alt="video cap"></a>
+  <a href="https://github.com/webkubor/free-imgbed"><img src="https://img.shields.io/github/stars/webkubor/free-imgbed?style=for-the-badge&color=coral" alt="Stars"></a>
+  <a href="https://github.com/webkubor/free-imgbed/actions/workflows/check.yml"><img src="https://github.com/webkubor/free-imgbed/actions/workflows/check.yml/badge.svg" alt="assets-check"></a>
+  <a href="https://github.com/webkubor/free-imgbed/blob/master/LICENSE"><img src="https://img.shields.io/badge/code%20license-MIT-4c9a6b?style=for-the-badge" alt="License"></a>
+  <a href="https://github.com/webkubor/free-imgbed"><img src="https://img.shields.io/badge/img%20max-2MB-coral?style=for-the-badge" alt="img cap"></a>
+  <a href="https://github.com/webkubor/free-imgbed"><img src="https://img.shields.io/badge/video%20max-10MB-coral?style=for-the-badge" alt="video cap"></a>
 </p>
 
 **开箱即用的 GitHub 免费图床**：一个仓库就是一台图床 —— 图片经 GitHub raw + jsDelivr 全球 CDN 分发，
@@ -58,7 +58,7 @@ og 社交分享卡默认不转现代格式 —— 部分社交平台抓取器兼
 ## 引用
 
 复制即用片段（含 `<picture>` 渐进增强、国内 R2 镜像说明）见 [TEMPLATES.md](TEMPLATES.md)。
-CDN 前缀：`https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<路径>`；
+CDN 前缀：`https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@master/<路径>`；
 求稳可用 git 标签替代 `@master`；缓存约 12h，`?updated=<时间戳>` 立即刷新。
 
 ## CI
@@ -73,4 +73,5 @@ CDN 前缀：`https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<�
 
 ## 历史
 
-2026-10-27 与 U 盘逐文件 MD5 比对清除 541 张重复图（443MB），旧「只进不出」政策废止，以本 README 为准。
+2026-10-27 与 U 盘逐文件 MD5 比对清除 541 张重复图（443MB），旧「只进不出」政策废止，以本 README 为准；
+同日重写 git 历史、剥离已删素材的大对象，clone 体积由 418MiB 降至个位数 MB —— fork 零负担。
