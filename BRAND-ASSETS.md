@@ -22,6 +22,8 @@
 - **Scorecard 历史链接**：旧 `scorecard/logo.svg` 是过渡版本，保留外链以免断图；新引用统一用 `scorecard/logo-v2.svg`。应用仓旧的 GHAM 标记同时更新。
 - **Bloom for Typora**：项目仅有花形 favicon；README 目前展示 banner，需按主题品牌另行确定正式字标或 logo。
 - **Kyvault / xiaobai-kanban / boiling-snow**：README 顶部现有 banner/宣传图，不能仅凭文件名或 alt 文本认定它们是 logo。
-- **没有可确认标识的项目**：先保留文本标题或现有 banner；不自动生成相同模板的占位 logo。
+- **有 banner、缺独立 logo**：Kyvault、xiaobai-kanban、Boiling Snow、Bloom for Typora、dsh-bloom-theme、ego-lite-ref。先保留现有 banner；在各项目确定专属视觉后再增补 logo。
+- **只有网站内部图标或未在 README 展示**：ai-orb、scorecard（已补）、device-passport（已入库，README 仍使用 banner）、dsh-llm-hub（已入库，README 仍使用 R2 banner）。应用内部 favicon 不等同于 README 品牌图。
+- **无可确认源图的自有项目**：ai-sse-kit、cs-mcp、frontend-contrast-guard、im-notify-kit、mlx-vlm-kit、path-guard、charmoji-sticker-skill、deadcode-reaper-skill、release-sync-skill、writing-standard-skills、suno-publisher、vite-plugin-refresh-guard 等。先保留文本标题，不自动生成相同模板的占位 logo。
 
 后续新增：先核对项目源文件、视觉用途及名称；优先用合格 SVG。上传后记录在本表，README 引用改为新 URL 并验证可访问。U 盘原始素材不动，旧外链保持可用。
