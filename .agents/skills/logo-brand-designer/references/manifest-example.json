@@ -1,0 +1,66 @@
+{
+  "projects": [
+    {
+      "id": "example-new",
+      "name": "Example · 首次品牌设计",
+      "sourceFiles": [
+        "README.md",
+        { "path": "src/theme.css", "label": "项目既有主题 token；核对具体行号" }
+      ],
+      "sources": [
+        { "url": "https://example.org/brand", "label": "品牌来源链接占位，使用前替换并核验" }
+      ],
+      "tokens": {
+        "primary": "#0F766E",
+        "accent": "#F59E0B",
+        "onLight": "#0F766E",
+        "onDark": "#FFFDF7",
+        "background": "transparent"
+      },
+      "tokenSources": {
+        "primary": "本次建议：示例值，待用户确认；不是任何项目的生产规范",
+        "accent": "本次建议：示例值，待用户确认",
+        "onLight": "本次建议：沿用示例 primary",
+        "onDark": "本次建议：独立深底版前景，待真实渲染验收",
+        "background": "用户给定：透明画布（演示记录，实际使用时换成真实决策）"
+      },
+      "rationale": [
+        "本次建议：用路径化几何表达项目能力；这里只演示记录格式，不替任何项目补历史寓意。"
+      ],
+      "userDecisions": [
+        "演示字段：在这里逐条记录用户实际给定或明确确认的要求，不能把建议放进来。"
+      ],
+      "recommendations": [
+        "示例建议：先验证浅底和深底 32px 的轮廓，再讨论细节。"
+      ],
+      "asset": "assets/mark.svg",
+      "darkAsset": "assets/mark-dark.svg",
+      "oldAsset": null
+    },
+    {
+      "id": "example-redesign",
+      "name": "Example · 重设计",
+      "sources": [ "https://example.org/project" ],
+      "tokens": {
+        "primary": "#334155",
+        "accent": "#EAB308",
+        "onLight": "#334155",
+        "onDark": "#334155",
+        "background": "transparent"
+      },
+      "tokenSources": {
+        "primary": "示例占位：实际填写用户给定/项目既有/素材测量/本次建议及证据",
+        "accent": "本次建议：示例值，未批准",
+        "onLight": "本次建议：示例主版本前景",
+        "onDark": "本次建议：演示复用同一文件，需实测可读性",
+        "background": "本次建议：透明画布"
+      },
+      "rationale": "本次建议：保留已有识别线索，重画轮廓；这是格式示例，非已通过方案。",
+      "userDecisions": [],
+      "recommendations": [],
+      "asset": "assets/redesign.svg",
+      "darkAsset": null,
+      "oldAsset": "assets/old.png"
+    }
+  ]
+}

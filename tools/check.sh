@@ -28,14 +28,14 @@ while IFS= read -r f; do
     echo "✗ $f — $label $(($sz / 1024 / 1024))MB 超过 $((max / 1024 / 1024))MB 红线（tools/add.sh 压缩，或转存 U 盘/R2）"
     fail=1
   fi
-done < <(find . -type f -not -path './.git/*' -not -path '*/node_modules/*' | grep -iE "\.($EXTS)$")
+done < <(find . -type f -not -path './.git/*' -not -path '*/node_modules/*' -not -path '*/.vitepress/*' -not -path './docs/public/design/*' | grep -iE "\.($EXTS)$")
 echo "  $n_assets 个素材通过尺寸检查"
 
 echo "== 重复检测 =="
 n_dup=0
 while IFS= read -r f; do
   printf '%s\t%s\n' "$(hash "$f")" "$f" >> "$tmp"
-done < <(find . -type f -not -path './.git/*' -not -path '*/node_modules/*' | grep -iE "\.($EXTS)$")
+done < <(find . -type f -not -path './.git/*' -not -path '*/node_modules/*' -not -path '*/.vitepress/*' -not -path './docs/public/design/*' | grep -iE "\.($EXTS)$")
 while IFS= read -r line; do
   echo "✗ $line 内容重复"
   n_dup=$((n_dup + 1)); fail=1

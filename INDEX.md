@@ -1,11 +1,12 @@
 # Image Index
 
-> 快照: 2026-10-27 09:46 UTC ｜ 25 directories, 135 images ｜ 由 tools/index.sh 生成，勿手工编辑
+> 快照: 2026-10-27 10:41 UTC ｜ 26 directories, 137 images ｜ 由 tools/index.sh 生成，勿手工编辑
 
 - [ai-orb/](ai-orb/) — 2 images
 - [blog/](blog/) — 16 images
 - [chat-mood-gen/](chat-mood-gen/) — 8 images
 - [claude-usage-statusline/](claude-usage-statusline/) — 5 images
+- [design/](design/) — 2 images
 - [device-passport/](device-passport/) — 5 images
 - [dsh-env-inspector/](dsh-env-inspector/) — 2 images
 - [dsh-llm-hub/](dsh-llm-hub/) — 6 images

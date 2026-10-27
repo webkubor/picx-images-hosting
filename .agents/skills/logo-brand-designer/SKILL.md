@@ -1,13 +1,13 @@
 ---
 name: logo-brand-designer
-description: 为开源项目设计或完善品牌标识，交付 design token、设计理念与透明底 1:1 SVG。适用于做 logo、重做标识、主题适配、品牌色核对和 logo 验收。优先遵循用户提供的 token、理念与 SVG，核实生产来源，实际渲染深浅背景下的 32px 版本。
+description: 为项目设计或完善品牌标识，交付 design token、理念、透明底 1:1 SVG、离线评审页与真实截图。用于做 logo、重设计、沿用既有 token、主题适配、品牌色核对、logo 验收及保留可复用评审流程。优先遵循用户输入，核实来源，实际渲染深浅背景的 32px 版本。
 ---
 
 # Logo 品牌设计师
 
 交付三件套：**design token + 设计理念 + 完整 SVG**。用户提供的 token、理念和已有 SVG 是首要设计输入。先理解和沿用；确需调整时解释具体原因，区分保留与新建议，不用个人审美覆盖用户要求。
 
-本仓 `.agents/skills/logo-brand-designer/SKILL.md` 为真源，全局同名目录保存该文件副本。更新先改本仓，再复制到全局；不在公开内容里记录用户本机绝对目录或凭据。
+项目 skill 目录为真源，全局同名目录保存完整副本。更新先改项目版，先查看全局既有文件，再同步整个目录（含 scripts/references），不删除目标额外用户文件；不在公开内容里记录用户本机绝对目录或凭据。通用复用不依赖本图床 tools；一行委托、manifest 契约与截图证据格式见 [references/reuse.md](references/reuse.md)。
 
 ## 先确认生产资料与证据
 
@@ -40,7 +40,7 @@ description: 为开源项目设计或完善品牌标识，交付 design token、
 
 ## 参考图可选，模型能力以当次环境为准
 
-可以直接手写 SVG；只有研究形态需要时才生成参考图。先检查当前工具的帮助、能力与用户授权，再使用当次可用工具与模型，不写死任何型号的可用/不可用状态、固定像素尺寸或账号能力。仅写好 prompt 不等于已调用模型；复制任务不等于转交。报告调用时说明实际工具与结果。
+先实际调用当次环境的能力发现工具/工具帮助，再自主选择可用工具、渲染器与模型，遵循用户授权及费用限制；不写死型号、尺寸或账号能力。可以直接手写 SVG，只有研究形态需要时才生成参考图。仅写好 prompt 不等于已调用模型；复制任务不等于转交。报告实际工具、结果和不可用项。
 
 参考位图不能替代最终矢量文件。风格遵循用户与项目：路径化字母、基础几何、渐变等不是一概禁止；选择是否使用以小尺寸、主题适配与实际交付契约为据。不要套“必须单主体、绝不允许某类隐喻、不能混合描边与填充”等通用审美禁令。
 
@@ -62,15 +62,21 @@ description: 为开源项目设计或完善品牌标识，交付 design token、
 </svg>
 ```
 
-## 必须实际渲染验收
+## 保留独立评审页与截图
 
-用 `rsvg-convert` 与 Pillow 或等价可验证工具渲染；在本仓运行：
+先读 [references/reuse.md](references/reuse.md)，按 [manifest-example.json](references/manifest-example.json) 填入真实资料（示例素材需自行提供）。在任何项目里使用标准库脚本，Python 3.9+，无第三方依赖：
 
 ```bash
-python3 tools/check-brand.py --render-dir /tmp/free-imgbed-brand
+python3 "$SKILL_DIR/scripts/build_review.py" --manifest "$DELIVERY_DIR/manifest.json" --out "$DELIVERY_DIR/review.html"
 ```
 
-工具缺失必须明确非零失败，不能跳过后报通过。验收包括：
+`SKILL_DIR` 为当前实际 skill 目录。`projects` 支持首次设计无 `oldAsset`、可选 `darkAsset` 和 SVG/PNG/WebP；所有素材及本地来源路径相对 manifest 目录，禁止逃逸。HTML 内嵌素材，离线支持浅/深/棋盘和 32/64/128 切换、来源与理念、素材/JSON 下载及含实际 SVG 的完整任务复制。`userDecisions` 与 `recommendations` 分别记录已给定/确认与未确认建议。复制须检查结果，失败显示手动复制入口，不能宣称成功。
+
+脚本只做结构检查（含 SVG 正方形、title/aria、安全子集及引用）；生成成功不等于像素透明或视觉验收通过。真实截图另存交付目录 `screenshots/`，说明来源页面/渲染命令、素材版本、背景/尺寸与实际测试范围，保留 HTML、manifest 和素材。未截图、未测像素或工具失败如实写明，不拿已有图当截图。
+
+## 必须实际渲染验收
+
+用 `rsvg-convert` 与 Pillow 或当次可用等价工具渲染；图床专用的 `tools/check-brand.py` 仅在本仓适用，其它项目不依赖它。工具缺失时相应检查必须明确失败，不能跳过后报通过。验收包括：
 
 1. XML 安全结构、路径与 manifest 契约、正方 viewBox、可访问名称。
 2. 真实 RGBA：检查透明角块、alpha 包围盒与画布边界、主体跨度与留白、非空图。不能仅用搜索铺底 rect 当作透明证明。
@@ -79,19 +85,8 @@ python3 tools/check-brand.py --render-dir /tmp/free-imgbed-brand
 
 本批图床统一主体最长跨度 72–80%（256px 栅格测量允许 1px 舍入），最小边距 5%；这是本批工程契约，不是所有品牌的永久审美规定。其它项目按其已授权规范验收。
 
-## 版本化入仓与展示
+## 图床专用入仓（仅任务授权时）
 
-先在仓外保存 SVG，通过 `tools/add.sh` 压缩/校验后以新文件名导入；保留已上传文件原名与内容，跨项目相同素材引用现有 URL。更新 `brand/*.json`、理念说明与评审入口，不能顺手改其它项目仓。
+其它项目直接使用独立评审流程。在本图床导入正式素材时，先在仓外保存 SVG，通过 `tools/add.sh` 压缩/校验，以新文件名导入；不覆盖已上传文件，不重复入仓，不顺手改其它项目。图床自有的 brand manifest 与 tools 契约按当次源码执行，不能把它们当成通用脚本依赖。正式接入入口、全仓检查、提交、推送或发布遵循用户授权与任务分工；测试素材留在系统临时目录。
 
-```bash
-tools/add.sh /tmp/mark-next.svg 项目名/
-python3 tools/check-brand.py --render-dir /tmp/free-imgbed-brand
-tools/gallery.sh
-python3 tools/brand-ui.py --publish
-tools/gallery.sh --check
-python3 tools/brand-ui.py --check
-```
-
-本仓现行 manifest 要求 `oldAsset` 指向真实旧文件，新增无旧图项目时先有依据地扩展契约，不虚填旧资产。全仓 `tools/check.sh` 和文档构建遵循当次任务与 workflow 分工，不重复执行整套流程。未经授权不提交、推送或发布。
-
-交付时给出 token 的 hex 与证据、理念、完整 SVG / 仓内路径、主题用法、实际执行的命令及结果、目视范围与限制；区分本地 ready、入口接入和远端发布状态。
+交付给出 token 的 hex 与证据、理念、完整 SVG/路径、主题用法、独立 HTML/manifest、`screenshots/` 的真实来源、命令结果及未验收项。区分本地完成、入口接入与远端发布。

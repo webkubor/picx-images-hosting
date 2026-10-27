@@ -7,7 +7,7 @@ EXTS='avif|png|jpg|jpeg|webp|gif|svg|bmp|mp4|mov|webm'
 tmp=$(mktemp); trap 'rm -f "$tmp.body" "$tmp.out"' EXIT
 total=0; dirs=0
 for d in */; do
-  n=$(find "$d" -type f -not -path '*/node_modules/*' | grep -icE "\.($EXTS)$" || true)
+  n=$(find "$d" -type f -not -path '*/node_modules/*' -not -path '*/.vitepress/*' -not -path '*/public/design/*' | grep -icE "\.($EXTS)$" || true)
   if [ "$n" -gt 0 ]; then
     echo "- [${d%/}/](${d%/}/) — $n images"
     total=$((total + n)); dirs=$((dirs + 1))

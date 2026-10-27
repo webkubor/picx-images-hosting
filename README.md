@@ -27,7 +27,7 @@
 
 ## 文档
 
-品牌交付：[新旧 logo 与颜色体系对照](https://imgbed.webkubor.online/design/logo-review.html) · [18 项待设计任务](https://imgbed.webkubor.online/design/logo-briefs.html) · [设计师 skill](.agents/skills/logo-brand-designer/SKILL.md) · [交付说明](design/DELIVERY.md)。每个新版都有透明底 1:1 SVG、颜色 token 和设计理念；页面可切深浅背景和尺寸，也可复制完整任务交给自己的设计 Agent。
+品牌交付：[新旧 logo 与颜色体系对照](https://imgbed.webkubor.online/design/logo-review.html) · [18 项待设计任务](https://imgbed.webkubor.online/design/logo-briefs.html) · [验收截图](https://imgbed.webkubor.online/design/screenshots/index.html) · [下载设计师 skill](https://imgbed.webkubor.online/design/logo-brand-designer.zip) · [skill 源码](.agents/skills/logo-brand-designer/SKILL.md) · [复用方法](.agents/skills/logo-brand-designer/references/reuse.md) · [交付说明](design/DELIVERY.md)。每个新版都有透明底 1:1 SVG、颜色 token 和设计理念；页面可切深浅背景和尺寸，也可复制完整任务交给自己的设计 Agent。
 
 VitePress 教程： [快速开始](docs/guide/getting-started.md) · [命名与链接](docs/guide/naming-and-links.md) · [全局 CLI](docs/guide/cli.md) · [压缩及透明度](docs/guide/compression.md) · [AI Agent 接入](docs/guide/ai-agents.md) · [自定义域名](docs/guide/custom-domain.md) · [引用模板](docs/guide/templates.md)。
 
