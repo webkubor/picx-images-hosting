@@ -1,5 +1,7 @@
 # 品牌 UI 与工程交付
 
+> 品牌设计 skill 已拆分为独立项目 [webkubor/logo-brand-designer](https://github.com/webkubor/logo-brand-designer)。本图床只保留素材、品牌数据、评审页和截图，不再维护或打包 skill。以下执行记录属于当时的设计交付。
+
 已将 12 项 manifest、23 枚新版 SVG 接入评审页与两个同源 logo 墙，并将待设计简报收敛到 18 个经本地生产 README 核对的项目。本次不提交推送、不改其它项目仓、不调用或转交任何用户模型。
 
 本机已存在的 `http://localhost:4402` 服务根目录为 `design/`：打开 [新旧评审](http://localhost:4402/logo-review.html) 或 [待设计任务](http://localhost:4402/logo-briefs.html)。文档站构建后的路径为 `/design/logo-review.html` 与 `/design/logo-briefs.html`；远端部署未执行。
@@ -10,7 +12,7 @@
 - `tools/brand-ui.py`：读取 manifest 与 `design/briefs.json`，生成 `design/logo-review.html`、`design/logo-briefs.html`。预览内嵌资产派生字节，当前只服务 design 目录时也能正常显示；原始资产仍在项目目录，HTML 不作为新的图片上传源。
 - 评审页：新旧并排、Light / Dark / Checkerboard、32 / 64 / 128px、hex 与来源理念、生产文件链接；复制任务包括完整 token、理念、浅底及深底 SVG。每个按钮有独立 live region、忙碌状态、可访问名称；Clipboard API 失败后用选区复制，再失败会展开只读文本框并完整选中任务，提示手动复制。
 - 待设计页：所有旧色板明确标注“建议，非既有品牌”，补齐生产资料链接与 token / 理念 / 完整 SVG 的交付要求。未完成项目没有 SVG 成品，prompt 要求 Agent 最终交付完整 SVG，不伪造占位成品。
-- `.agents/skills/logo-brand-designer/SKILL.md`：仓内真源；已复制到全局同名 skill 目录。去掉硬编码模型可用性与通用美学禁令，优先用户 token / 理念 / SVG，要求实际深浅背景 32px 渲染，alpha 验收不依赖 rect 搜索。
+- 品牌设计 skill：已独立到 [logo-brand-designer](https://github.com/webkubor/logo-brand-designer)，包含可移植生成器和完整复用说明；图床不是它的源码真源。
 - `tools/check-brand.py`：验证 manifest 精确字段、hex token、真实仓内路径、正方 viewBox、可访问名称与安全 SVG 元素；禁止字体、脚本、外链、位图及 filter。实际调用 rsvg-convert + Pillow 检查透明角块、alpha 包围盒、边界、留白、空图。缺依赖退出 2。`--render-dir` 导出透明 PNG、两种底色与棋盘合成图，以及 `stats.json`。
 - `tools/gallery.sh`：可移植 sh 入口，委托 Python 标准库实现。优先 manifest 的 `asset` / `darkAsset`，纳入 Agent Eyes，排除隐藏及工程目录；`--check` 同时比对 README 与文档整段画廊。
 - `docs/package.json`：`dev` 与 `build` 显式先运行生成与复制命令，避免依赖包管理器的隐式 prebuild。`docs/public/design/` 是被 Git 忽略的派生产物；已生成且与仓内 HTML 字节相同，无第二份手工真源。

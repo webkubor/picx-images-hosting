@@ -14,7 +14,6 @@ import json
 import mimetypes
 import re
 import shutil
-import zipfile
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 
@@ -256,11 +255,6 @@ def main():
             stale_readme = dest / 'screenshots/README.md'
             if stale_readme.is_file():
                 stale_readme.unlink()
-        skill = ROOT / '.agents/skills/logo-brand-designer'
-        with zipfile.ZipFile(dest / 'logo-brand-designer.zip', 'w', zipfile.ZIP_DEFLATED) as package:
-            for item in sorted(skill.rglob('*')):
-                if item.is_file() and '__pycache__' not in item.parts and item.suffix != '.pyc':
-                    package.write(item, Path('logo-brand-designer') / item.relative_to(skill))
     print(f"PASS brand UI {'freshness' if args.check else 'generated'}: {len(manifests)} reviews, {len(briefs['projects'])} briefs" + ('; copied to docs/public/design/' if args.publish else ''))
     return 0
 
