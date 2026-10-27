@@ -6,9 +6,11 @@
 
 ```html
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/<项目>/logo.png" width="120" alt="<项目> logo">
+  <img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/<项目>/logo.svg" width="120" alt="<项目> logo">
 </div>
 ```
+
+将 `<项目>` 和扩展名换成仓库里实际存在的路径；有明暗两版时使用 `<picture>` 按主题切换。正式 logo 的规范路径及现役别名见 [品牌资产清单](https://github.com/webkubor/free-imgbed/blob/main/BRAND-ASSETS.md)。
 
 ## Banner
 

@@ -17,7 +17,7 @@ logo / banner / OG 图 / 演示 GIF+MP4 / 宣传截图，GitHub raw + jsDelivr �
 
 ## 目录约定
 
-- 推广素材进顶层 `<项目名>/`，命名 `logo.* / banner.* / og.* / demo.gif + demo.mp4 / shot-*.png`
+- 推广素材进顶层 `<项目名>/`；确认归属和展示用途的正式标识才用 `logo.*` 命名。banner、截图、favicon 不冒充 logo；现役外链保留。品牌来源及待设计项见 [BRAND-ASSETS.md](BRAND-ASSETS.md)，巡检用 `python3 tools/audit-brand.py`。
 - 临时图进 `temp/YYYY-MM/`；`blog/projects/…` 等历史路径只读保留
 - 引用片段抄 [TEMPLATES.md](TEMPLATES.md)
 
