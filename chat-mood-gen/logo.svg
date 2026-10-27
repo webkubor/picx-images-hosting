@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="grad-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A9D8C" />
+      <stop offset="100%" stop-color="#6B8E78" />
+    </linearGradient>
+    <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A27B5C" />
+      <stop offset="100%" stop-color="#8B6B4C" />
+    </linearGradient>
+  </defs>
+  <!-- Outer soft glow / Shadow -->
+  <circle cx="128" cy="128" r="120" fill="url(#grad-main)" fill-opacity="0.05" />
+
+  <!-- Main Geometric Chat Bubble -->
+  <path fill="url(#grad-main)" d="M128 40 C75 40 32 80 32 128 C32 155 45 178 65 195 L65 230 L105 210 C112 212 120 213 128 213 C181 213 224 173 224 128 C224 80 181 40 128 40 Z" />
+
+  <!-- AI / Generation Sparkle (Sharp Geometric Style like Vite) -->
+  <path fill="url(#grad-accent)" d="M150 75 L125 135 L145 135 L115 195 L175 115 L155 115 Z" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.2))" />
+
+  <!-- Inner Glow/Detail -->
+  <path fill="#FFFFFF" fill-opacity="0.1" d="M128 40 C75 40 32 80 32 128 C32 135 33 142 35 148 L128 128 L221 108 C218 70 178 40 128 40 Z" />
+</svg>
