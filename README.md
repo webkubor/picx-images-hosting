@@ -17,7 +17,7 @@ CI 自动拦截超限与重复，`tools/` 三条命令管压缩上传。fork 改
 1. fork 本仓（或 clone 后推到你自己的新仓），改成你喜欢的名字
 2. 本地 clone，把 `<项目>/` 里的示例素材换成你的内容
 3. 上传：`tools/add.sh <图片> <目录>`，按打印出的提示 commit + push
-4. 任意项目里引用：`https://cdn.jsdelivr.net/gh/<你的用户名>/<你的仓>@master/<路径>`
+4. 任意项目里引用：`https://cdn.jsdelivr.net/gh/<你的用户名>/<你的仓>@main/<路径>`
    ——README / TEMPLATES 里的片段把前缀替换掉即可直接用
 
 ## 红线（CI 强制）
@@ -58,8 +58,8 @@ og 社交分享卡默认不转现代格式 —— 部分社交平台抓取器兼
 ## 引用
 
 复制即用片段（含 `<picture>` 渐进增强、国内 R2 镜像说明）见 [TEMPLATES.md](TEMPLATES.md)。
-CDN 前缀：`https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@master/<路径>`；
-求稳可用 git 标签替代 `@master`；缓存约 12h，`?updated=<时间戳>` 立即刷新。
+CDN 前缀：`https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/<路径>`；
+求稳可用 git 标签替代 `@main`；缓存约 12h，`?updated=<时间戳>` 立即刷新。
 
 ## CI
 

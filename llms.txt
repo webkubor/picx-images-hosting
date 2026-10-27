@@ -4,7 +4,7 @@
 > GitHub raw + jsDelivr 分发；原图权威来源在本地资源库（U 盘 AI素材资源）与 Cloudflare R2。
 
 ## 引用方式
-- CDN（优先）：`https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@master/<路径>`
+- CDN（优先）：`https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/<路径>`
 - 兜底：GitHub raw 直链；复制即用片段见 TEMPLATES.md
 
 ## 关键约束（对 AI 助手）
