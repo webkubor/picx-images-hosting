@@ -43,6 +43,71 @@ tools/add.sh 我的图片.png <项目名>/
 
 <!-- fork 后记得把上面命令和本文件里的仓库地址换成你自己的 -->
 
+## 🧭 这是什么
+
+一句话：**把图片放进这个仓库，全世界就能通过一条链接看到它。**
+
+它不是网页服务，也不是 App，形态是「Git 仓库 + 三条终端命令」：
+
+| 你想做什么 | 怎么做 | 需要什么 |
+|---|---|---|
+| 传一张图 | 终端敲 `tools/add.sh 图片.png 目录/`，或 GitHub 网页直接拖 | 一行命令 / 纯网页都行 |
+| 看一张图 | 把图床链接粘进浏览器地址栏 | 只需浏览器 |
+| 在网页 / README 里显示 | 粘一条 `<img>` 或 Markdown | 任何编辑器 |
+
+## 🚀 5 分钟上手（拿本页 logo 走一遍真流程）
+
+本页头上的 logo 🟠 就是用这套流程传上去的，全程两步：
+
+**① 传** —— 文件放哪个目录、叫什么名，链接就是什么：
+
+```bash
+# 起好名再传（建议小写英文 + 连字符，如 my-logo.png）
+tools/add.sh ~/Desktop/my-logo.png 我的项目名/
+```
+
+屏幕直接打印成果，链接不用你自己拼：
+
+```
+✓ 我的项目名/my-logo.webp  (61KB)
+  https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/我的项目名/my-logo.webp
+```
+
+**② 看** —— 把链接粘进浏览器地址栏就打开了。真实例子，点开就是本页那张 logo：
+
+> 🔗 **https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg**
+
+在任意网页 / README 里写一行，图就出现在那里（本页头图就是这么来的）：
+
+```html
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg" width="112">
+```
+
+> 💡 不想碰终端？GitHub 网页上 **Add file → Upload files** 直接拖图也能传，链接规则相同——只是没压缩，超 2MB 会被 CI 拦下，所以还是推荐命令行。
+
+## 🔗 图床链接长什么样
+
+以上面 logo 的链接为例，一共四段：
+
+- `https://cdn.jsdelivr.net/gh/` —— 固定前缀，永远不变
+- `webkubor` / `free-imgbed` —— 你的 GitHub 用户名 / 仓库名（fork 后换成你自己的）
+- `@main` —— 分支或标签（求稳可换成 `@v1`：标签不动、图就不动）
+- `free-imgbed/logo.svg` —— **仓内路径 = 你放的目录 + 文件名**，这就是"图片名"的来源
+
+三种等价形态，随便换用：
+
+| 形态 | 长这样 | 适合 |
+|---|---|---|
+| CDN（推荐） | `cdn.jsdelivr.net/gh/用户/仓@main/路径` | 网页、README（缓存 ~12h，`?updated=<时间戳>` 立即刷新） |
+| raw 兜底 | `raw.githubusercontent.com/用户/仓/main/路径` | CDN 抽风时的备份 |
+| 国内镜像 | `img.webkubor.online/路径` | 大陆读者（见 [TEMPLATES.md](TEMPLATES.md) R2 方案） |
+
+## 🖼 怎么查看 / 管理图片
+
+- **全仓总目录**：[INDEX.md](INDEX.md)，每个目录多少张一目了然
+- **逐张看**：仓库页点进目录 → 点文件即预览；或把任意 CDN/raw 链接粘进浏览器
+- **命名规则**：文件名叫什么，链接就是什么（`add.sh` 可能只把扩展名换成 `.webp`）；**传完不改名**——外链绑死路径，要换新版就传 `my-logo-v2.png`，同名会被拒绝以防弄断已有外链
+
 ## ⌨️ 日常命令
 
 | 命令 | 作用 |
@@ -71,14 +136,6 @@ tools/add.sh 我的图片.png <项目名>/
 - `temp/YYYY-MM/`：临时图（`add.sh` 默认落点）
 - `free-imgbed/`：本方案自己的 logo（吃自己的狗粮 🐶）
 - `web/` 是配套 R2 相册应用快照；其余历史路径只读保留
-
-## 🔗 引用
-
-复制即用片段（居中 logo、`<picture>` 渐进增强、国内 R2 镜像、缓存刷新）见 **[TEMPLATES.md](TEMPLATES.md)**。
-
-```
-https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/<路径>
-```
 
 ## 🤖 CI
 
