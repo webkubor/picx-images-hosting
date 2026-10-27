@@ -1,0 +1,15 @@
+# picx-images-hosting
+
+> 个人图床素材仓库：为 webkubor 的开源项目保存历史图片（banner / OG 图 / 截图），通过 GitHub raw 与 jsDelivr CDN 分发。
+
+## 这个仓库是什么
+内容仓，不是软件项目：无构建、无测试。图片按 `blog/<项目名>/` 归档，
+README 与社交分享卡大量引用这里的直链。
+
+## 引用方式
+- CDN（优先）：`https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/<路径>`
+- 兜底：GitHub raw 直链
+
+## 关键约束（对 AI 助手）
+- 已有图片**不改名、不移动、不删除** —— 外链已散布在各项目 README / OG 卡里，动了就是断图。
+- 新图片按项目目录归档，单文件控制在几 MB 内。
