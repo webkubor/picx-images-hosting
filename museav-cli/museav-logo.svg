@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">一念成像标志</title>
+  <desc id="desc">一枚珊瑚橙色的旋转画面，以一道留白切出「一」，象征一个念头进入画面。</desc>
+  <defs>
+    <mask id="oneCut" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128">
+      <rect width="128" height="128" fill="#000"/>
+      <path d="M64 18L110 64L64 110L18 64L64 18Z" fill="#fff"/>
+      <path d="M22 59H85V69H22V59Z" fill="#000"/>
+    </mask>
+  </defs>
+  <rect width="128" height="128" fill="#FF8150" mask="url(#oneCut)"/>
+</svg>

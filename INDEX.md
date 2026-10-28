@@ -1,6 +1,6 @@
 # Image Index
 
-> 快照: 2026-10-27 10:41 UTC ｜ 26 directories, 137 images ｜ 由 tools/index.sh 生成，勿手工编辑
+> 快照: 2026-10-28 07:11 UTC ｜ 27 directories, 141 images ｜ 由 tools/index.sh 生成，勿手工编辑
 
 - [ai-orb/](ai-orb/) — 2 images
 - [blog/](blog/) — 16 images
@@ -15,6 +15,7 @@
 - [free-imgbed/](free-imgbed/) — 3 images
 - [frontend-contrast-guard/](frontend-contrast-guard/) — 1 images
 - [hypit/](hypit/) — 13 images
+- [museav-cli/](museav-cli/) — 4 images
 - [qingjian/](qingjian/) — 1 images
 - [reel-kit/](reel-kit/) — 6 images
 - [reverse-skill/](reverse-skill/) — 3 images
