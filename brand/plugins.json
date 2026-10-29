@@ -1,0 +1,20 @@
+{
+ "id": "plugins",
+ "name": "Plugins",
+ "sourceRepo": "webkubor/plugins",
+ "sourceFiles": [
+  "README.md"
+ ],
+ "oldAsset": "plugins/logo.svg",
+ "asset": "plugins/mark-v3.svg",
+ "darkAsset": "plugins/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#14B8A6",
+  "accent": "#0F172A",
+  "onLight": "#0F172A",
+  "onDark": "#CCFBF1",
+  "background": "transparent"
+ },
+ "rationale": "本仓尚无确认的独立标识。造型为十字插头接口加两段信号条，表达「可插拔、可组合」；主色 #14B8A6 取自简报色板。",
+ "status": "review"
+}
