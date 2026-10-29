@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="lite-browser-title lite-browser-desc">
+<title id="lite-browser-title">Lite Browser</title>
+<desc id="lite-browser-desc">Lite Browser project mark</desc>
+<g transform="translate(-1.00 -1.00) scale(1.0057)">
+<path fill="#3B82F6" d="M44 60h168a12 12 0 0 1 12 12v112a12 12 0 0 1-12 12H44a12 12 0 0 1-12-12V72a12 12 0 0 1 12-12Zm0 24v100h168V84H44Z"/>
+<path fill="#0F172A" d="M64 108h58v14H64Zm0 32h96v14H64Z"/>
+<path fill="#0F172A" d="M170 104a10 10 0 1 1 0 20 10 10 0 0 1 0-20Z"/>
+</g>
+</svg>
