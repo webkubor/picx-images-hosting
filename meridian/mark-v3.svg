@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="meridian-title meridian-desc">
+<title id="meridian-title">Meridian</title>
+<desc id="meridian-desc">Meridian project mark</desc>
+<g transform="translate(-13.00 -13.00) scale(1.1000)">
+<path fill="#0EA5E9" d="M40 132a88 88 0 0 1 176 0H40Z"/>
+<path fill="#0EA5E9" d="M40 132h176v20H40Z"/>
+<path fill="#0F172A" d="M118 60h20v92h-20Z"/>
+<path fill="#0F172A" d="M62 112h34v12H62Zm98 0h34v12h-34Z"/>
+<path fill="#0F172A" d="M96 152v40a20 20 0 0 0 40 0v-40h-40Z"/>
+</g>
+</svg>
