@@ -1,0 +1,20 @@
+{
+ "id": "typora-bloom-theme",
+ "name": "Typora Bloom",
+ "sourceRepo": "webkubor/typora-bloom-theme",
+ "sourceFiles": [
+  "README.md"
+ ],
+ "oldAsset": "typora-Bloom-theme/ink.webp",
+ "asset": "typora-bloom-theme/mark-v3.svg",
+ "darkAsset": "typora-bloom-theme/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#EC4899",
+  "accent": "#1F2937",
+  "onLight": "#1F2937",
+  "onDark": "#FDF2F8",
+  "background": "transparent"
+ },
+ "rationale": "本仓尚无确认的独立标识。造型为盛开花瓣与字杆，表达长文写作主题；主色 #EC4899 取自简报色板，与 dsh-bloom-theme 的终端语境刻意区分。",
+ "status": "review"
+}
