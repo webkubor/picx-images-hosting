@@ -1,0 +1,20 @@
+{
+ "id": "dsh-museav-assets",
+ "name": "DSH MUSE AV Assets",
+ "sourceRepo": "webkubor/dsh-museav-assets",
+ "sourceFiles": [
+  "README.md"
+ ],
+ "oldAsset": "dsh-museav-assets/logo.svg",
+ "asset": "dsh-museav-assets/mark-v3.svg",
+ "darkAsset": "dsh-museav-assets/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#A855F7",
+  "accent": "#0F172A",
+  "onLight": "#0F172A",
+  "onDark": "#F3E8FF",
+  "background": "transparent"
+ },
+ "rationale": "本仓尚无确认的独立标识。造型为素材架格位加底托，表达「在 DSH 里看得见素材库」；主色 #A855F7 取自简报色板。",
+ "status": "review"
+}
