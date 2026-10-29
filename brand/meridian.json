@@ -1,0 +1,20 @@
+{
+ "id": "meridian",
+ "name": "Meridian",
+ "sourceRepo": "webkubor/meridian",
+ "sourceFiles": [
+  "README.md"
+ ],
+ "oldAsset": "meridian/logo.svg",
+ "asset": "meridian/mark-v3.svg",
+ "darkAsset": "meridian/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#0EA5E9",
+  "accent": "#0F172A",
+  "onLight": "#0F172A",
+  "onDark": "#E2E8F0",
+  "background": "transparent"
+ },
+ "rationale": "本仓尚无确认的独立标识。造型取子午线弧 + 水平刻度 + 竖向基座，对应 Meridian 之名与本地优先的 Git 图形界面定位；主色 #0EA5E9 取自简报色板。",
+ "status": "review"
+}
