@@ -1,0 +1,20 @@
+{
+ "id": "pr-contributor-skill",
+ "name": "PR Contributor",
+ "sourceRepo": "webkubor/pr-contributor-skill",
+ "sourceFiles": [
+  "README.md"
+ ],
+ "oldAsset": "pr-contributor-skill/logo.svg",
+ "asset": "pr-contributor-skill/mark-v3.svg",
+ "darkAsset": "pr-contributor-skill/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#0F766E",
+  "accent": "#111827",
+  "onLight": "#111827",
+  "onDark": "#CCFBF1",
+  "background": "transparent"
+ },
+ "rationale": "本仓尚无确认的独立标识。造型为分支汇流加箭头，表达「从隔离修改验收到合入主干」的交付链路；主色 #0F766E 取自简报色板。",
+ "status": "review"
+}
