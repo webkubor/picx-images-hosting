@@ -1,0 +1,20 @@
+{
+ "id": "lite-browser",
+ "name": "Lite Browser",
+ "sourceRepo": "webkubor/lite-browser",
+ "sourceFiles": [
+  "README.md"
+ ],
+ "oldAsset": "lite-browser/logo.svg",
+ "asset": "lite-browser/mark-v3.svg",
+ "darkAsset": "lite-browser/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#3B82F6",
+  "accent": "#0F172A",
+  "onLight": "#0F172A",
+  "onDark": "#F8FAFC",
+  "background": "transparent"
+ },
+ "rationale": "本仓尚无确认的独立标识。本版为待设计简报的首次实现：取极简窗格造型（开口边框 + 地址条刻度 + 一个轻量光点），呼应「极致轻量、零常驻」的定位；主色 #3B82F6 取自简报建议色板，深色件 #0F172A 用于浅底，#F8FAFC 用于深底。浅底版 32px 已用 rsvg-convert 渲染目视检查，不宣称满足正文对比度要求。",
+ "status": "review"
+}
