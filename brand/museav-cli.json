@@ -1,0 +1,20 @@
+{
+ "id": "museav-cli",
+ "name": "MUSE AV CLI",
+ "sourceRepo": "webkubor/museav-cli",
+ "sourceFiles": [
+  "README.md"
+ ],
+ "oldAsset": "museav-cli/museav-logo.svg",
+ "asset": "museav-cli/mark-v3.svg",
+ "darkAsset": "museav-cli/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#8B5CF6",
+  "accent": "#111827",
+  "onLight": "#111827",
+  "onDark": "#EDE9FE",
+  "background": "transparent"
+ },
+ "rationale": "本仓尚无确认的独立标识。造型为终端窗口内含命令行提示符与一条输出条，表达「Agent-ready 的命令行出图」；主色 #8B5CF6 取自简报色板，与 MUSE AV 主标识保持紫色家族感但不雷同。",
+ "status": "review"
+}
