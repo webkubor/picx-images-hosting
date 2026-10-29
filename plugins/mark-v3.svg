@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="plugins-title plugins-desc">
+<title id="plugins-title">Plugins</title>
+<desc id="plugins-desc">Plugins project mark</desc>
+<g transform="translate(-27.00 -9.50) scale(1.1659)">
+<path fill="#14B8A6" d="M84 40h48v34h34v48h-34v34H84v-34H50V74h34Z"/>
+<path fill="#0F172A" d="M100 56h16v22h22v16h-22v22h-16V94H78V78h22Z"/>
+<path fill="#0F172A" d="M168 148h48v16h-48Zm0 32h48v16h-48Z"/>
+</g>
+</svg>
