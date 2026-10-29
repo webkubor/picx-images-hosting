@@ -5,7 +5,7 @@
 ## 安装（一次性）
 
 ```bash
-git clone https://github.com/webkubor/free-imgbed.git
+git clone git@github.com:webkubor/free-imgbed.git
 cd free-imgbed
 tools/imgbed install        # 软链到 ~/.local/bin
 imgbed init <你的fork仓库地址>   # 登记仓库（默认克隆本模板仓）
