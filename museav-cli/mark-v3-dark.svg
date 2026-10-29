@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="museav-cli-title museav-cli-desc">
+<title id="museav-cli-title">MUSE AV CLI</title>
+<desc id="museav-cli-desc">MUSE AV CLI project mark</desc>
+<g transform="translate(-6.00 -6.00) scale(1.0498)">
+<path fill="#8B5CF6" d="M36 56h184v144H36Zm18 18v108h148V74H54Z"/>
+<path fill="#EDE9FE" d="M74 104l26 26-26 26 12 12 38-38-38-38Z"/>
+<path fill="#EDE9FE" d="M136 156h50v14h-50Z"/>
+</g>
+</svg>
