@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="pr-contributor-skill-title pr-contributor-skill-desc">
+<title id="pr-contributor-skill-title">PR Contributor</title>
+<desc id="pr-contributor-skill-desc">PR Contributor project mark</desc>
+<g transform="translate(-15.00 -27.00) scale(1.2100)">
+<path fill="#0F766E" d="M44 48h20v64h44V78h20v34h44V78h20v54a20 20 0 0 1-20 20h-44v56H64v-56H44Z"/>
+<path fill="#CCFBF1" d="M116 140h56v16h-56Z"/>
+<path fill="#CCFBF1" d="M150 128l28 28-28 28-12-12 16-16-16-16Z"/>
+</g>
+</svg>
