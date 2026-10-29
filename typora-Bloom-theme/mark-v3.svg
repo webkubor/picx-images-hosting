@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="typora-bloom-theme-title typora-bloom-theme-desc">
+<title id="typora-bloom-theme-title">Typora Bloom</title>
+<desc id="typora-bloom-theme-desc">Typora Bloom project mark</desc>
+<g transform="translate(-13.00 -13.00) scale(1.1000)">
+<path fill="#EC4899" d="M128 40c14 18 14 34 0 50-14-16-14-32 0-50Z"/>
+<path fill="#EC4899" d="M128 92c22-10 40-4 48 14-20 8-38 2-48-14Z"/>
+<path fill="#EC4899" d="M128 92c-22-10-40-4-48 14 20 8 38 2 48-14Z"/>
+<path fill="#EC4899" d="M118 104h20v112h-20Z"/>
+<path fill="#1F2937" d="M88 186h80v16H88Z"/>
+<path fill="#1F2937" d="M104 152h48v14h-48Z"/>
+</g>
+</svg>
