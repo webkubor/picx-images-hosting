@@ -1,0 +1,20 @@
+{
+ "id": "logo-brand-designer",
+ "name": "Logo Brand Designer",
+ "sourceRepo": "webkubor/logo-brand-designer",
+ "sourceFiles": [
+  "README.md"
+ ],
+ "oldAsset": "logo-brand-designer/logo.svg",
+ "asset": "logo-brand-designer/mark-v3.svg",
+ "darkAsset": "logo-brand-designer/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#6366F1",
+  "accent": "#1E293B",
+  "onLight": "#1E293B",
+  "onDark": "#F1F5F9",
+  "background": "transparent"
+ },
+ "rationale": "本仓尚无确认的独立标识。造型为取景框四角 + 内部排版刻度，表达「设计、评审与交付」；主色 #6366F1 与强调色 #1E293B 取自简报建议色板，深色件在深底版替换为 #F1F5F9 以保证可辨。",
+ "status": "review"
+}
