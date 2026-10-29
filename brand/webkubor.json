@@ -1,0 +1,20 @@
+{
+ "id": "webkubor",
+ "name": "webkubor",
+ "sourceRepo": "webkubor/webkubor",
+ "sourceFiles": [
+  "README.md"
+ ],
+ "oldAsset": "webkubor/logo.svg",
+ "asset": "webkubor/mark-v3.svg",
+ "darkAsset": "webkubor/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#2563EB",
+  "accent": "#0F172A",
+  "onLight": "#0F172A",
+  "onDark": "#DBEAFE",
+  "background": "transparent"
+ },
+ "rationale": "本仓尚无确认的独立标识。造型为 W 形门户加底座横线，作为个人工具生态的门面，与各子项目标识区分；主色 #2563EB 取自简报色板。",
+ "status": "review"
+}
