@@ -10,6 +10,6 @@
 
 **已运行验收。** 命令 `python3 /tmp/brand-tools-v3.17efpp/validate.py` 输出：主版 `structure=PASS alpha=PASS negative-space=PASS bbox=(32, 31, 223, 224) span=75.3906% sizes=256/144/64/32 bytes=661`，dark 版相同检查通过、660 bytes，JSON 的 `exact-contract/source-files/paths=PASS`。脚本对每版执行 `rsvg-convert -w 32 -h 32 -o /tmp/brand-tools-v3.17efpp/scorecard/final-32.png scorecard/mark-v3.svg` 等全部四种尺寸命令；检查 SVG 只含 svg/title/desc/path、无位图/字体/滤镜/脚本/渐变/铺底，像素边角和量环负空间为透明，主体跨度满足 72%–80%。实际目视读取临时预览 `/tmp/brand-tools-v3.17efpp/review.png` 和 `/tmp/brand-tools-v3.17efpp/final-review.png`；预览是仓外验收产物，不是交付 SVG 替代。
 
-**交付路径。** 主版 `scorecard/mark-v3.svg`；深底版 `scorecard/mark-v3-dark.svg`；token 与来源 `brand/scorecard.json`；本说明 `design/rationale/scorecard.md`。旧 `scorecard/logo.svg`、`scorecard/logo-v2.svg` 保留。
+**交付路径。** 主版 `scorecard/mark-v3.svg`；深底版 `scorecard/mark-v3-dark.svg`；token 与来源 `brand/scorecard.json`；本说明 `design/rationale/scorecard.md`。旧 `scorecard/logo.svg`、`scorecard/logo-v2.svg` 已清理，图床只保留现役版本。
 
 **导入与局限。** SVG 先暂存仓外，调用隔离仓中的原版脚本 `/tmp/brand-tools-v3.17efpp/import-repo/tools/add.sh /tmp/brand-tools-v3.17efpp/scorecard/mark-v3.svg scorecard`（dark 版同方式），再将脚本输出以不存在才创建的方式放入指定路径。脚本输出 `✓ scorecard/mark-v3.svg (0KB)`；其 `tools/add.sh:101–102` 对 `sips` 返回的 `256.000` 发出 `integer expected` 提示，但进程退出 0，另行实际渲染和结构检查通过。隔离方式避免 `tools/add.sh:140` 改写本仓 INDEX。没有运行会改 INDEX 的全仓 `tools/check.sh`、gallery、完整构建或浏览器实测；没有调用 museav 或付费模型，没有检查远端 URL，也未接入 README、HTML、画廊或巡检入口。`ready` 只表示本地三件套设计与上述渲染验收完成，不表示已经发布或接入。

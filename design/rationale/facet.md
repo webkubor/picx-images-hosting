@@ -18,7 +18,6 @@
 - 深底 SVG：`facet/mark-v3-dark.svg`
 - token：`brand/facet.json`
 - 本说明：`design/rationale/facet.md`
-- 保留旧路径：`facet/icon.svg`
 
 ## 局限
 

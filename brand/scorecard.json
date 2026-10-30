@@ -1,22 +1,21 @@
 {
-  "id": "scorecard",
-  "name": "Scorecard",
-  "sourceRepo": "webkubor/scorecard",
-  "sourceFiles": [
-    "README.md",
-    "public/logo.svg",
-    "src/styles/global.css"
-  ],
-  "oldAsset": "scorecard/logo-v2.svg",
-  "asset": "scorecard/mark-v3.svg",
-  "darkAsset": "scorecard/mark-v3-dark.svg",
-  "tokens": {
-    "primary": "#58A6FF",
-    "accent": "#0D1117",
-    "onLight": "#0D1117",
-    "onDark": "#E6EDF3",
-    "background": "transparent"
-  },
-  "rationale": "本次设计解释：沿用 public/logo.svg:5–9 及图床 scorecard/logo-v2.svg 的雷达包络与勾选，放大不规则评分面积，删除细坐标线，并用一段粗量环保留评估仪表感。七个轮廓转折是造型，不代表固定七维或九维；README.md:12–24 明确有多种对象与独立维度。primary 来自 src/styles/global.css:11–15 明定的晴空蓝 #58A6FF；替代旧标识 #6CCDBC 绿系，是本次对齐现役界面主题的决定。accent/onLight #0D1117 来自同文件:3，承担浅底量环与勾选；onDark #E6EDF3 来自:8，深底版只替换量环，勾选继续用深色以保证与蓝面区分。旧有颜色被重新分配为标识角色，形态及主题版本均为本次新规范。32px 已用 rsvg-convert 实际渲染并目视检查；晴空蓝对白底仅 2.53:1，依靠深色量环和勾选维持识别，不宣称适合所有背景或满足正文色对比要求。",
-  "status": "ready"
+ "id": "scorecard",
+ "name": "Scorecard",
+ "sourceRepo": "webkubor/scorecard",
+ "sourceFiles": [
+  "README.md",
+  "public/logo.svg",
+  "src/styles/global.css"
+ ],
+ "asset": "scorecard/mark-v3.svg",
+ "darkAsset": "scorecard/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#58A6FF",
+  "accent": "#0D1117",
+  "onLight": "#0D1117",
+  "onDark": "#E6EDF3",
+  "background": "transparent"
+ },
+ "rationale": "本次设计解释：沿用项目 public/logo.svg:5–9 的雷达包络与勾选，放大不规则评分面积，删除细坐标线，并用一段粗量环保留评估仪表感。七个轮廓转折是造型，不代表固定七维或九维；README.md:12–24 明确有多种对象与独立维度。primary 来自 src/styles/global.css:11–15 明定的晴空蓝 #58A6FF；替代既有标识 #6CCDBC 绿系，是本次对齐现役界面主题的决定。accent/onLight #0D1117 来自同文件:3，承担浅底量环与勾选；onDark #E6EDF3 来自:8，深底版只替换量环，勾选继续用深色以保证与蓝面区分。既有颜色被重新分配为标识角色，形态及主题版本均为本次新规范。32px 已用 rsvg-convert 实际渲染并目视检查；晴空蓝对白底仅 2.53:1，依靠深色量环和勾选维持识别，不宣称适合所有背景或满足正文色对比要求。",
+ "status": "ready"
 }

@@ -5,7 +5,6 @@
  "sourceFiles": [
   "README.md"
  ],
- "oldAsset": "plugins/logo.svg",
  "asset": "plugins/mark-v3.svg",
  "darkAsset": "plugins/mark-v3-dark.svg",
  "tokens": {

@@ -5,7 +5,6 @@
  "sourceFiles": [
   "README.md"
  ],
- "oldAsset": "lite-browser/logo.svg",
  "asset": "lite-browser/mark-v3.svg",
  "darkAsset": "lite-browser/mark-v3-dark.svg",
  "tokens": {

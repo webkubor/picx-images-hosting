@@ -1,22 +1,21 @@
 {
-  "id": "chat-mood-gen",
-  "name": "Chat Mood Gen",
-  "sourceRepo": "webkubor/chat-mood-gen",
-  "sourceFiles": [
-    "README.md",
-    "public/logo.svg",
-    "src/views/GeneratorView.vue"
-  ],
-  "oldAsset": "chat-mood-gen/logo.svg",
-  "asset": "chat-mood-gen/mark-v3.svg",
-  "darkAsset": "chat-mood-gen/mark-v3-dark.svg",
-  "tokens": {
-    "primary": "#7A9D8C",
-    "accent": "#A27B5C",
-    "onLight": "#4C6F5D",
-    "onDark": "#9DBEAB",
-    "background": "transparent"
-  },
-  "rationale": "本次新设计解释：沿用 public/logo.svg:16 的聊天轮廓，内部改用两段左右错位的对话内容线，呼应 README.md:16、43–47 的社交模式与批量截图，并与壁纸项目的山景取景形态拉开差异。primary 来自 README.md:35 及 GeneratorView.vue:94 的微信系 sage；accent 来自旧 SVG:8 的装饰棕，本次未使用。onLight #4C6F5D 与 onDark #9DBEAB 为本次从 sage 派生的新前景色，分别解决浅底和深底可见性；不把小红书模式红升级为品牌色。",
-  "status": "ready"
+ "id": "chat-mood-gen",
+ "name": "Chat Mood Gen",
+ "sourceRepo": "webkubor/chat-mood-gen",
+ "sourceFiles": [
+  "README.md",
+  "public/logo.svg",
+  "src/views/GeneratorView.vue"
+ ],
+ "asset": "chat-mood-gen/mark-v3.svg",
+ "darkAsset": "chat-mood-gen/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#7A9D8C",
+  "accent": "#A27B5C",
+  "onLight": "#4C6F5D",
+  "onDark": "#9DBEAB",
+  "background": "transparent"
+ },
+ "rationale": "本次新设计解释：沿用 public/logo.svg:16 的聊天轮廓，内部改用两段左右错位的对话内容线，呼应 README.md:16、43–47 的社交模式与批量截图，并与壁纸项目的山景取景形态拉开差异。primary 来自 README.md:35 及 GeneratorView.vue:94 的微信系 sage；accent 来自旧 SVG:8 的装饰棕，本次未使用。onLight #4C6F5D 与 onDark #9DBEAB 为本次从 sage 派生的新前景色，分别解决浅底和深底可见性；不把小红书模式红升级为品牌色。",
+ "status": "ready"
 }

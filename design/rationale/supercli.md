@@ -18,7 +18,6 @@
 - 深底 SVG：`supercli/mark-v3-dark.svg`
 - token：`brand/supercli.json`
 - 本说明：`design/rationale/supercli.md`
-- 保留旧路径：`supercli/logo.svg` 与 `supercli/logo-dark.svg`
 
 ## 局限
 

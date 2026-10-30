@@ -12,6 +12,6 @@
 
 **已运行验收。** `python3 /tmp/brand-tools-v3.17efpp/validate.py` 输出主版 `structure=PASS alpha=PASS negative-space=PASS bbox=(30, 30, 226, 226) span=76.5625% sizes=256/144/64/32 bytes=902`，dark 版相同检查通过、901 bytes，JSON `exact-contract/source-files/paths=PASS`。实际执行的32px命令为 `rsvg-convert -w 32 -h 32 -o /tmp/brand-tools-v3.17efpp/dsh-llm-hub/final-32.png dsh-llm-hub/mark-v3.svg`，dark 和其余尺寸分别执行。结构只含 svg/title/desc/path；角落、三口内部与主体间隙实际 alpha=0，无实底、位图、字体、渐变、滤镜或脚本。已目视读取仓外 `/tmp/brand-tools-v3.17efpp/review.png` 及 `/tmp/brand-tools-v3.17efpp/final-review.png`。
 
-**交付路径。** `dsh-llm-hub/mark-v3.svg`；`dsh-llm-hub/mark-v3-dark.svg`；`brand/dsh-llm-hub.json`；`design/rationale/dsh-llm-hub.md`。旧 `dsh-llm-hub/logo.png` 不改名、不覆盖、不删除。
+**交付路径。** `dsh-llm-hub/mark-v3.svg`；`dsh-llm-hub/mark-v3-dark.svg`；`brand/dsh-llm-hub.json`；`design/rationale/dsh-llm-hub.md`。旧 `dsh-llm-hub/logo.png` 已从图床清理；本项目只保留现役标识。
 
 **导入与局限。** 命令 `/tmp/brand-tools-v3.17efpp/import-repo/tools/add.sh /tmp/brand-tools-v3.17efpp/dsh-llm-hub/mark-v3.svg dsh-llm-hub`（dark 同方式）运行的是仓库原版脚本隔离副本，输出 `✓ dsh-llm-hub/mark-v3.svg (0KB)`，只将处理后的 SVG 安装到指定路径。脚本 `:101–102` 对 sips 的 `256.000` 提示 `integer expected`，退出0，实际尺寸由 rsvg-convert 另验。隔离避免 add.sh 的 INDEX 副作用。全仓 tools/check.sh、gallery、完整构建、浏览器和远端 URL 检查未运行；未调用 museav 或付费模型，未修改展示入口。`ready` 表示本地三件套与所述渲染通过，不表示旧图已被替换上线。

@@ -1,16 +1,16 @@
 # 品牌 UI 与工程交付
 
-> 品牌设计 skill 已拆分为独立项目 [webkubor/logo-brand-designer](https://github.com/webkubor/logo-brand-designer)。本图床只保留素材、品牌数据、评审页和截图，不再维护或打包 skill。以下执行记录属于当时的设计交付。
+> 品牌设计 skill 已拆分为独立项目 [webkubor/logo-brand-designer](https://github.com/webkubor/logo-brand-designer)。本图床只保留素材、品牌数据、评审页和截图，不再维护或打包 skill。以下执行记录属于当时的设计交付，当前仓库状态以 `BRAND-ASSETS.md` 和实际文件为准。
 
 已将 12 项 manifest、23 枚新版 SVG 接入评审页与两个同源 logo 墙，并将待设计简报收敛到 18 个经本地生产 README 核对的项目。本次不提交推送、不改其它项目仓、不调用或转交任何用户模型。
 
-本机已存在的 `http://localhost:4402` 服务根目录为 `design/`：打开 [新旧评审](http://localhost:4402/logo-review.html) 或 [待设计任务](http://localhost:4402/logo-briefs.html)。文档站构建后的路径为 `/design/logo-review.html` 与 `/design/logo-briefs.html`；远端部署未执行。
+当时的本机预览使用 `http://localhost:4402` 服务（根目录 `design/`）：[现役标识评审](http://localhost:4402/logo-review.html) 或 [待设计任务](http://localhost:4402/logo-briefs.html)。文档站构建后的路径为 `/design/logo-review.html` 与 `/design/logo-briefs.html`；远端部署未执行。
 
 ## 修改与真源
 
-- `brand/*.json` 与项目目录 SVG：12 项本地设计资料，保留输入中的 token、理念与新旧路径，不改资产内容。`ready` 是本地设计状态，不等于已发布或获用户最终批准。
+- `brand/*.json` 与项目目录 SVG：当时的 12 项本地设计资料记录了 token、理念与来源；清理旧版后 manifest 只保存现役路径。`ready` 是本地设计状态，不等于已发布或获用户最终批准。
 - `tools/brand-ui.py`：读取 manifest 与 `design/briefs.json`，生成 `design/logo-review.html`、`design/logo-briefs.html`。预览内嵌资产派生字节，当前只服务 design 目录时也能正常显示；原始资产仍在项目目录，HTML 不作为新的图片上传源。
-- 评审页：新旧并排、Light / Dark / Checkerboard、32 / 64 / 128px、hex 与来源理念、生产文件链接；复制任务包括完整 token、理念、浅底及深底 SVG。每个按钮有独立 live region、忙碌状态、可访问名称；Clipboard API 失败后用选区复制，再失败会展开只读文本框并完整选中任务，提示手动复制。
+- 评审页：现役浅底/深底并排、Light / Dark / Checkerboard、32 / 64 / 128px、hex 与来源理念、生产文件链接；复制任务包括完整 token、理念、浅底及深底 SVG。每个按钮有独立 live region、忙碌状态、可访问名称；Clipboard API 失败后用选区复制，再失败会展开只读文本框并完整选中任务，提示手动复制。
 - 待设计页：所有旧色板明确标注“建议，非既有品牌”，补齐生产资料链接与 token / 理念 / 完整 SVG 的交付要求。未完成项目没有 SVG 成品，prompt 要求 Agent 最终交付完整 SVG，不伪造占位成品。
 - 品牌设计 skill：已独立到 [logo-brand-designer](https://github.com/webkubor/logo-brand-designer)，包含可移植生成器和完整复用说明；图床不是它的源码真源。
 - `tools/check-brand.py`：验证 manifest 精确字段、hex token、真实仓内路径、正方 viewBox、可访问名称与安全 SVG 元素；禁止字体、脚本、外链、位图及 filter。实际调用 rsvg-convert + Pillow 检查透明角块、alpha 包围盒、边界、留白、空图。缺依赖退出 2。`--render-dir` 导出透明 PNG、两种底色与棋盘合成图，以及 `stats.json`。
@@ -31,7 +31,7 @@
 | dsh-llm-hub | 旧 PNG 中心经 ICC 转 sRGB 记录为 `#5EC27F`；本项目徽章蓝 `#4C7EF3` | 浅底 `#287A43` 是本次加深建议；不是源码既有主色 | `brand/dsh-llm-hub.json:13`、`:20` |
 | Facet | 正式 icon 的 `#0F766E`、`#F59E0B`、`#FFFDF7` | 沿用色系并重排大色面；不借可选输出主题作品牌 | `brand/facet.json:9`、`:16` |
 | free-imgbed | 旧 logo 的 `#FF6F61`、`#FF9F45` | `#C3483D` 为新定深珊瑚，明暗共用，无独立 darkAsset | `brand/free-imgbed.json:9`、`:16` |
-| reel-kit | README / docs style 已命名 Reel 红 `#CC584D`、浅红 `#E6A5A0` | 从横字标卷轴抽出方形符号；旧横版仍保留 | `brand/reel-kit.json:14`、`:21` |
+| reel-kit | README / docs style 已命名 Reel 红 `#CC584D`、浅红 `#E6A5A0` | 从横字标卷轴抽出方形符号；旧横版已从图床移除 | `brand/reel-kit.json` |
 | Scorecard | 现役 CSS 晴空蓝 `#58A6FF`、深灰 `#0D1117`、浅灰 `#E6EDF3` | 新标识对齐 UI 蓝，明确替代旧雷达绿；蓝色不能直接复用作白底正文 | `brand/scorecard.json:13`、`:20` |
 | SuperCLI | 品牌页蓝 `#002FA7`，现有浅色单色版 `#EEF1F7` | 保留正式折返 S 与光标，不改字形关系 | `brand/supercli.json:9`、`:16` |
 | Agent Eyes | 网站 theme-color `#39D353` | 浅底 `#178A35` 是本次加深建议；旧图为白底 WebP | `brand/vite-plugin-agent-eyes.json:12`、`:19` |
@@ -67,7 +67,7 @@
 
 ## 设计与验证限制
 
-- 本轮只更新本仓 UI、工具、文档与全局 skill 副本；不改 23 枚输入 SVG，不删除、覆盖或改名已上传图片，现有 CDN 根与旧 URL 保留。其它项目的 README / UI 未切换。
+- 以下是当时设计交付的范围记录：未改动输入 SVG，也未切换其它项目的 README / UI。当前图床已另行清理弃用 logo，相关使用方已迁至现役标识；以 `BRAND-ASSETS.md` 的现行规则为准。
 - 渲染检查覆盖 23 枚 SVG、32 / 64 / 128 / 256px。透明角块按边长 1/32 取样，主体边距至少 5%，256px 最长主体跨度目标 72–80%，允许 1px 栅格舍入。Facet 实测 184/256 = 71.875%，在该公开容差内，不把它写成精确 72%。
 - 实际读取 `/tmp/free-imgbed-brand-delivery/contact-sheet.png`，查看全部 32px 的浅底主版与深底版；芯片、三轨、折页、声波等主体可辨。错误主题的版本确会减弱轮廓，因此不能省略 darkAsset 切换。free-imgbed 明暗共用，深底对比弱于浅底。
 - 自动检查只证明规定结构与 alpha 条件，不证明品牌独特性、语义理解或所有背景的可读性。16px、照片、任意彩色底、色觉模拟未验收。

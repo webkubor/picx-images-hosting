@@ -5,7 +5,6 @@
  "sourceFiles": [
   "README.md"
  ],
- "oldAsset": "webkubor/logo.svg",
  "asset": "webkubor/mark-v3.svg",
  "darkAsset": "webkubor/mark-v3-dark.svg",
  "tokens": {

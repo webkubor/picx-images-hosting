@@ -1,18 +1,21 @@
 {
-  "id": "supercli",
-  "name": "SuperCLI",
-  "sourceRepo": "webkubor/supercli",
-  "sourceFiles": ["brand.html", "public/brand/supercli-symbol-mono.svg", "public/brand/supercli-symbol-mono-light.svg"],
-  "oldAsset": "supercli/logo.svg",
-  "asset": "supercli/mark-v3.svg",
-  "darkAsset": "supercli/mark-v3-dark.svg",
-  "tokens": {
-    "primary": "#002FA7",
-    "accent": "#19191D",
-    "onLight": "#002FA7",
-    "onDark": "#EEF1F7",
-    "background": "transparent"
-  },
-  "rationale": "SuperCLI 的品牌页明确规定折返几何 S 与右下输入光标，并定义品牌蓝 #002FA7。主体沿用源仓单色 S 路径并等比放大到约 73% 画幅；浅底用规范品牌蓝，深底用现有单色浅版 #EEF1F7。",
-  "status": "ready"
+ "id": "supercli",
+ "name": "SuperCLI",
+ "sourceRepo": "webkubor/supercli",
+ "sourceFiles": [
+  "brand.html",
+  "public/brand/supercli-symbol-mono.svg",
+  "public/brand/supercli-symbol-mono-light.svg"
+ ],
+ "asset": "supercli/mark-v3.svg",
+ "darkAsset": "supercli/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#002FA7",
+  "accent": "#19191D",
+  "onLight": "#002FA7",
+  "onDark": "#EEF1F7",
+  "background": "transparent"
+ },
+ "rationale": "SuperCLI 的品牌页明确规定折返几何 S 与右下输入光标，并定义品牌蓝 #002FA7。主体沿用源仓单色 S 路径并等比放大到约 73% 画幅；浅底用规范品牌蓝，深底用现有单色浅版 #EEF1F7。",
+ "status": "ready"
 }

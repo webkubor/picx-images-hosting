@@ -112,12 +112,12 @@ class BrandDeliveryCases(unittest.TestCase):
         for expected in ('typora-Bloom-theme → typora-bloom-theme',
                          'brand/typora-bloom-theme.json', 'id 填 typora-bloom-theme',
                          'sourceRepo 填 webkubor/typora-Bloom-theme',
-                         '导入 typora-bloom-theme/'):
+                         'dir 字段'):
             self.assertIn(expected, text)
         self.assertNotIn('brand/typora-Bloom-theme.json', text)
         typora['id'] = 'typora-Bloom-theme'
         from unittest.mock import patch
-        with patch.object(ui.json, 'loads', return_value=data), self.assertRaises(ValueError):
+        with patch.object(ui.Path, 'read_text', return_value=json.dumps(data)), self.assertRaises(ValueError):
             ui.load_briefs()
 
     def test_site_gallery_uses_root_theme_and_readme_uses_system(self):
@@ -159,7 +159,7 @@ class BrandDeliveryCases(unittest.TestCase):
             self.assertEqual(link['download'], Path(asset).name)
             self.assertTrue(link['href'].startswith('data:image/svg+xml;base64,'))
             self.assertEqual(base64.b64decode(link['href'].split(',', 1)[1]), (ROOT / asset).read_bytes())
-            self.assertNotIn(ui.CDN + asset, review)
+            self.assertNotIn('cdn.jsdelivr.net/gh/webkubor/free-imgbed', review)
         for page in (review, ui.briefs_page(ui.load_briefs())):
             self.assertIn('href="#delivery"', page)
             self.assertIn(ui.E((ROOT / 'design/DELIVERY.md').read_text()), page)

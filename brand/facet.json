@@ -1,18 +1,20 @@
 {
-  "id": "facet",
-  "name": "Facet",
-  "sourceRepo": "webkubor/facet",
-  "sourceFiles": ["README.md", "docs/brand/icon.svg"],
-  "oldAsset": "facet/icon.svg",
-  "asset": "facet/mark-v3.svg",
-  "darkAsset": "facet/mark-v3-dark.svg",
-  "tokens": {
-    "primary": "#0F766E",
-    "accent": "#F59E0B",
-    "onLight": "#0F766E",
-    "onDark": "#FFFDF7",
-    "background": "transparent"
-  },
-  "rationale": "源仓正式 icon 使用 #0F766E、#F59E0B 和暖白页面；本次沿用其中的 teal、amber 与暖白，不采纳可选渲染主题色作为品牌色。保留折角文档这一现有几何，以大幅色面和两条内容流线表达 Markdown 内容经结构化后生成分页 PDF 与长图。深底版本将文档面换为源图已有的暖白色，保证页面轮廓与深色背景分离。",
-  "status": "ready"
+ "id": "facet",
+ "name": "Facet",
+ "sourceRepo": "webkubor/facet",
+ "sourceFiles": [
+  "README.md",
+  "docs/brand/icon.svg"
+ ],
+ "asset": "facet/mark-v3.svg",
+ "darkAsset": "facet/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#0F766E",
+  "accent": "#F59E0B",
+  "onLight": "#0F766E",
+  "onDark": "#FFFDF7",
+  "background": "transparent"
+ },
+ "rationale": "源仓正式 icon 使用 #0F766E、#F59E0B 和暖白页面；本次沿用其中的 teal、amber 与暖白，不采纳可选渲染主题色作为品牌色。保留折角文档这一现有几何，以大幅色面和两条内容流线表达 Markdown 内容经结构化后生成分页 PDF 与长图。深底版本将文档面换为源图已有的暖白色，保证页面轮廓与深色背景分离。",
+ "status": "ready"
 }

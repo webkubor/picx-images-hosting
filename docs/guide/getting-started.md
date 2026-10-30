@@ -29,12 +29,12 @@ tools/add.sh ~/Desktop/my-logo.png 我的项目名/
 
 **② 看** —— 把链接粘进浏览器地址栏就打开了。真实例子，点开就是 README 页头那张 logo：
 
-> 🔗 <https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg>
+> 🔗 <https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/mark-v3.svg>
 
 在任意网页 / README 里写一行，图就出现在那里：
 
 ```html
-<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg" width="112">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/mark-v3.svg" width="112">
 ```
 
 ::: tip 不想碰终端？

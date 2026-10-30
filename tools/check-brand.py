@@ -18,8 +18,11 @@ import xml.etree.ElementTree as ET
 from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parent.parent
-FIELDS = {"id", "name", "sourceRepo", "sourceFiles", "oldAsset", "asset", "darkAsset",
+FIELDS = {"id", "name", "sourceRepo", "sourceFiles", "asset", "darkAsset",
           "tokens", "rationale", "status"}
+# Optional: the top-level directory holding the assets, when the GitHub repo name
+# differs from the brand id (e.g. an obfuscated repo name).
+OPTIONAL_FIELDS = {"dir"}
 TOKEN_FIELDS = {"primary", "accent", "onLight", "onDark", "background"}
 HEX = re.compile(r"#[0-9a-fA-F]{6}\Z")
 # Basic geometry and local gradients/masks are allowed; executable/foreign/font/
@@ -61,9 +64,16 @@ def load_manifests(root=ROOT):
     seen = set()
     for path in paths:
         d = json.loads(path.read_text(encoding="utf-8"))
-        require(isinstance(d, dict) and set(d) == FIELDS, f"{path.name}: exact fields must be {sorted(FIELDS)}")
+        require(isinstance(d, dict) and set(d) - OPTIONAL_FIELDS == FIELDS
+                and set(d) <= FIELDS | OPTIONAL_FIELDS,
+                f"{path.name}: required fields {sorted(FIELDS)}, optional {sorted(OPTIONAL_FIELDS)}")
         require(isinstance(d["id"], str) and re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", d["id"]), "invalid id")
         require(d["id"] == path.stem and d["id"] not in seen, "id must match unique manifest filename")
+        if "dir" in d:
+            require(isinstance(d["dir"], str) and bool(d["dir"].strip())
+                    and PurePosixPath(d["dir"]).as_posix() == d["dir"]
+                    and "/" not in d["dir"] and not d["dir"].startswith("."), "dir must be a top-level directory name")
+        asset_dir = d.get("dir", d["id"])
         seen.add(d["id"])
         for key in ("name", "rationale"):
             require(isinstance(d[key], str) and bool(d[key].strip()), f"{path.name}: empty {key}")
@@ -77,15 +87,19 @@ def load_manifests(root=ROOT):
         require(isinstance(t, dict) and set(t) == TOKEN_FIELDS, "invalid token contract")
         require(t["background"] == "transparent", "tokens.background must be transparent")
         require(all(isinstance(t[k], str) and HEX.fullmatch(t[k]) for k in TOKEN_FIELDS - {"background"}), "tokens must use six-digit hex")
-        local_asset(d["oldAsset"])
         for key in ("asset", "darkAsset"):
             if key == "darkAsset" and d[key] is None:
                 require(t["onLight"].lower() == t["onDark"].lower(), "null darkAsset needs identical theme foregrounds")
                 continue
             p = local_asset(d[key])
-            require(p.suffix == ".svg" and PurePosixPath(d[key]).parts[0] == d["id"], "new SVG must be in its project directory")
-            require(d[key] != d["oldAsset"], "new asset must preserve old path")
+            require(p.suffix == ".svg" and PurePosixPath(d[key]).parts[0] == asset_dir, "new SVG must be in its project directory")
         require(d["darkAsset"] != d["asset"], "use null for a shared theme asset")
+        allowed = {d["asset"], d["darkAsset"]}
+        for candidate in (root / asset_dir).iterdir():
+            if (candidate.is_file() and candidate.suffix.lower() in {".svg", ".png", ".webp"}
+                    and re.search(r"(?:^|[-_])(?:logo|mark|icon)(?:[-_.]|$)", candidate.stem, re.I)
+                    and candidate.relative_to(root).as_posix() not in allowed):
+                raise ValueError(f"unused logo version: {candidate.relative_to(root)}")
         result.append(d)
     return result
 

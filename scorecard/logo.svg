@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-  <title id="title">Scorecard</title>
-  <desc id="desc">An open scoring ring with an endpoint, based on the Scorecard app brand icon.</desc>
-  <rect width="256" height="256" rx="56" fill="#161b22"/>
-  <path d="M158.08 45.32 A88 88 0 1 0 210.68 97.92" fill="none" stroke="#91b8d6" stroke-width="32" stroke-linecap="round"/>
-  <circle cx="190.24" cy="65.76" r="20" fill="#91b8d6"/>
-</svg>

@@ -1,22 +1,21 @@
 {
-  "id": "claude-usage-statusline",
-  "name": "claude-usage-statusline",
-  "sourceRepo": "webkubor/claude-usage-statusline",
-  "sourceFiles": [
-    "README.md",
-    "scripts/statusline.py",
-    "assets/logo.svg"
-  ],
-  "oldAsset": "claude-usage-statusline/logo.svg",
-  "asset": "claude-usage-statusline/mark-v3.svg",
-  "darkAsset": "claude-usage-statusline/mark-v3-dark.svg",
-  "tokens": {
-    "primary": "#74B388",
-    "accent": "#D65D5D",
-    "onLight": "#3A3A42",
-    "onDark": "#C6C6CE",
-    "background": "transparent"
-  },
-  "rationale": "本次设计解释：保留 assets/logo.svg:16–28 的三条用量轨，把实底轨道改成有透明余量的粗轮廓，并扩大至方形构图；三条填充逐步接近末端，保留用量/限额主题，不借用 Claude 商标形状。primary #74B388、accent #D65D5D 与中段琥珀 #D1B566 来自 scripts/statusline.py:47–58 的 default 语义色带；琥珀段从填充起点的约55%出现、珊瑚段从约80%出现，连续色带被简化为三段纯色，省略80%橙色 #DE8A5F。本次新增标识规则，不宣称是实际百分比读数。onLight #3A3A42 来自 assets/logo.svg:19 的旧轨道色；onDark #C6C6CE 来自 scripts/statusline.py:58 的 mono 80%节点，本次借作深底轨道色，而非修改运行时默认主题。32px 深浅版均已由 rsvg-convert 渲染并目视检查，三轨、不同填充长度及末端珊瑚可辨；sage/amber 对白底对比偏低，因此需保留深轮廓，不能抽出色块当小字。README.md:24 已声明社区项目，图形也不暗示 Anthropic 官方出品。",
-  "status": "ready"
+ "id": "claude-usage-statusline",
+ "name": "claude-usage-statusline",
+ "sourceRepo": "webkubor/claude-usage-statusline",
+ "sourceFiles": [
+  "README.md",
+  "scripts/statusline.py",
+  "assets/logo.svg"
+ ],
+ "asset": "claude-usage-statusline/mark-v3.svg",
+ "darkAsset": "claude-usage-statusline/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#74B388",
+  "accent": "#D65D5D",
+  "onLight": "#3A3A42",
+  "onDark": "#C6C6CE",
+  "background": "transparent"
+ },
+ "rationale": "本次设计解释：保留 assets/logo.svg:16–28 的三条用量轨，把实底轨道改成有透明余量的粗轮廓，并扩大至方形构图；三条填充逐步接近末端，保留用量/限额主题，不借用 Claude 商标形状。primary #74B388、accent #D65D5D 与中段琥珀 #D1B566 来自 scripts/statusline.py:47–58 的 default 语义色带；琥珀段从填充起点的约55%出现、珊瑚段从约80%出现，连续色带被简化为三段纯色，省略80%橙色 #DE8A5F。本次新增标识规则，不宣称是实际百分比读数。onLight #3A3A42 来自 assets/logo.svg:19 的旧轨道色；onDark #C6C6CE 来自 scripts/statusline.py:58 的 mono 80%节点，本次借作深底轨道色，而非修改运行时默认主题。32px 深浅版均已由 rsvg-convert 渲染并目视检查，三轨、不同填充长度及末端珊瑚可辨；sage/amber 对白底对比偏低，因此需保留深轮廓，不能抽出色块当小字。README.md:24 已声明社区项目，图形也不暗示 Anthropic 官方出品。",
+ "status": "ready"
 }

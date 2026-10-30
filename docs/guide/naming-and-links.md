@@ -7,7 +7,7 @@
 - `https://cdn.jsdelivr.net/gh/` —— 固定前缀，永远不变
 - `webkubor` / `free-imgbed` —— GitHub 用户名 / 仓库名（fork 后换成你自己的）
 - `@main` —— 分支或标签；求稳可换成 `@v1`：标签不动、图就不动
-- `free-imgbed/logo.svg` —— **仓内路径 = 你放的目录 + 文件名**，这就是「图片名」的来源
+- `free-imgbed/mark-v3.svg` —— **仓内路径 = 你放的目录 + 文件名**，这就是「图片名」的来源
 
 ## 四种等价形态
 

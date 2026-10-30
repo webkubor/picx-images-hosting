@@ -1,13 +1,13 @@
 {
  "id": "typora-bloom-theme",
  "name": "Typora Bloom",
- "sourceRepo": "webkubor/typora-bloom-theme",
+ "sourceRepo": "webkubor/typora-Bloom-theme",
  "sourceFiles": [
   "README.md"
  ],
- "oldAsset": "typora-Bloom-theme/ink.webp",
- "asset": "typora-bloom-theme/mark-v3.svg",
- "darkAsset": "typora-bloom-theme/mark-v3-dark.svg",
+ "dir": "typora-Bloom-theme",
+ "asset": "typora-Bloom-theme/mark-v3.svg",
+ "darkAsset": "typora-Bloom-theme/mark-v3-dark.svg",
  "tokens": {
   "primary": "#EC4899",
   "accent": "#1F2937",

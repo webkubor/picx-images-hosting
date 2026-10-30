@@ -1,23 +1,22 @@
 {
-  "id": "reel-kit",
-  "name": "reel-kit",
-  "sourceRepo": "webkubor/reel-kit",
-  "sourceFiles": [
-    "README.md",
-    "docs/logo.svg",
-    "docs/logo-light.svg",
-    "docs/style.css"
-  ],
-  "oldAsset": "reel-kit/logo.svg",
-  "asset": "reel-kit/mark-v3.svg",
-  "darkAsset": "reel-kit/mark-v3-dark.svg",
-  "tokens": {
-    "primary": "#CC584D",
-    "accent": "#E6A5A0",
-    "onLight": "#CC584D",
-    "onDark": "#E6A5A0",
-    "background": "transparent"
-  },
-  "rationale": "从现役横向字标 docs/logo.svg:3-12 抽取同心卷轴与四个穿孔，放大线宽和孔径并去掉文字，保留 reel 的既有几何。README.md:51-52 与 docs/style.css:3-4 明定 Reel 红和暗底用的浅红；两版沿用这些既有颜色。卷轴属于本次重新排版，旧横向字标仍有效。",
-  "status": "ready"
+ "id": "reel-kit",
+ "name": "reel-kit",
+ "sourceRepo": "webkubor/reel-kit",
+ "sourceFiles": [
+  "README.md",
+  "docs/logo.svg",
+  "docs/logo-light.svg",
+  "docs/style.css"
+ ],
+ "asset": "reel-kit/mark-v3.svg",
+ "darkAsset": "reel-kit/mark-v3-dark.svg",
+ "tokens": {
+  "primary": "#CC584D",
+  "accent": "#E6A5A0",
+  "onLight": "#CC584D",
+  "onDark": "#E6A5A0",
+  "background": "transparent"
+ },
+ "rationale": "从现役横向字标 docs/logo.svg:3-12 抽取同心卷轴与四个穿孔，放大线宽和孔径并去掉文字，保留 reel 的既有几何。README.md:51-52 与 docs/style.css:3-4 明定 Reel 红和暗底用的浅红；两版沿用这些既有颜色。卷轴属于本次重新排版，旧横向字标仍有效。",
+ "status": "ready"
 }

@@ -3,7 +3,7 @@
 import argparse
 import html
 import importlib.util
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = 'https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/'
@@ -18,26 +18,34 @@ spec.loader.exec_module(contract)
 
 def entries():
     manifests = {m['id']: m for m in contract.load_manifests()}
+    # A manifest id is the project name, which may differ from its directory
+    # (e.g. a repo whose GitHub name is not the brand name). Resolve the
+    # directory from the asset path instead of assuming they are equal.
+    by_dir = {}
+    for m in manifests.values():
+        parent = PurePosixPath(m['asset']).parts[0]
+        by_dir[parent] = m
     result = []
     for directory in sorted(ROOT.iterdir()):
         if not directory.is_dir() or directory.name.startswith('.') or directory.name in SKIP:
             continue
-        id_ = directory.name
-        if id_ in manifests:
-            m = manifests[id_]
-            result.append((id_, m['asset'], m['darkAsset']))
+        manifest = by_dir.get(directory.name)
+        if manifest:
+            result.append((manifest['id'], manifest['asset'], manifest['darkAsset']))
             continue
-        # Legacy directories without a manifest retain their URLs and naming order.
-        asset = next((directory / name for name in ('logo-v2.svg', 'logo.svg', 'logo.png',
+        # Projects without a manifest use their current logo file.
+        asset = next((directory / name for name in ('mark-v3.svg', 'logo-v2.svg', 'logo.svg', 'logo.png',
                      'logo.webp', 'icon.svg', 'logo-icon.webp', 'logo-icon.png')
                       if (directory / name).is_file()), None)
         if asset:
-            dark = directory / 'logo-dark.svg'
-            result.append((id_, asset.relative_to(ROOT).as_posix(),
+            dark = directory / 'mark-v3-dark.svg'
+            if not dark.is_file():
+                dark = directory / 'logo-dark.svg'
+            result.append((directory.name, asset.relative_to(ROOT).as_posix(),
                            dark.relative_to(ROOT).as_posix() if dark.is_file() else None))
-    missing = set(manifests) - {row[0] for row in result}
+    missing = set(by_dir) - {PurePosixPath(a).parts[0] for _, a, _ in result}
     if missing:
-        raise ValueError('manifest project directories excluded or missing: ' + ', '.join(sorted(missing)))
+        raise ValueError('manifest asset directories missing: ' + ', '.join(sorted(missing)))
     return result
 
 
@@ -45,7 +53,7 @@ def build(site_theme=False):
     behavior = ('文档随站内主题开关显示对应 `darkAsset`（以根元素 `.dark` 为准）'
                 if site_theme else '深色主题用 `<picture>` 按系统偏好加载对应 `darkAsset`')
     lines = [START, '', '## 🖼 项目 logo 墙', '',
-             f'优先展示 `brand/*.json` 指定的新符号；{behavior}。旧素材 URL 继续保留。', '']
+             f'展示 `brand/*.json` 指定的现役标识；{behavior}。旧版 logo 不在图床保留。', '']
     if site_theme:
         lines.extend(['<style>',
                       '.brand-gallery-dark { display: none !important; }',

@@ -5,7 +5,6 @@
  "sourceFiles": [
   "README.md"
  ],
- "oldAsset": "dsh-museav-assets/logo.svg",
  "asset": "dsh-museav-assets/mark-v3.svg",
  "darkAsset": "dsh-museav-assets/mark-v3-dark.svg",
  "tokens": {

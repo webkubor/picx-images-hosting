@@ -18,7 +18,6 @@
 - 深底 SVG：`wallpaper-generator/mark-v3-dark.svg`
 - token：`brand/wallpaper-generator.json`
 - 本说明：`design/rationale/wallpaper-generator.md`
-- 保留旧路径：`wallpaper-generator/logo.svg`
 
 ## 局限
 

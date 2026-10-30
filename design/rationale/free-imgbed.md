@@ -17,7 +17,6 @@
 - SVG：`free-imgbed/mark-v3.svg`
 - token：`brand/free-imgbed.json`
 - 本说明：`design/rationale/free-imgbed.md`
-- 保留旧路径：`free-imgbed/logo.svg`
 
 ## 局限
 

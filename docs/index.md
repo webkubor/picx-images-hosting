@@ -13,7 +13,7 @@ hero:
       text: GitHub 仓库
       link: https://github.com/webkubor/free-imgbed
   image:
-    src: https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/logo.svg
+    src: https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/mark-v3.svg
     alt: free-imgbed
 
 features:

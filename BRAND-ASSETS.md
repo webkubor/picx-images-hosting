@@ -1,35 +1,50 @@
 # 品牌资产清单
 
-本表记录 `~/dev` 自有项目 README 所用的项目标识及其质量边界。`logo.*` 只用于确认属于该项目、适合在 README 展示的图；banner、截图、favicon 不自动冒充 logo。图床中的既有 URL 不改名，跨项目相同素材只留一份。
+本表记录 `~/dev` 自有项目在图床中的**现役**标识。原则：**每个项目只保留当前使用的 logo**（深浅主题成对的 `mark-v3.svg` / `mark-v3-dark.svg`），旧版与弃用版本一律不进仓。`brand/*.json` 是唯一真源，画廊、评审页与 README 均由它生成。
 
-| 项目 | 图床中的标识 | 状态 | 来源与说明 |
-|---|---|---|---|
-| free-imgbed | `free-imgbed/logo.svg` | 正式 logo | 本仓矢量标识 |
-| claude-usage-statusline | `claude-usage-statusline/logo.svg` | 正式 logo | 项目已有 128×128 SVG；README 原用 256×256 PNG，已改用 SVG |
-| device-passport | `device-passport/logo.svg` | 正式 logo | 项目已有 256×256 SVG；README 的 banner 保持原样 |
-| supercli | `supercli/logo.svg` + `supercli/logo-dark.svg` | 明暗两版正式字标 | 源自项目 `public/brand/supercli-wordmark*.svg`，用 `picture` 按主题切换 |
-| facet | `facet/icon.svg` | 正式标识，现役路径 | 项目 256×256 SVG；与 `logo.svg` 内容相同，保留已被引用的 `icon.svg`，避免重复文件 |
-| chat-mood-gen | `chat-mood-gen/logo.svg` | 正式 logo | 项目已有 256×256 SVG |
-| wallpaper-generator | `wallpaper-generator/logo.svg` | 正式 logo | 项目已有 512×512 SVG |
-| scorecard | `scorecard/logo-v2.svg` | 新版专属标识 | 体检雷达 + 勾选；原 `logo.svg` 保持旧外链可用，README 与应用资源统一使用 v2 |
-| dsh-llm-hub | `dsh-llm-hub/logo.png` | 正式 logo | 项目已有 512×512 PNG；现役 banner 仍走 R2 |
-| voxflow / voxcraft | `voxflow/logo-icon.webp` | 共享正式标识，现役路径 | 两个仓库原文件完全相同，只保留一份并共享 URL |
-| reel-kit | `reel-kit/logo.svg` + `reel-kit/logo-light.svg` | 明暗两版字标 | 两份内容不同，README 使用 `picture` 按主题切换 |
-| vite-plugin-agent-eyes | `blog/projects/vite-plugin-agent-eyes/logo.webp` | 现役 logo | 保留旧路径以维持外链 |
+| 项目 | 现役标识 | 状态 |
+|---|---|---|
+| chat-mood-gen | `chat-mood-gen/mark-v3.svg` + `chat-mood-gen/mark-v3-dark.svg` | 定稿 |
+| claude-usage-statusline | `claude-usage-statusline/mark-v3.svg` + `claude-usage-statusline/mark-v3-dark.svg` | 定稿 |
+| device-passport | `device-passport/mark-v3.svg` + `device-passport/mark-v3-dark.svg` | 定稿 |
+| dsh-llm-hub | `dsh-llm-hub/mark-v3.svg` + `dsh-llm-hub/mark-v3-dark.svg` | 定稿 |
+| dsh-museav-assets | `dsh-museav-assets/mark-v3.svg` + `dsh-museav-assets/mark-v3-dark.svg` | 待评审 |
+| facet | `facet/mark-v3.svg` + `facet/mark-v3-dark.svg` | 定稿 |
+| free-imgbed | `free-imgbed/mark-v3.svg` | 定稿 |
+| lite-browser | `lite-browser/mark-v3.svg` + `lite-browser/mark-v3-dark.svg` | 待评审 |
+| logo-brand-designer | `logo-brand-designer/mark-v3.svg` + `logo-brand-designer/mark-v3-dark.svg` | 待评审 |
+| meridian | `meridian/mark-v3.svg` + `meridian/mark-v3-dark.svg` | 待评审 |
+| museav-cli | `museav-cli/mark-v3.svg` + `museav-cli/mark-v3-dark.svg` | 待评审 |
+| plugins | `plugins/mark-v3.svg` + `plugins/mark-v3-dark.svg` | 待评审 |
+| pr-contributor-skill | `pr-contributor-skill/mark-v3.svg` + `pr-contributor-skill/mark-v3-dark.svg` | 待评审 |
+| reel-kit | `reel-kit/mark-v3.svg` + `reel-kit/mark-v3-dark.svg` | 定稿 |
+| scorecard | `scorecard/mark-v3.svg` + `scorecard/mark-v3-dark.svg` | 定稿 |
+| supercli | `supercli/mark-v3.svg` + `supercli/mark-v3-dark.svg` | 定稿 |
+| typora-bloom-theme | `typora-Bloom-theme/mark-v3.svg` + `typora-Bloom-theme/mark-v3-dark.svg` | 待评审 |
+| vite-plugin-agent-eyes | `vite-plugin-agent-eyes/mark-v3.svg` + `vite-plugin-agent-eyes/mark-v3-dark.svg` | 定稿 |
+| voxflow | `voxflow/mark-v3.svg` + `voxflow/mark-v3-dark.svg` | 定稿 |
+| wallpaper-generator | `wallpaper-generator/mark-v3.svg` + `wallpaper-generator/mark-v3-dark.svg` | 定稿 |
+| webkubor | `webkubor/mark-v3.svg` + `webkubor/mark-v3-dark.svg` | 待评审 |
 
-## 本地新版符号交付
+## 版本策略
 
-12 项新版符号及深底版本以 `brand/*.json` 为展示真源，画廊优先使用 `asset` / `darkAsset`，上表保留现役旧路径的历史来源。可在[新旧评审页](design/logo-review.html)比较图形、查看 hex 与生产资料；[交付说明](design/DELIVERY.md)记录本次建议色、检查范围与限制。此状态不代表远端已发布或其它项目已切换引用。
+- 图床只保留每项目的现役 logo；旧版、过渡版、草稿版（如 `logo.svg`、`logo-v2.svg`、`museav-logo.svg`、`logo-icon.webp`）已清理，不再作为兼容链接保留。
+- 替换标识时**先迁移使用方**（各项目 README、站点、博客数据），确认无引用后再移除旧文件。
+- 深浅主题成对的文件（`mark-v3.svg` + `mark-v3-dark.svg`）视为同一版本，成对保留。
+- banner、截图、favicon、OG 图不属于 logo，不在此表；也不自动冒充 logo。
+
+## 评审与待设计
+
+[现役标识评审](/design/logo-review.html)可查看每项的浅底/深底版本与 hex；[交付说明](design/DELIVERY.md)记录色板建议、检查范围与限制。
 
 真实待设计项目见 [18 项设计任务](design/logo-briefs.html)；其中色板均标为待评审建议。`path-guard` 的定位以生产 README 的命令副本诊断为准，`release-sync-skill` 为版本台账同步；`ego-lite-ref` 为上游参照实现，不列入自有品牌委托。
 
 ## 待设计或核验
 
-- **Scorecard 历史链接**：旧 `scorecard/logo.svg` 是过渡版本，`scorecard/logo-v2.svg` 是上一代雷达；两者保留外链。本仓画廊使用 manifest 的 `scorecard/mark-v3.svg` 与深底版，其它项目应用资源未在本次修改。
 - **Bloom for Typora**：项目仅有花形 favicon；README 目前展示 banner，需按主题品牌另行确定正式字标或 logo。
 - **Kyvault / xiaobai-kanban / boiling-snow**：README 顶部现有 banner/宣传图，不能仅凭文件名或 alt 文本认定它们是 logo。
 - **有 banner、缺独立 logo**：Kyvault、xiaobai-kanban、Boiling Snow、Bloom for Typora、dsh-bloom-theme、ego-lite-ref。先保留现有 banner；在各项目确定专属视觉后再增补 logo。
-- **只有网站内部图标或未在 README 展示**：ai-orb、scorecard（已补）、device-passport（已入库，README 仍使用 banner）、dsh-llm-hub（已入库，README 仍使用 R2 banner）。应用内部 favicon 不等同于 README 品牌图。
+- **未在 README 展示标识**：ai-orb、device-passport（已入库，README 仍使用 banner）、dsh-llm-hub（已入库，README 仍使用 R2 banner）。应用内部 favicon 不等同于 README 品牌图。
 - **无可确认源图的自有项目**：ai-sse-kit、cs-mcp、frontend-contrast-guard、im-notify-kit、mlx-vlm-kit、path-guard、charmoji-sticker-skill、deadcode-reaper-skill、release-sync-skill、writing-standard-skills、suno-publisher、vite-plugin-refresh-guard 等。先保留文本标题，不自动生成相同模板的占位 logo。
 
-后续新增：先核对项目源文件、视觉用途及名称；优先用合格 SVG。上传后记录在本表，README 引用改为新 URL 并验证可访问。U 盘原始素材不动，旧外链保持可用。
+后续新增：先核对项目源文件、视觉用途及名称；优先用合格 SVG。新增后写入 `brand/*.json` 并在本表登记，迁移使用方引用，最后刷新画廊与评审页。U 盘原始素材不动。
